@@ -1,5 +1,7 @@
 import { Router } from "express";
-import { createVagas, createMei, insertVaga, updateVaga, selectVagas, selectVaga, deleteVaga, insertMei, updateMei, selectAllMei, selectMei, deleteMei} from './Controler/Vagas.js';
+import { createVagas, createMei, insertVaga, updateVaga, selectVagas, selectVaga, deleteVaga, insertMei, updateMei, selectAllMei, selectMei, deleteMei, joinMeiVagas} from './Controler/Vagas.js';
+
+// esse arquivo foi criado para melhorar a perfomance da aplicação, por meio de um sistema de rotas dinâmicos com as operações de cada CRUD e os respectivos JOIN´s.
 
 const router = Router();
 
@@ -24,8 +26,13 @@ router.delete('/mei', deleteMei)
 router.put('/mei', updateMei)
 router.post('/newmei', insertMei)
 
-// JOINS 
+// Rotas da tabela Efetivação
+router.get('/allEfetivacao', selectAllEfetivacao)
+router.get('/efetivacao', selectEfetivacao)
+router.delete('/efetivacao', deleteEfetivacao)
+router.put('/efetivacao', udpateEfetivacao)
+router.post('/newEfetivacao', insertEfetivacao)
 
-
-
+// JOIN´s 
+router.get('/allMeiVagas', joinMeiVagas) // join entre os ID´s da empresa e da vaga
 export default router;

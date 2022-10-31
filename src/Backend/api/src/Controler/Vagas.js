@@ -1,6 +1,8 @@
 import { openDb, bancoDados } from '../configDB.js';
 
+// os comandos abaixo são responsáveis por fazer o CRUD da tabela vagas
 
+// comando SELECT ALL da tabela vagas 
 export async function selectVagas(req, res){
     openDb().then(db=>{
        db.all('SELECT * FROM Vagas')
@@ -8,6 +10,7 @@ export async function selectVagas(req, res){
     });
 }
 
+// comando SELECT da tabela vagas
 export async function selectVaga(req, res){
     let id_vagas = req.body.id_vagas;
      openDb().then(db=>{
@@ -15,13 +18,14 @@ export async function selectVaga(req, res){
         .then(Vaga=>res.json(Vaga))
     });
 }
-
+// Comando create - criar a tabela vagas
 export async function createVagas(){
     openDb().then(db=>{
         db.exec('CREATE TABLE IF NOT EXISTS Vagas (id_vagas INTEGER PRIMARY KEY, regiao TEXT, area_de_atuacao TEXT, telefone INTEGER)')
     })
 }
 
+// comando insert - responsável por inserir dados na tabela vagas
 export async function insertVaga(req, res){
     let vagas = req.body;
     openDb().then(db=>{
@@ -32,6 +36,7 @@ export async function insertVaga(req, res){
     })
 }
 
+// comando update - responsável por atualizar a tabela vagas
 export async function updateVaga(req, res){
     let vagas = req.body;
     openDb().then(db=>{
@@ -42,6 +47,7 @@ export async function updateVaga(req, res){
     })
 }
 
+// comando delete - responsável por deletar elementos da tabela vagas
 export async function deleteVaga(req, res){
     let id_vagas = req.body.id_vagas    
     openDb().then(db=>{
@@ -53,6 +59,9 @@ export async function deleteVaga(req, res){
     })
 }
 
+// os comandos abaixo são responsáveis pela tabela MEI
+
+//  comando SELECT ALL da tabela MEI 
 export async function selectAllMei(req, res){
     bancoDados().then(db=>{
         db.all('SELECT * FROM Tabela_Mei')
@@ -60,6 +69,7 @@ export async function selectAllMei(req, res){
     })
 }
 
+// comando SELECT da tabela MEI 
 export async function selectMei(req, res){
     let id_mei = req.body.id_mei;
     bancoDados().then(db=>{
@@ -68,38 +78,54 @@ export async function selectMei(req, res){
     })
 }
 
+// comando create - responsável por criar a tabela MEI 
 export async function createMei(){
     bancoDados().then(db=>{
-        db.exec('CREATE TABLE IF NOT EXISTS Tabela_Mei (id_mei INTEGER PRIMARY KEY, razaoSocial TEXT, cnpj INTEGER, telefone INTEGER, email TEXT, regiao TEXT, principaisAreas TEXT, numeroColaboradores INTEGER)')
+        db.exec('CREATE TABLE IF NOT EXISTS Tabela_Mei (id_mei INTEGER PRIMARY KEY, razaoSocial TEXT, cnpj INTEGER, telefone INTEGER, email TEXT, regiao_empresa TEXT, principaisAreas TEXT, numeroColaboradores INTEGER)')
     })
 }
 
+// comando insert - responsável por inserir dados na tabela MEI
 export async function insertMei(req, res){
     let Tabela_Mei = req.body;
     bancoDados().then(db=>{
-        db.run('INSERT INTO Tabela_Mei (razaoSocial, cnpj, telefone, email, regiao, principaisAreas, numeroColaboradores) VALUES (?,?,?,?,?,?,?)', [Tabela_Mei.razaoSocial, Tabela_Mei.cnpj, Tabela_Mei.telefone, Tabela_Mei.email, Tabela_Mei.regiao, Tabela_Mei.principaisAreas, Tabela_Mei.numeroColaboradores]);
+        db.run('INSERT INTO Tabela_Mei (razaoSocial, cnpj, telefone, email, regiao_empresa, principaisAreas, numeroColaboradores) VALUES (?,?,?,?,?,?,?)', [Tabela_Mei.razaoSocial, Tabela_Mei.cnpj, Tabela_Mei.telefone, Tabela_Mei.email, Tabela_Mei.regiao, Tabela_Mei.principaisAreas, Tabela_Mei.numeroColaboradores]);
     });
     res.json({
         "statusCode":200
     })
 }
 
+// comando update - responsável por atualizar os dados da tabela MEI 
 export async function updateMei(req, res){
     let Tabela_Mei = req.body;
     bancoDados().then(db=>{
-        db.run('UPDATE Tabela_Mei SET razaoSocial=?, cnpj=?, telefone=?, email=?, regiao=?, principaisAreas=?, numeroColaboradores=? WHERE id_mei=?', [Tabela_Mei.razaoSocial, Tabela_Mei.cnpj, Tabela_Mei.telefone, Tabela_Mei.email, Tabela_Mei.regiao, Tabela_Mei.principaisAreas, Tabela_Mei.numeroColaboradores, Tabela_Mei.id_mei])
+        db.run('UPDATE Tabela_Mei SET razaoSocial=?, cnpj=?, telefone=?, email=?, regiao_empresa=?, principaisAreas=?, numeroColaboradores=? WHERE id_mei=?', [Tabela_Mei.razaoSocial, Tabela_Mei.cnpj, Tabela_Mei.telefone, Tabela_Mei.email, Tabela_Mei.regiao, Tabela_Mei.principaisAreas, Tabela_Mei.numeroColaboradores, Tabela_Mei.id_mei])
     });
     res.json({
         "statusCode": 200
     })
 }
 
+// comando delete - responsável por deletar dados da tabela MEI 
 export async function deleteMei(req, res){
     let id_mei = req.body.id_mei
     bancoDados().then(db=>{
         db.get('DELETE FROM Tabela_Mei WHERE id_mei=?', [id_mei])
         .then(res=>res)
     });
+    res.json({
+        "statusCode": 200
+    })
+}
+
+// JOIN entre as tabelas MEI e Vagas (junta as regiões da tabela MEI com as regiões da tabela Vagas)
+export async function joinMeiVagas (req, res){
+    let idVagas = req.body.id_mei;
+    let idMei = req.body.id_vagas;
+    bancoDados().then(db =>{
+        db.get("SELECT * FROM Tabela_mei JOIN Vagas ON Tabela_mei.id_mei = Vagas.id_vagas", [idMei, idVagas]).then(res=>res);
+    })
     res.json({
         "statusCode": 200
     })

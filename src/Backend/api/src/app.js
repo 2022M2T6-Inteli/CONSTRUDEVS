@@ -4,20 +4,26 @@ import https from 'https';
 import cors from 'cors';
 import { createVagas, createMei } from './Controler/Vagas.js';
 
+// essa é o arquivo principal do backend
+
 import express from 'express';
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors()); // usado para evitar erro do cors no navegador 
 
+// implementando o sistema de rotas
 import router from './routes.js'
 app.use(router)
 
-
+// criando as tabelas 
  createVagas();
  createMei()
+ createCurriculoEmpresa();
 
+ // abrindo servidor 
 app.listen(3000, ()=>cconsole.log("api Rodando."))
 
+// executando em HTTPS 
 https.createServer({
     cert: fs.readFileSync("src/SSL/code.crt"),
     key: fs.readFileSyncs("src/SSL/code.key")

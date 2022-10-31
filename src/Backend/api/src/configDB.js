@@ -1,7 +1,8 @@
 import sqlite3 from 'sqlite3'
 import { open } from 'sqlite'
 
-// you would have to import / invoke this in another file
+
+// esses arquivos servem para configurar a abertura do banco de dados quando necessário 
 export async function openDb () {
   return open({
     filename: './vagas.db',
