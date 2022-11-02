@@ -1,3 +1,5 @@
+import { get } from 'https';
+import { isBuffer } from 'util';
 import {  bancoDados } from '../configDB.js';
 
 // os comandos abaixo são responsáveis por fazer o CRUD da tabela vagas
@@ -120,12 +122,21 @@ export async function deleteMei(req, res){
 }
 
 // JOIN entre as tabelas MEI e Vagas (junta as regiões da tabela MEI com as regiões da tabela Vagas)
+// export async function joinMeiVagas (req, res){
+//     let idVagas = req.body.id_mei;
+//     let idMei = req.body.id_vagas;
+//     bancoDados().then(db =>{
+//         db.all("SELECT * FROM Tabela_mei JOIN Vagas ON Tabela_mei.id_mei = Vagas.id_vagas", [idMei, idVagas]).then(Cadastro=>res.json(Cadastro))
+//     })
+// }
+
 export async function joinMeiVagas (req, res){
     let idVagas = req.body.id_mei;
     let idMei = req.body.id_vagas;
     bancoDados().then(db =>{
-        db.get("SELECT * FROM Tabela_mei JOIN Vagas ON Tabela_mei.id_mei = Vagas.id_vagas", [idMei, idVagas]).then(res=>res);
-    }).then(Cadastros=>res.json(Cadastros))
+         db.all("SELECT * FROM Tabela_Mei JOIN Vagas ON Tabela_Mei.id_mei = Vagas.id_vagas", [idMei, idVagas]).then(Cadastro=>res.json(Cadastro))
+    })
+
 }
 
 // comando SELECT ALL da tabela efetivacao
@@ -161,22 +172,12 @@ export async function deleteEfetivacao(req, res){
 export async function udpateEfetivacao(req, res){
     let efetivacao= req.body;
     bancoDados().then(db=>{
-        db.run('UPDATE efetivacao SET id_efetivacao=?, id_vagas=?,id_mei =?', [efetivacao.id_efetivacao, efetivacao.id_vagas, efetivacao.id_mei])
+        db.run('UPDATE OR IGNORE efetivacao SET id_efetivacao=?, id_vagas=?,id_mei =?', [efetivacao.id_efetivacao, efetivacao.id_vagas, efetivacao.id_mei])
     });
     res.json({
         "statusCode": 200
     })
 }
-
-// export async function updateMei(req, res){
-//     let Tabela_Mei = req.body;
-//     bancoDados().then(db=>{
-//         db.run('UPDATE Tabela_Mei SET razaoSocial=?, cnpj=?, telefone=?, email=?, regiao_empresa=?, principaisAreas=?, numeroColaboradores=? WHERE id_mei=?', [Tabela_Mei.razaoSocial, Tabela_Mei.cnpj, Tabela_Mei.telefone, Tabela_Mei.email, Tabela_Mei.regiao, Tabela_Mei.principaisAreas, Tabela_Mei.numeroColaboradores, Tabela_Mei.id_mei])
-//     });
-//     res.json({
-//         "statusCode": 200
-//     })
-// }
 
 
 // comando insert - responsável por inserir dados na tabela efetivacao
