@@ -24,7 +24,7 @@ A aplicação web acima soluciona o problema de contratação de empreiteiros da
 
 |--> documentos<br>
   &emsp;| --> outros <br>
-      &emsp;| --> modelagem-relacional.PNG <br>
+  &emsp;| --> modelagem-relacional.PNG <br>
   &emsp;| T6_G2_V1.9_Web_application_document.pdf<br>
   &emsp;| T6_G2_V1.9_Web_application_document.docx<br>
 |--> imagens<br>
