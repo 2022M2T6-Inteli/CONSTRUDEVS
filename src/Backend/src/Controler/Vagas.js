@@ -122,14 +122,6 @@ export async function deleteMei(req, res){
 }
 
 // JOIN entre as tabelas MEI e Vagas (junta as regiões da tabela MEI com as regiões da tabela Vagas)
-// export async function joinMeiVagas (req, res){
-//     let idVagas = req.body.id_mei;
-//     let idMei = req.body.id_vagas;
-//     bancoDados().then(db =>{
-//         db.all("SELECT * FROM Tabela_mei JOIN Vagas ON Tabela_mei.id_mei = Vagas.id_vagas", [idMei, idVagas]).then(Cadastro=>res.json(Cadastro))
-//     })
-// }
-
 export async function joinMeiVagas (req, res){
     let idVagas = req.body.id_mei;
     let idMei = req.body.id_vagas;
