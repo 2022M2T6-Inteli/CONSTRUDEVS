@@ -179,6 +179,7 @@ export async function insertEfetivacao(req, res){
     let id_vagas = req.body;
     bancoDados().then(db=>{
         db.run('INSERT INTO efetivacao (id_efetivacao, id_vagas, id_mei) VALUES (?,?,?)', [id_efetivacao.id_efetivacao, id_mei.id_mei, id_vagas.id_vagas]);
+        console.log(Tabela_Mei.regiao)
     });
     res.json({
         "statusCode":200
