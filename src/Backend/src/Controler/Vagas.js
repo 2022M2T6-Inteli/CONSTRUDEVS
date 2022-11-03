@@ -126,9 +126,9 @@ export async function joinMeiVagas (req, res){
     let idVagas = req.body.id_mei;
     let idMei = req.body.id_vagas;
     bancoDados().then(db =>{
-         db.all("SELECT * FROM Tabela_Mei JOIN Vagas ON Tabela_Mei.id_mei = Vagas.id_vagas", [idMei, idVagas]).then(Cadastro=>res.json(Cadastro))
+         db.all("SELECT * FROM Tabela_Mei INNER JOIN Vagas ON Tabela_Mei.id_mei = Vagas.id_vagas", [idMei, idVagas]).then(Cadastro=>res.json(Cadastro))
+         
     })
-
 }
 
 // comando SELECT ALL da tabela efetivacao
