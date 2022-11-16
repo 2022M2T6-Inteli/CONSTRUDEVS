@@ -1,25 +1,19 @@
 body {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
-    background: #643d87 url(../Aula12-Estilizando-formularios-2/Imagens/fundo.jpg) no-repeat top;
+    background: linear-gradient(#505050, #26815c, #99b78b) no-repeat;
+    height: 100vh;
 }
 
 #container {
     width: 400px;
     height: 300px;
-    background-color: rgba(255,255,255, 0.3);
+    background-color: rgba(255, 255, 255, 0.3);
     border-radius: 10px;
     border-radius: 10px;
-    margin: 0 auto;
-    margin-top: 120px;
+    margin: 120px auto 0;
     text-align: center;
 }
 
-#container img {
-    width: 120px;
-    height: 120px;
-    margin-top: -60px;
-    margin-bottom: 30px;
-}
 
 input {
     height: 40px;
@@ -34,11 +28,11 @@ input {
 }
 
 input.email {
-    background-image: url(../Aula12-Estilizando-formularios-2/Imagens/icone-usuario.png);
+    background-image: url('../img/icone-usuario.png');
 }
 
 input.senha {
-    background-image: url(../Aula12-Estilizando-formularios-2/Imagens/icone-cadeado.png);
+    background-image: url('../img/icone-cadeado.png');
 }
 
 input.submit {
@@ -49,4 +43,11 @@ input.submit {
     height: 45px;
     width: 90%;
     background: linear-gradient(to bottom, #faa600, #f68a00);
+}
+
+ion-icon {
+    font-size: 120px;
+    color: #fff;
+    padding-bottom: 15px;
+    padding-top: 5px;
 }
