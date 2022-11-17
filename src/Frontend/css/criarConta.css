@@ -5,8 +5,8 @@
 }
 
 body {
-    background-color: #26815c;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background: linear-gradient(#505050, #26815c, #99b78b) no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;

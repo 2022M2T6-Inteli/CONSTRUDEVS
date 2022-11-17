@@ -17,11 +17,11 @@ html {
 
     color: black;
 
-    background-color: #26815c ;
+    background: linear-gradient(#26815c, #505050, #99b78b) no-repeat;
 
     width: 100%;
 
-    height: 110vh;
+    height: 215%;
 
 }
 
