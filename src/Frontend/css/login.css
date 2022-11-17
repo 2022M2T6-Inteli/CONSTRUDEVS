@@ -1,7 +1,56 @@
 body {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     background: linear-gradient(#505050, #26815c, #99b78b) no-repeat;
-    height: 100vh;
+    height: 80vh;
+}
+
+.header {
+    width: 98%;
+    height:25px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    background-color: rgba (17, 17, 17, 0.8);
+}
+
+.header-container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0px 0px;
+}
+
+#menu-h {
+    list-style: none;
+    padding: 0;
+    background: linear-gradient(black, rgb(34, 32, 32));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#menu-h li{
+    display: inline;
+}
+
+#menu-h li a {
+    color: #FFF;
+    padding: 20px;
+    display: inline-block;
+    text-decoration: none;
+    transition: background .4s;
+}
+
+#menu-h li a:hover{
+    background-color: rgb(120, 120, 186);
+}
+
+#menu-h li:last-child a {
+    float: right;
+    background-color: green;
+}
+
+#menu-h li:last-child a:hover {
+    background-color: gray;
 }
 
 #container {
@@ -43,11 +92,24 @@ input.submit {
     height: 45px;
     width: 90%;
     background: linear-gradient(to bottom, #faa600, #f68a00);
+    cursor: pointer;
 }
+
+
 
 ion-icon {
     font-size: 120px;
     color: #fff;
     padding-bottom: 15px;
     padding-top: 5px;
+}
+
+.submit:hover {
+    color: #26815c;
+}
+
+
+footer {
+    padding-top: 150px;
+    padding-left: 46%;
 }

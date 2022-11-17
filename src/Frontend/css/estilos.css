@@ -252,3 +252,50 @@ p{
     text-align: center;
 
 }
+
+.footer1 {
+    margin-top: 10%;
+    margin-bottom: 5px;
+}
+
+.sobrenos {
+    margin-top: 80px;
+    text-align: center;
+    font-size: x-large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.paragrafo12 {
+    width: 60%;
+    justify-content: center;
+    text-align: center;
+    margin-left: 20%;
+    margin-top: 1%;
+    padding: 1%;
+    font-size: large;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.paragrafo123 {
+        width: 60%;
+        justify-content: center;
+        text-align: center;
+        margin-left: 20%;
+        margin-top: 3%;
+        padding: 1%;
+        font-size: large;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.construcaopeb {
+    width: 60%;
+    box-shadow: 4px 4px 4px black;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.construpeb {
+    width: 40%;
+    margin-top: 3%;
+    box-shadow: 4px 4px 4px black;
+}
