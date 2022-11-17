@@ -192,6 +192,8 @@ p{
     background-color: darkgreen;
     width: 340px;
     margin-left: 600px;
+    height: 200px;
+    box-shadow: 3px 3px 3px black;
 }
 
 .wpp {
@@ -201,7 +203,7 @@ p{
 }
 
 .wpp1 {
-    margin-top: 30px;
+    margin-top: 20px;
     text-align: center;
     color: yellowgreen
 }
@@ -215,6 +217,9 @@ p{
     background-color: white;
     width: 340px;
     margin-left: 600px;
+    height: 120px;
+    box-shadow: 3px 3px 3px black;
+    margin-top: 40px;
 }
 
 .mail {
@@ -223,6 +228,26 @@ p{
 }
 
 .mail1 {
+    padding-top: 20px;
+    text-align: center;
+
+}
+
+.sitesdiv {
+    background-color: rgb(255, 0, 0);
+    width: 340px;
+    margin-left: 600px;
+    height: 180px;
+    box-shadow: 3px 3px 3px black;
+    margin-top: 40px;
+}
+
+.sites {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.sites1 {
     padding-top: 20px;
     text-align: center;
 
