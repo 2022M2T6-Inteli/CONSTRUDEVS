@@ -1,0 +1,229 @@
+* {
+
+    padding: 0;
+
+    margin: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+
+body, html {
+    margin: 0;
+
+    font: 16px "Lato", sans-serif;
+
+    color: black;
+
+    background-color: #5dc79d;
+
+    width: 100%;
+
+    height: 110vh;
+
+}
+
+.header {
+    width: 100%;
+    height:35px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    background-color: rgba (17, 17, 17, 0.8);
+}
+
+.header-container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0px 0px;
+}
+
+#menu-h {
+    list-style: none;
+    padding: 0;
+    background: linear-gradient(black, rgb(34, 32, 32));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#menu-h li{
+    display: inline;
+}
+
+#menu-h li a {
+    color: #FFF;
+    padding: 20px;
+    display: inline-block;
+    text-decoration: none;
+    transition: background .4s;
+}
+
+#menu-h li a:hover{
+    background-color: rgb(120, 120, 186);
+}
+
+#menu-h li:last-child a {
+    float: right;
+    background-color: green;
+}
+
+#menu-h li:last-child a:hover {
+    background-color: gray;
+}
+
+
+
+
+.caixa1, .caixa2, .caixa3, .caixa4 {
+
+    height: 110vh;
+
+}
+
+.logo-corpo {
+    padding-top: 100px;
+    margin-left: 560px;
+
+}
+
+.pg1 {
+    list-style: none;
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.img1_pg1 {
+    margin-left: 120px;
+}
+
+.text {
+    padding-left: 140px;
+}
+
+p{
+    text-align:left ;
+}
+
+.caixa2 {
+    padding-top: 30px;
+}
+
+.caixa3 {
+    padding-top: 30px;
+}
+
+.pg2 {
+    list-style: none;
+    padding-top: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.img1_pg2 {
+    margin-left: 120px;
+}
+
+.sobre {
+    margin: 30px;
+}
+
+.titulo1 {
+    padding-left: 140px;
+}
+
+.paragrafo-conteudo {
+    max-width: 500px;
+    padding-left: 140px;
+}
+
+.link {
+    padding-left: 140px;
+    text-decoration: none;
+
+}
+
+.link1 {
+    text-decoration: none;
+}
+
+.conteudo {
+    list-style: none;
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.img1_pg3 {
+    margin-left: 120px;
+}
+
+.img1_pg4 {
+    margin-left: 120px;
+}
+
+.paragrafo-conteudo2 {
+    padding-left: 140px;
+}
+
+.link2 {
+    padding-left: 140px;
+    text-decoration: none;
+
+}
+
+.titulo2 {
+    padding-left: 140px;
+}
+
+.mrvecologo{
+    width: 120px;
+    margin-left: 700px;
+}
+
+.copyright {
+    margin-left: 693px;
+}
+
+.wppdiv {
+    background-color: darkgreen;
+    width: 340px;
+    margin-left: 600px;
+}
+
+.wpp {
+    margin-top: 160px;
+    text-align: center;
+    color: white;
+}
+
+.wpp1 {
+    margin-top: 30px;
+    text-align: center;
+    color: yellowgreen
+}
+
+.linkwpp {
+    text-decoration: none;
+    text-align: center;
+}
+
+.maildiv {
+    background-color: white;
+    width: 340px;
+    margin-left: 600px;
+}
+
+.mail {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.mail1 {
+    padding-top: 20px;
+    text-align: center;
+
+}
