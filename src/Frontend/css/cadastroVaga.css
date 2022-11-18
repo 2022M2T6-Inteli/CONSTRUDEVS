@@ -1,3 +1,4 @@
+/*definicação de posição da tela completa (body(*/
 html,
 body {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -10,15 +11,7 @@ body {
     font-family: 'Rubik', sans-serif
 }
 
-
-#cabeca > p {
-    border-bottom: 1px solid black;
-    color: #505050;
-    padding: 1rem 2rem;
-    border-radius: 1rem;
-    background-color: #D9D9D9;
-}
-
+/*posição do conteúdo principal alinhado*/
 .main {
     display: flex;
     flex-direction: column;
@@ -26,6 +19,7 @@ body {
     height: 100%;
 }
 
+/*dimensções do cabeçalho*/
 .cabeca {
     display: flex;
     border-bottom: 1px grey;
@@ -34,18 +28,22 @@ body {
     min-width: 80vw;
 }
 
+/*reposicionando o local de inserção de imagem*/
 .quebra {
     display: block;
 }
 
+/*posicionando a contagem de estrelas*/
 .contei {
     width: 100%;
     height: 500px;
     margin: 0;
     display: flex;
     flex-direction: column;
+    border: 1px red;
 }
 
+/*definindo cores e tamanhos do bloco 1*/
 .block1 {
     background-color: #085634;
     color: #085634;
@@ -54,6 +52,7 @@ body {
     float: left;
 }
 
+/*posicionando e tamanho do container principal dos filhos*/
 .container {
     display: flex;
     flex-direction: row;
@@ -65,25 +64,20 @@ body {
     z-index: 10;
 }
 
-/*.background {
-    background-color: #244705;
-    width: 100%;
-    height: 80%;
-}
-*/
+/*caixa com as partes de inserção de conteúdo*/
 .filho {
     width: 40%;
     display: flex;
     flex-direction: column;
     height: fit-content;
-
-    border: 1px solid yellow;
 }
 
+/*definindo input que está dentro do filho*/
 .filho > input {
     margin-bottom: 2rem;
 }
 
+/*estrutura da estrela */
 .star {
     display: flex;
     color: white;

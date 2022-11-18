@@ -1,14 +1,12 @@
+
+/*definindo o padrão da página geral*/
 * {
-
     padding: 0;
-
     margin: 0;
-
     box-sizing: border-box;
-
 }
 
-
+/*definindo cores, fonte e tamanho do body*/
 body,
 html {
     margin: 0;
@@ -25,6 +23,7 @@ html {
 
 }
 
+/* vestilização do cabeçalho */
 .header {
     width: 100%;
     height: 35px;
@@ -35,12 +34,14 @@ html {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+/*tamanho e posicionamento do container do cabeçalho*/
 .header-container {
     max-width: 1920px;
     margin: 0 auto;
     padding: 0;
 }
 
+/*definição de estilo do menu principal*/
 #menu-h {
     list-style: none;
     padding: 0;
@@ -50,10 +51,12 @@ html {
     justify-content: space-between;
 }
 
+/*display dos intens do menu*/
 #menu-h li {
     display: inline;
 }
 
+/*estilo dos ícones da lista dentro do menu*/
 #menu-h li a {
     color: #FFF;
     padding: 20px;
@@ -62,35 +65,38 @@ html {
     transition: background 0.4s;
 }
 
+/*efeito hover nos links que estão nos itens do menu*/
 #menu-h li a:hover {
     background-color: rgb(120, 120, 186);
 }
 
+/*mudando a cor e o posicionamento do último filho*/
 #menu-h li:last-child a {
     float: right;
     background-color: green;
 }
 
+/*efeito hover no último filho*/
 #menu-h li:last-child a:hover {
     background-color: gray;
 }
 
-
+/*definindo tamanho das caixas*/
 .caixa1,
 .caixa2,
 .caixa3,
 .caixa4 {
-
     height: 110vh;
-
 }
 
+/*preenchimento e posição da logo*/
 .logo-corpo {
     padding-top: 100px;
     margin-left: 560px;
 
 }
 
+/*tamanho, preenchimento e alinhamento dos itens da página 1 */
 .pg1 {
     list-style: none;
     padding-top: 80px;
@@ -98,26 +104,32 @@ html {
     align-items: center;
 }
 
+/*posição da imagem da pagina 1*/
 .img1_pg1 {
     margin-left: 120px;
 }
 
+/*preenchimento do texto*/
 .text {
     padding-left: 140px;
 }
 
+/*alinhamento dos parágrafos*/
 p {
     text-align: left;
 }
 
+/*preenchimento superior da caixa 2*/
 .caixa2 {
     padding-top: 30px;
 }
 
+/*preenchimento superior da caixa 3*/
 .caixa3 {
     padding-top: 30px;
 }
 
+/*preenchimento e posição da página 2*/
 .pg2 {
     list-style: none;
     padding-top: 0;
@@ -125,33 +137,40 @@ p {
     align-items: center;
 }
 
+/*posição da imagem 1 da página 2*/
 .img1_pg2 {
     margin-left: 120px;
 }
 
+/*about onde tem a classe sobre*/
 .sobre {
     margin: 30px;
 }
 
+/*preenchimento esquerdo do título 1*/
 .titulo1 {
     padding-left: 140px;
 }
 
+/*comprimento máximo e preenchimento do parágrafo-conteudo*/
 .paragrafo-conteudo {
     max-width: 500px;
     padding-left: 140px;
 }
 
+/*estilização dos links*/
 .link {
     padding-left: 140px;
     text-decoration: none;
 
 }
 
+/*tirando a decoração do link 1*/
 .link1 {
     text-decoration: none;
 }
 
+/*estilo, preenchimento e posicionamento da classe conteúdo*/
 .conteudo {
     list-style: none;
     padding-top: 80px;
@@ -159,38 +178,45 @@ p {
     align-items: center;
 }
 
+/*afastamento da imagem 1 da página 3*/
 .img1_pg3 {
     margin-left: 120px;
 }
 
+/*afastamento da imagem 1 da página 4*/
 .img1_pg4 {
     margin-left: 120px;
 }
 
+/*estilo, preenchimento e posicionamento da classe conteúdo2*/
 .paragrafo-conteudo2 {
     padding-left: 140px;
 }
 
+/*tirando a decoração do link 2*/
 .link2 {
     padding-left: 140px;
     text-decoration: none;
 
 }
-
+/*tirando a decoração do titulo 2*/
 .titulo2 {
     padding-left: 140px;
 }
 
+/*logo da mrv com posição e comprimento estilizados*/
 .mrvecologo {
     width: 10%;
     margin-left: 45%;
     margin-top: 5%;
 }
 
+/*posição do copyrught*/
 .copyright {
     margin-left: 45%;
 }
 
+/*posição, comprimento e sombra da div do wpp*/
 .wppdiv {
     background-color: darkgreen;
     width: 340px;
@@ -199,23 +225,26 @@ p {
     box-shadow: 3px 3px 3px black;
 }
 
+/*margem, alinhamento e cor do campo wpp*/
 .wpp {
     margin-top: 160px;
     text-align: center;
     color: white;
 }
 
+/*margem, alinhamento e cor do campo wpp1*/
 .wpp1 {
     margin-top: 20px;
     text-align: center;
     color: yellowgreen
 }
-
+/*alinhamento e decoração do link wpp*/
 .linkwpp {
     text-decoration: none;
     text-align: center;
 }
 
+/*cor de fundo, comprimento, posição e sombra da div do email*/
 .maildiv {
     background-color: white;
     width: 340px;
@@ -225,17 +254,20 @@ p {
     margin-top: 40px;
 }
 
+/*preenchiemnto e alinhamento da div email*/
 .mail {
     padding-top: 20px;
     text-align: center;
 }
 
+/*preenchiemnto e alinhamento da div email1*/
 .mail1 {
     padding-top: 20px;
     text-align: center;
 
 }
 
+/*estilizando as divs gerais*/
 .sitesdiv {
     background-color: rgb(255, 0, 0);
     width: 340px;
@@ -245,22 +277,26 @@ p {
     margin-top: 40px;
 }
 
+/*preenchimento e alinhamento da classe sites*/
 .sites {
     padding-top: 20px;
     text-align: center;
 }
 
+/*preenchimento e alinhamento da classe sites1*/
 .sites1 {
     padding-top: 20px;
     text-align: center;
 
 }
 
+/*preenchimento e alinhamento da classe footer1*/
 .footer1 {
     margin-top: 10%;
     margin-bottom: 2%;
 }
 
+/*posição, alinhamento e tipo de fonte da classe sobrenos*/
 .sobrenos {
     margin-top: 80px;
     text-align: center;
@@ -268,6 +304,7 @@ p {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+/*preenchimento, tipo de fonte, comprimento e alinhamento da classe paragrafo12*/
 .paragrafo12 {
     width: 60%;
     justify-content: center;
@@ -279,6 +316,7 @@ p {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+/*comprimento, alinhamento, preenchimento e tipo de fonte na classe paragrafo123*/
 .paragrafo123 {
     width: 60%;
     justify-content: center;
@@ -290,6 +328,7 @@ p {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+/*comprimento, sombra e posição da classe construcaopeb*/
 .construcaopeb {
     width: 60%;
     box-shadow: 4px 4px 4px black;
@@ -297,6 +336,7 @@ p {
     margin-bottom: 3%;
 }
 
+/*comprimento, sombra da caixa e posição da classe construpeb*/
 .construpeb {
     width: 40%;
     margin-top: 3%;
