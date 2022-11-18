@@ -1,3 +1,4 @@
+/*definindo o padrão da página inteira (body)*/
 html,
 body {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -9,54 +10,50 @@ body {
     width: 100;
 }
 
+/*definindo o fundo do filho*/
 .background {
     background-color: #006b3eb1;
     margin-top: 462px;
     height: 450px;
     width: 100vw;
-
 }
 
-
+/*estilização do cabeçalho*/
 .cabeca {
     display: flex;
     border-bottom: 1px grey;
 }
+
+/*estilo do navebar*/
 .nav {
     display: flex;
     justify-content: space-around;
     min-width: 80vw;
-
 }
 
+
+/*tamanho da fonte do parágrafo dentro do  navebar*/
 .nav > p {
     font-size: 15px;
 }
 
-.block1 {
-    background-color: grey;
-    width: 250px;
-    height: 250px;
-    margin-top: -30%;
-    margin-left: 30;
 
-}
+/*estilizando os três blocos de conteúdos principais*/
+
 .block1 {
     background-color: grey;
     width: 450px;
     height: 250px;
     margin-top: -30%;
     margin-left: 20px;
-
 }
+
 .block2 {
     background-color: grey;
     width: 450px;
     height: 250px;
     margin-top: -13%;
     margin-left: 735px;
-
-
 }
 
 
@@ -66,19 +63,11 @@ body {
     height: 250px;
     margin-top: -13%;
     margin-left: 1435px;
-
-
 }
 
-
-.quebra {
-    display: block;
-
-
-}
+/*estilizandoo os textos principais*/
 
 .text > .t1 {
-
     font-size: 25px;
     color: black;
     max-width: 90vw;
@@ -90,8 +79,6 @@ body {
     overflow-wrap: break-word;
     word-wrap: break-word;
     word-break: break-word;
-
-
 }
 .text1 > .t2 {
     width: 350px;
@@ -103,12 +90,9 @@ body {
     overflow-wrap: break-word;
     word-wrap: break-word;
     word-break: break-word;
-
-
 }
 
 .text2 > .t3 {
-
     font-size: 25px;
     color: black;
     max-width: 90vw;
@@ -118,18 +102,16 @@ body {
     word-wrap: break-word;
     word-break: break-word;
     width: 350px;
-
-
 }
 
+/*definindo estilo para os elementos do pai nav*/
 #n1 {
     border-bottom: 1px solid rgb(0, 0, 0);
     color: rgb(0, 0, 0);
     margin-top: 50px;
-
-
 }
 
+/*posicionando a parte do administrador na tela*/
 .adm {
     background-color: #D9D9D9;
     width: 170px;
@@ -140,6 +122,4 @@ body {
     word-break: break-word;
     margin-top: -37px;
     margin-left: 107%;
-
-
 }

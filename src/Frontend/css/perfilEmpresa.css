@@ -1,4 +1,7 @@
-html, body {
+
+/*padrão geral do body*/
+html,
+body {
     background-color: #EDEAE4;
     margin: 0;
     position: fixed;
@@ -48,6 +51,7 @@ background: #EDEAE4;
     
 }
 
+/*tamanho da fonte do parágrafo dentro do nav*/
 .nav > p {
     font-size: 15px;
 }
@@ -80,7 +84,6 @@ background: #EDEAE4;
 
 .colum{
     display: flex;
-
 }
 
 .block1{
@@ -108,7 +111,6 @@ button{
     height: 25px;
     margin-top: 80px;
     margin-left: 60px;
-
 }
 
 #n1{

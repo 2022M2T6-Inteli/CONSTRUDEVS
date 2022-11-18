@@ -1,3 +1,5 @@
+
+/*definição de padrão para o body da página*/
 html,
 body {
     background-color: #EDEAE4;
@@ -7,57 +9,59 @@ body {
     font-family: 'Rubik', sans-serif
 }
 
+/*estilização completa do fundo do pai*/
 .background {
     background-color: #006b3eb1;
     margin-top: 462px;
     height: 450px;
     width: 100vw;
-
 }
 
 
+/*posicionamento do cabeçalho*/
 .cabeca {
     display: flex;
     border-bottom: 1px grey;
 }
+
+/*posição geral do nav e comprimento mínimo*/
 .nav {
     display: flex;
     justify-content: space-around;
     min-width: 80vw;
-
 }
 
+/*tamanho da fonte do parágrafo dentro da navbar*/
 .nav > p {
     font-size: 15px;
 }
+
+/*mudando o display do pai para flex*/
 .pai {
     display: flex;
 }
+
+/*mudando tamanho da fonte e posicionamento da classe insi, rank e atua*/
 
 .insi {
     font-size: 30px;
     margin-left: 260px;
     margin-top: 6%;
-
-
 }
 
 .rank {
     font-size: 30px;
     margin-left: 515px;
     margin-top: 6%;
-
-
 }
 .atua {
     font-size: 30px;
     margin-left: 445px;
     margin-top: 6%;
-
-
 }
 
 
+/*fundo, tamanho e posição da classe block1, block3, block4 e block5*/
 .block1 {
     background-color: grey;
     width: 200px;
@@ -65,54 +69,46 @@ body {
     margin-top: -45%;
     margin-left: 45%;
     border-radius: 100%;
-
-
 }
 .block3 {
     background-color: white;
     width: 600px;
     height: 80px;
     margin-left: 1%;
-
-
 }
+
+
 .block4 {
     background-color: white;
     width: 600px;
     height: 80px;
     margin-left: 1%;
-
-
 }
+
 .block5 {
     background-color: white;
     width: 600px;
     height: 80px;
     float: center;
     margin-left: 1%;
-
-
 }
 
+/*tamanho, posição e camuflagem de conteúdo da classe sobre, que está dentro do block2*/
 .block2 > .sobre {
     width: 900px;
     height: 120px;
     margin-top: 0;
     margin-left: 500px;
     overflow-y: scroll;
-
-
 }
 
-
+/*mudando o display do pai para block*/
 .quebra {
     display: block;
-
-
 }
 
+/*estilização completa do texto onde está a classe t1*/
 .text > .t1 {
-
     font-size: 25px;
     color: black;
     max-width: 90vw;
@@ -124,18 +120,16 @@ body {
     overflow-wrap: break-word;
     word-wrap: break-word;
     word-break: break-word;
-
-
 }
 
+/*colocação de borda, cor e posicionamento externo de quem tem o id n1*/
 #n1 {
     border-bottom: 1px solid black;
     color: #505050;
     margin-top: 50px;
-
-
 }
 
+/*estilização completa da classe adm*/
 .adm {
     background-color: #D9D9D9;
     width: 170px;
@@ -146,13 +140,10 @@ body {
     word-break: break-word;
     margin-top: -37px;
     margin-left: 107%;
-
-
 }
 
+/*alinhamento e tamanho da fonte do placeholder*/
 ::placeholder {
     text-align: center;
     font-size: 20px;
-
-
 }
