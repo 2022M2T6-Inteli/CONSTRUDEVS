@@ -1,7 +1,7 @@
 html,
 body {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
-    background: linear-gradient(#505050, #26815c, #99b78b) no-repeat;
+    background-color: #EDEAE4;
     margin: 0;
     min-height: 100vh;
     height: 100%;
@@ -123,8 +123,8 @@ body {
 }
 
 #n1 {
-    border-bottom: 1px solid rgb(255, 255, 255);
-    color: #ffff;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
     margin-top: 50px;
 
 
