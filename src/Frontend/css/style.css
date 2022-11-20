@@ -7,7 +7,7 @@ body {
     width: 100vw;
     overflow-x: hidden;
     height: 100%;
-    font-family: 'Rubik', sans-serif
+    font-family: 'Rubik', sans-serif;
 }
 
 .inici {
@@ -34,8 +34,6 @@ body {
     width: 20vw;
     position: absolute;
     left: 2.5vw;
-
-
 }
 #nome {
     top: 11.5vw;
@@ -43,8 +41,6 @@ body {
     position: absolute;
     left: 3.5vw;
     font-size: 25px;
-
-
 }
 .lado0 > .circle0 {
     position: absolute;
