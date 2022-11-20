@@ -1,4 +1,3 @@
-
 /*padrão geral do body*/
 html,
 body {
@@ -11,11 +10,11 @@ body {
     font-family: 'Rubik', sans-serif
 }
 
-.inici{
+.inici {
     display: flex;
 }
 
-.lado0{
+.lado0 {
     position: absolute;
     top: 10%;
     width: 50vw;
@@ -25,12 +24,12 @@ body {
     border-radius: 30px;
 }
 
-.lado0 > .circle0{
+.lado0 > .circle0 {
     left: 19vw;
     top: 5vw;
 }
 
-#seja{
+#seja {
     bottom: 1vw;
     width: 20vw;
     position: absolute;
@@ -38,7 +37,7 @@ body {
 
 
 }
-#nome{
+#nome {
     top: 11.5vw;
     width: 20vw;
     position: absolute;
@@ -47,49 +46,48 @@ body {
 
 
 }
-.lado0 > .circle0{
+.lado0 > .circle0 {
     position: absolute;
-    
+
 }
 
-.tfund{
+.tfund {
     background-color: #EDEAE4;
     width: 800px;
     height: 25vw;
     position: absolute;
     left: 55%;
     top: 10%;
-    
+
 }
 
-.colorA{
+.colorA {
     width: 1934px;
     height: 548px;
-    
 
-background: #EDEAE4;
+
+    background: #EDEAE4;
 }
 
-.white{
+.white {
     background-color: #ffffff;
 }
 
 
-
-.test1{
+.test1 {
     display: flex;
     background-color: #ff9d47;
-    border-top:15px solid #ffffff;
-    border-bottom:15px solid #ffffff;
+    border-top: 15px solid #ffffff;
+    border-bottom: 15px solid #ffffff;
 
 }
 
-.block2{
+.block2 {
     display: flex;
-    
+
 }
 
-.laranja{
+.laranja {
     background-color: #EDEAE4;
     width: 100vw;
     height: 30vw;
@@ -97,64 +95,57 @@ background: #EDEAE4;
 }
 
 
-.circle0 img{
+.circle0 img {
     position: absolute;
     border-radius: 100%;
-    width:30vh;
+    width: 30vh;
     height: 30vh;
     background-color: white;
     left: 5%;
     margin-top: 10%;
-    
+
 }
-.circle1 img{
+.circle1 img {
     position: absolute;
     border-radius: 100%;
-    width:30vh;
+    width: 30vh;
     height: 30vh;
     background-color: white;
     left: 42%;
     margin-top: 10%;
-    
+
 }
-.circle2 img{
+.circle2 img {
     position: absolute;
     border-radius: 100%;
-    width:30vh;
+    width: 30vh;
     height: 30vh;
     background-color: white;
     left: 80%;
     margin-top: 10%;
-    
+
 }
-
-
-
-
-
-
-
 
 /*Clientes cadastrados*/
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,600);
 .snip1336 {
-  font-family: 'Roboto', Arial, sans-serif;
-  position: relative;
-  overflow: hidden;
-  margin: 33px;
-  min-width: 230px;
-  max-width: 315px;
-  width: 100%;
-  color: #ffffff;
-  text-align: left;
-  line-height: 1.4em;
-  background-color: #141414;
-    
-  
+    font-family: 'Roboto', Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+    margin: 33px;
+    min-width: 230px;
+    max-width: 315px;
+    width: 100%;
+    color: #ffffff;
+    text-align: left;
+    line-height: 1.4em;
+    background-color: #141414;
+
+
 }
 
-.snip1336{
+.snip1336 {
     border-radius: 7%;
 }
 
@@ -171,10 +162,10 @@ background: #EDEAE4;
     max-width: 100%;
     vertical-align: top;
     opacity: 0.85;
-  }
+}
 
-  /*position relative joga as png pra cima*/
-  .snip1336 figcaption {
+/*position relative joga as png pra cima*/
+.snip1336 figcaption {
     width: 150%;
     background-color: #ffffff;
     padding: 25px;
@@ -182,13 +173,13 @@ background: #EDEAE4;
 }
 
 /* o "a" fica sem cor e possivel a alteração do "rosto"*/
-  .snip1336 figcaption a {
+.snip1336 figcaption a {
     padding: 5px;
     border: 1px solid #de6b07;
     color: #de6b07;
     font-size: 0.7em;
     text-transform: uppercase;
-    margin: 10px 0;
+    margin: 10px 0 10px 15%;
     display: inline-block;
     opacity: 0.65;
     width: 30%;
@@ -196,141 +187,140 @@ background: #EDEAE4;
     text-decoration: none;
     font-weight: 600;
     letter-spacing: 1px;
-    margin-left: 15%;
 }
 .snip1336 figcaption a:hover {
-  opacity: 1;
+    opacity: 1;
 }
 /*profileeee*/
 .snip1336 .profile {
-  border-radius: 50%;
-  position: absolute;
-  bottom: 100%;
-  left: 25px;
-  z-index: 1;
-  max-width: 90px;
-  opacity: 1;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 100%;
+    left: 25px;
+    z-index: 1;
+    max-width: 90px;
+    opacity: 1;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
 .snip1336 h2 {
-  margin: 0 0 5px;
-  font-weight: 300;
-  color: rgb(0, 0, 0);
+    margin: 0 0 5px;
+    font-weight: 300;
+    color: rgb(0, 0, 0);
 }
 
-.snip1336 p{
+.snip1336 p {
     color: black;
 }
 
 .snip1336 p {
-  margin-left: -10px;
-  font-size: 0.8em;
-  letter-spacing: 1px;
-  opacity: 0.8;
-  word-wrap:break-word;
-  word-break:normal ;
-  
-  width: 290px;
+    margin-left: -10px;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    word-wrap: break-word;
+    word-break: normal;
+
+    width: 290px;
 }
 
 
 /*nav bar*/
 
-*{
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	font-family: 'Poppins', sans-serif;
-	text-decoration: none;
-	list-style: none;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
 }
-:root{
+:root {
     --bg-color: #222327;
-	--text-color: rgb(0, 0, 0);
-	--main-color: #de6b07;
+    --text-color: rgb(0, 0, 0);
+    --main-color: #de6b07;
 }
-body{
+body {
     min-height: 100vh;
-	background: var(--bg-color);
-	color: var(--text-color);
+    background: var(--bg-color);
+    color: var(--text-color);
 }
-header{
+header {
     width: 100%;
-	top: 0;
-	right: 0;
-	z-index: 1000;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	background: transparent;
-	padding: 28px 12%;
-	transition: all .50s ease;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 28px 12%;
+    transition: all 0.50s ease;
     background-color: white;
     height: 7%;
 }
-.logo{
+.logo {
     display: flex;
-	align-items: center;
+    align-items: center;
 }
-.logo i{
+.logo i {
     color: var(--main-color);
-	font-size: 28px;
-	margin-right: 3px;
+    font-size: 28px;
+    margin-right: 3px;
 }
-.logo span{
+.logo span {
     color: var(--text-color);
-	font-size: 1.7rem;
-	font-weight: 600;
+    font-size: 1.7rem;
+    font-weight: 600;
 }
-.navbar{
+.navbar {
     margin-top: 1%;
-	display: flex;
-}
-.navbar a{
-	color: var(--text-color);
-	font-size: 1.1rem;
-	font-weight: 500;
-	padding: 5px 0;
-	margin: 0px 30px;
-	transition: all .50s ease;
-}
-.navbar a:hover{
-    color: var(--main-color);
-}
-.navbar a.active{
-    color: var(--main-color);
-}
-.main{
     display: flex;
-	align-items: center;
 }
-.main a{
-    
+.navbar a {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 5px 0;
+    margin: 0 30px;
+    transition: all 0.50s ease;
+}
+.navbar a:hover {
+    color: var(--main-color);
+}
+.navbar a.active {
+    color: var(--main-color);
+}
+.main {
+    display: flex;
+    align-items: center;
+}
+.main a {
+
     margin-right: 25px;
-	margin-left: 10px;
-	color: var(--text-color);
-	font-size: 1.1rem;
-	font-weight: 500;
-	transition: all .50s ease;
+    margin-left: 10px;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.50s ease;
 }
-.user{
+.user {
     display: flex;
-	align-items: center;
+    align-items: center;
 }
-.user i{
+.user i {
     color: var(--main-color);
-	font-size: 28px;
-	margin-right: 7px;
+    font-size: 28px;
+    margin-right: 7px;
 }
-.main a:hover{
-	color: var(--main-color);
+.main a:hover {
+    color: var(--main-color);
 }
-#menu-icon{
+#menu-icon {
     font-size: 35px;
-	color: var(--text-color);
-	cursor: pointer;
-	z-index: 10001;
-	display: none;
-    
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+
 }
