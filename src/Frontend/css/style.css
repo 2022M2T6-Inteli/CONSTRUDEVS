@@ -7,7 +7,7 @@ body {
     width: 100vw;
     overflow-x: hidden;
     height: 100%;
-    font-family: 'Rubik', sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .inici {
@@ -126,7 +126,6 @@ body {
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,600);
 .snip1336 {
-    font-family: 'Roboto', Arial, sans-serif;
     position: relative;
     overflow: hidden;
     margin: 33px;
@@ -216,7 +215,6 @@ body {
     opacity: 0.8;
     word-wrap: break-word;
     word-break: normal;
-
     width: 290px;
 }
 
@@ -227,9 +225,9 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
     text-decoration: none;
     list-style: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 :root {
     --bg-color: #222327;
