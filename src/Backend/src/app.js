@@ -2,7 +2,7 @@ import {bancoDados} from './configDB.js';
 import fs from 'fs';
 import https from 'https';
 import cors from 'cors';
-import { createVagas, createMei, createEfetivacao } from './Controller/Vagas.js';
+import { createVagas, createMei, createEfetivacao } from './Controller/crudTabelas.js';
 
 // essa é o arquivo principal do backend
 
@@ -12,16 +12,16 @@ app.use(express.json());
 app.use(cors()); // usado para evitar erro do cors no navegador 
 
 // implementando o sistema de rotas
-import router from './routes.js'
+import router from './routes/routes.js'
 app.use(router)
 
-// inicianod a pasta views
+// iniciando a pasta views
 app.set('view engine', 'ejs')
 
 app.use(express.static("Frontend"))
 
-app.get('/layouts/main', (req,res) =>{
-    res.render('main')
+app.get('/home', (req,res) =>{
+    res.render('home')
 })
 // criando as tabelas 
  createVagas();

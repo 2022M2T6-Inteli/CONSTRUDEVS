@@ -1,5 +1,4 @@
-import { get } from 'https';
-import { isBuffer } from 'util';
+
 import {  bancoDados } from '../configDB.js';
 
 // os comandos abaixo são responsáveis por fazer o CRUD da tabela vagas
