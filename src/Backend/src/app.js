@@ -2,7 +2,7 @@ import {bancoDados} from './configDB.js';
 import fs from 'fs';
 import https from 'https';
 import cors from 'cors';
-import { createVagas, createMei, createEfetivacao } from './Controler/Vagas.js';
+import { createVagas, createMei, createEfetivacao } from './Controller/Vagas.js';
 
 // essa é o arquivo principal do backend
 
@@ -15,6 +15,14 @@ app.use(cors()); // usado para evitar erro do cors no navegador
 import router from './routes.js'
 app.use(router)
 
+// inicianod a pasta views
+app.set('view engine', 'ejs')
+
+app.use(express.static("Frontend"))
+
+app.get('/layouts/main', (req,res) =>{
+    res.render('main')
+})
 // criando as tabelas 
  createVagas();
  createMei();
@@ -22,10 +30,4 @@ app.use(router)
 
  // abrindo servidor 
 app.listen(3000, ()=>console.log("api Rodando."))
-
-// executando em HTTPS 
-// https.createServer({
-//     cert: fs.readFileSyncs("src/SSL/code.crt"),
-//     key: fs.readFileSyncs("src/SSL/code.key")
-// }, app).listen(3001, ()=> console.log("Rodando um https"))
 
