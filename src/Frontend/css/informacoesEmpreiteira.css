@@ -3,6 +3,7 @@
 /*definição da dimensão geral da página*/
 * {
 	box-sizing: border-box;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 

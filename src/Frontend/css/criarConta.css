@@ -3,6 +3,7 @@
 /*definição do tamanho geral da tela */
 * {
     box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /*configurando letra, dimensão e posicionamento do  body*/
