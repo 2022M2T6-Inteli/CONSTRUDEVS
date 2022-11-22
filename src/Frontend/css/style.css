@@ -60,7 +60,7 @@ body {
     height: 548px;
 
 
-    background: #EDEAE4;
+    background: #ffffff;
 }
 
 .white {
@@ -316,4 +316,143 @@ header {
     z-index: 10001;
     display: none;
 
+}
+
+@media screen and (max-width: 768px) {
+
+    .inici {
+        display: flex;
+    }
+
+    .colorA {
+        width: 100vw;
+        height: 130vw;
+    
+    
+        background: #EDEAE4;
+    }
+    
+    .lado0 {
+        position: absolute;
+        top: 10%;
+        width: 98vw;
+        height: 40vw;
+        background-color: rgb(255, 255, 255);
+        left: 1vw;
+        border-radius: 30px;
+    }
+    
+    .lado0 > .circle0 {
+        left: 40vw;
+        top: 10vw;
+        
+    }
+
+    #circulo{
+        width: 150px;
+        height: 150px;
+    }
+    
+    #seja {
+        bottom: 0vw;
+        width: max-content;
+        left: -2vw;
+        word-wrap:break-word ;
+        
+    }
+    #nome {
+        color: transparent;
+        top: 11.5vw;
+        width: 20vw;
+        position: absolute;
+        left: 1.5vw;
+        font-size: 25px;
+    }
+
+    .tfund {
+        
+        position: absolute;
+        top: 33%;
+        left: 2.5vw;
+        width: 95vw;
+        height: 10vw;
+    
+    }
+
+    .white {
+        position: absolute;
+        top: 130vw;
+        background-color: #ffffff;
+    }
+
+    .test1 {
+        position: absolute;
+        top: 135vw;
+        display: flex;
+        background-color: #ff9d47;
+        border-top: 15px solid #ffffff;
+        border-bottom: 15px solid #ffffff;
+    
+    }
+    .block2 {
+        position: absolute;
+        display: flex;
+        top: 210vw;
+    
+    }
+
+    .lado0 > .circle0 {
+        position: absolute;
+    
+    }
+
+    .laranja {
+        position: absolute;
+        background-color: #EDEAE4;
+        width: 100vw;
+        height: 50vw;
+        top: 280vw;
+        border-top: 10px solid white;
+    }
+
+    .circle0 img {
+        position: absolute;
+        border-radius: 100%;
+        width: 10vh;
+        height: 10vh;
+        background-color: white;
+        left: 5%;
+        margin-top: 10%;
+    
+    }
+    .circle1 img {
+        position: absolute;
+        border-radius: 100%;
+        width: 10vh;
+        height: 10vh;
+        background-color: white;
+        left: 42%;
+        margin-top: 10%;
+    
+    }
+    .circle2 img {
+        position: absolute;
+        border-radius: 100%;
+        width: 10vh;
+        height: 10vh;
+        background-color: white;
+        left: 80%;
+        margin-top: 10%;
+    
+    }
+
+    footer{
+        position: absolute;
+        top: 331vw;
+        width: 100vw;
+    }
+    
+    
+
+    
 }
