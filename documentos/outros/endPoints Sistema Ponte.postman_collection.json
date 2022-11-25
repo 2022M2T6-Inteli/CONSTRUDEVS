@@ -1,0 +1,773 @@
+{
+	"info": {
+		"_postman_id": "3797dbe1-ee02-4163-b562-d5c27debac8d",
+		"name": "endPoints Sistema Ponte",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23776014"
+	},
+	"item": [
+		{
+			"name": "MÉTODOS GET ÚNICO",
+			"item": [
+				{
+					"name": "selectVaga",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_vagas\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/selectVaga",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"selectVaga"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "selectEmpreiteiro",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_empreiteiro\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/selectEmpreiteiro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"selectEmpreiteiro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "selectEfetivacao",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_efetivacao\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/selectEfetivacao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"selectEfetivacao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "selectAdminMrv",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"id_adminMrv\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/selectAdminMrv",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"selectAdminMrv"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MÉTODOS GET TODOS",
+			"item": [
+				{
+					"name": "selectAllVagas",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3001/selectAllVagas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"selectAllVagas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "selectAllEmpreiteiros",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/selectAllEmpreiteiro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"selectAllEmpreiteiro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "selectAllEfetivacoes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3001/selectAllEfetivacao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"selectAllEfetivacao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "selectAllAdminMrv",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/selectAllAdminMrv",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"selectAllAdminMrv"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MÉTODOS POST",
+			"item": [
+				{
+					"name": "insertVaga",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"regiao\": \"Sul\",\r\n    \"area_de_atuacao\": \"Projetista\",\r\n    \"telefone\": 40958180\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/insereVaga",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"insereVaga"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insertEmpreiteiro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_empreiteiro\": 3,\r\n    \"nome_empresa\": \"MORAES MOLDURAS\",\r\n    \"email_empresa\": \"moraes@gmail.com\",\r\n    \"cnpj\": 20175009838319,\r\n    \"localidade\": \"Porto Seguro - BA\",\r\n    \"especialidade\": \"Molduras\",\r\n    \"representante\": \"Marcos Vynicius\",\r\n    \"email_representante\": \"marcos@hotmail.com\",\r\n    \"senha\": \"macaco234\",\r\n    \"confirma_senha\": \"macaco234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/adicionaEmpreiteiro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"adicionaEmpreiteiro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insertEfetivacao",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id_efetivacao\": 1,\r\n        \"id_vagas\": 4,\r\n        \"id_adminMrv\": 1,\r\n        \"id_empreiteiro\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/adicionaEfetivacao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"adicionaEfetivacao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insertAdminMrv",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_adminMrv\":4,\r\n    \"nome_admin\": \"Leandro Fernandes Barbosa\",\r\n    \"email_admin\":\"leandro.fbarbosa@mrv.com.br\",\r\n    \"senha_admin\": \"10006\",\r\n    \"confirma_senha\":\"10006\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/adicionaAdminMrv",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"adicionaAdminMrv"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MÉTODOS JOIN",
+			"item": [
+				{
+					"name": "joinEmpreiteiroVaga",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"area_de_atuacao\":\"pintura\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/joinEmpreiteiroVaga",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"joinEmpreiteiroVaga"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MÉTODOS DELETE",
+			"item": [
+				{
+					"name": "deleteVaga",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"id_vagas\": 7\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/deleteVaga",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"deleteVaga"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteEmpreiteiro",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_empreiteiro\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/deleteEmpreiteiro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"deleteEmpreiteiro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteEfetivacao",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_efetivacao\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/deleteEfetivacao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"deleteEfetivacao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAdminMrv",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_adminMrv\":4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/deleteAdminMrv",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"deleteAdminMrv"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MÉTODOS PUT",
+			"item": [
+				{
+					"name": "updateVaga",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \r\n        \"id_vaga\":6,\r\n        \"regiao\": \"Sul\",\r\n        \"area_de_atuacao\": \"Projetista\",\r\n        \"telefone\": 239876543\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/atualizaVaga",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"atualizaVaga"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateEmpreiteiro",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_empreiteiro\": 3,\r\n    \"nome_empresa\": \"MORAES MOLDURAS\",\r\n    \"email_empresa\": \"moraes@gmail.com\",\r\n    \"cnpj\": 20175009838319,\r\n    \"localidade\": \"Porto Seguro - BA\",\r\n    \"especialidade\": \"Molduras\",\r\n    \"representante\": \"Marcos Vynicius\",\r\n    \"email_representante\": \"marcos@hotmail.com\",\r\n    \"senha\": \"macaco2345\",\r\n    \"confirma_senha\": \"macaco2345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/atualizaEmpreiteiro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"atualizaEmpreiteiro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateEfetivacao",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id_efetivacao\": 4,\r\n        \"id_vagas\": 5,\r\n        \"id_mei\": 7\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/efetivacao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"efetivacao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "udpateAdminMrv",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_adminMrv\":3,\r\n    \"nome_admin\": \"Leandro Fernandes Barbosa\",\r\n    \"email_admin\":\"leandro.fbarbosa@mrv.com.br\",\r\n    \"senha_admin\": \"10006\",\r\n    \"confirma_senha\":\"10006\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/atualizaAdminMrv",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"atualizaAdminMrv"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MÉTODOS DELETE TODOS",
+			"item": [
+				{
+					"name": "deleteAllVagas",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/deleteAllVagas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"deleteAllVagas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAllEmpreiteiros",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/deleteAllEmpreiteiros",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"deleteAllEmpreiteiros"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAllEfetivacoes",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/deleteAllEfetivacao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"deleteAllEfetivacao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAllAdminMrv",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/deleteAllAdminMrv",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"deleteAllAdminMrv"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
