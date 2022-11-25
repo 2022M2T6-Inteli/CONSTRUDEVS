@@ -4,34 +4,34 @@ import {  bancoDados } from '../../Backend/configDB.js';
 // os comandos abaixo são responsáveis pela tabela MEI
 
 //  comando SELECT ALL da tabela MEI 
-export async function selectAllMei(req, res){
+export async function selectAllEmpreiteiro(req, res){
     bancoDados().then(db=>{
-        db.all('SELECT * FROM Tabela_Mei')
+        db.all('SELECT * FROM empreiteiros')
         .then(Cadastros=>res.json(Cadastros))
     })
 }
 
 // comando SELECT da tabela MEI 
-export async function selectMei(req, res){
-    let id_mei = req.body.id_mei;
+export async function selectEmpreiteiro(req, res){
+    let id_empreiteiro = req.body.id_empreiteiro;
     bancoDados().then(db=>{
-        db.get('SELECT * FROM Tabela_Mei WHERE id_mei=?', [id_mei])
+        db.get('SELECT * FROM empreiteiros WHERE id_empreiteiro=?', [id_empreiteiro])
         .then(Cadastro=>res.json(Cadastro))
     })
 }
 
 // comando create - responsável por criar a tabela MEI 
-export async function createMei(){
+export async function createEmpreiteiro(){
     bancoDados().then(db=>{
-        db.exec('CREATE TABLE IF NOT EXISTS Tabela_Mei (id_mei INTEGER PRIMARY KEY, razaoSocial TEXT, cnpj INTEGER, telefone INTEGER, email TEXT, regiao_empresa TEXT, principaisAreas TEXT, numeroColaboradores INTEGER)')
+        db.exec('CREATE TABLE IF NOT EXISTS empreiteiros (id_empreiteiro INTEGER PRIMARY KEY AUTOINCREMENT, nome_empresa TEXT, email_empresa TEXT, cnpj INTEGER, localidade TEXT, especialidade TEXT, representante TEXT, email_representante TEXT, senha TEXT, confirma_senha TEXT)')
     })
 }
 
 // comando insert - responsável por inserir dados na tabela MEI
-export async function insertMei(req, res){
-    let Tabela_Mei = req.body;
+export async function insertEmpreiteiro(req, res){
+    let empreiteiros = req.body;
     bancoDados().then(db=>{
-        db.run('INSERT INTO Tabela_Mei (razaoSocial, cnpj, telefone, email, regiao_empresa, principaisAreas, numeroColaboradores) VALUES (?,?,?,?,?,?,?)', [Tabela_Mei.razaoSocial, Tabela_Mei.cnpj, Tabela_Mei.telefone, Tabela_Mei.email, Tabela_Mei.regiao, Tabela_Mei.principaisAreas, Tabela_Mei.numeroColaboradores]);
+        db.run('INSERT INTO empreiteiros (id_empreiteiro, nome_empresa, email_empresa, cnpj, localidade, especialidade, representante,email_representante, senha, confirma_senha) VALUES (?,?,?,?,?,?,?,?,?,?)', [empreiteiros.id_empreiteiro, empreiteiros.nome_empresa, empreiteiros.email_empresa, empreiteiros.cnpj,empreiteiros.localidade,empreiteiros.especialidade, empreiteiros.representante, empreiteiros.email_representante, empreiteiros.senha,empreiteiros.confirma_senha]);
     });
     res.json({
         "statusCode":200
@@ -39,10 +39,10 @@ export async function insertMei(req, res){
 }
 
 // comando update - responsável por atualizar os dados da tabela MEI 
-export async function updateMei(req, res){
-    let Tabela_Mei = req.body;
+export async function updateEmpreiteiro(req, res){
+    let empreiteiros = req.body;
     bancoDados().then(db=>{
-        db.run('UPDATE Tabela_Mei SET razaoSocial=?, cnpj=?, telefone=?, email=?, regiao_empresa=?, principaisAreas=?, numeroColaboradores=? WHERE id_mei=?', [Tabela_Mei.razaoSocial, Tabela_Mei.cnpj, Tabela_Mei.telefone, Tabela_Mei.email, Tabela_Mei.regiao, Tabela_Mei.principaisAreas, Tabela_Mei.numeroColaboradores, Tabela_Mei.id_mei])
+        db.run('UPDATE empreiteiros SET nome_empresa=?, email_empresa=?, cnpj=?, localidade=?, especialidade=?, representante=?, senha=?,confirma_senha=? WHERE id_empreiteiro=?', [empreiteiros.nome_empresa,empreiteiros.email_empresa, empreiteiros.cnpj, empreiteiros.localidade, empreiteiros.especialidade, empreiteiros.representante, empreiteiros.senha,empreiteiros.confirma_senha, empreiteiros.id_empreiteiro])
     });
     res.json({
         "statusCode": 200
@@ -50,10 +50,21 @@ export async function updateMei(req, res){
 }
 
 // comando delete - responsável por deletar dados da tabela MEI 
-export async function deleteMei(req, res){
-    let id_mei = req.body.id_mei
+export async function deleteEmpreiteiro(req, res){
+    let id_empreiteiro = req.body.id_empreiteiro
     bancoDados().then(db=>{
-        db.get('DELETE FROM Tabela_Mei WHERE id_mei=?', [id_mei])
+        db.get('DELETE FROM empreiteiros WHERE id_empreiteiro=?', [id_empreiteiro])
+        .then(res=>res)
+    });
+    res.json({
+        "statusCode": 200
+    })
+}
+
+// comando DELETE para todos os dados da tabela  
+export async function deleteAllEmpreiteiro(req, res){
+    bancoDados().then(db=>{
+        db.get('DELETE  FROM empreiteiros')
         .then(res=>res)
     });
     res.json({

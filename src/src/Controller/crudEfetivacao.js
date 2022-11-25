@@ -33,7 +33,7 @@ export async function deleteEfetivacao(req, res){
 export async function udpateEfetivacao(req, res){
     let efetivacao= req.body;
     bancoDados().then(db=>{
-        db.run('UPDATE OR IGNORE efetivacao SET id_efetivacao=?, id_vagas=?,id_mei =?', [efetivacao.id_efetivacao, efetivacao.id_vagas, efetivacao.id_mei])
+        db.run('UPDATE efetivacao SET id_vagas=?,id_adminMrv=?,id_empreiteiro=? WHERE id_efetivacao=?', [efetivacao.id_vagas, efetivacao.id_adminMrv, efetivacao.id_empreiteiro, efetivacao.id_efetivacao])
     });
     res.json({
         "statusCode": 200
@@ -44,10 +44,11 @@ export async function udpateEfetivacao(req, res){
 // comando insert - responsável por inserir dados na tabela efetivacao
 export async function insertEfetivacao(req, res){
     let id_efetivacao = req.body;
-    let id_mei = req.body;
+    let id_empreiteiro = req.body;
     let id_vagas = req.body;
+    let id_adminMrv = req.body;
     bancoDados().then(db=>{
-        db.run('INSERT INTO efetivacao (id_efetivacao, id_vagas, id_mei) VALUES (?,?,?)', [id_efetivacao.id_efetivacao, id_mei.id_mei, id_vagas.id_vagas]);
+        db.run('INSERT INTO efetivacao (id_efetivacao, id_vagas, id_adminMrv, id_empreiteiro) VALUES (?,?,?,?)', [id_efetivacao.id_efetivacao, id_empreiteiro.id_empreiteiro, id_vagas.id_vagas, id_adminMrv.id_adminMrv]);
     });
     res.json({
         "statusCode":200
@@ -57,6 +58,17 @@ export async function insertEfetivacao(req, res){
 // comando create - responsável por criar a tabela efetivacao
 export async function createEfetivacao(){
     bancoDados().then(db=>{
-        db.exec('CREATE TABLE IF NOT EXISTS efetivacao (id_efetivacao INTEGER PRIMARY KEY, id_vagas INTEGER,  id_mei INTEGER) ')
+        db.exec('CREATE TABLE IF NOT EXISTS efetivacao (id_efetivacao INTEGER PRIMARY KEY, id_vagas INTEGER, id_adminMrv INTEGER, id_empreiteiro INTEGER) ')
+    })
+}
+
+// comando DELETE para todos os dados da tabela  
+export async function deleteAllEfetivacao(req, res){
+    bancoDados().then(db=>{
+        db.get('DELETE FROM efetivacao ')
+        .then(res=>res)
+    });
+    res.json({
+        "statusCode": 200
     })
 }

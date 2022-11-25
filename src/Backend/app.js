@@ -1,12 +1,14 @@
 
 import cors from 'cors';
 import { createVagas} from '../src/Controller/crudVagas.js';
-import {createMei} from '../src/Controller/crudEmpreiteiro.js';
+import {createEmpreiteiro} from '../src/Controller/crudEmpreiteiro.js';
 import {createEfetivacao } from '../src/Controller/crudEfetivacao.js';
+import { createAdminMrv } from '../src/Controller/crudAdminMrv.js';
 import express from 'express';
 import efetivacao from '../src/routes/efetivacao.js'
 import empreiteiro from '../src/routes/empreiteiro.js'
 import vagas from '../src/routes/vagas.js'
+import adminMrv from '../src/routes/adminMrv.js'
 import path from 'path'
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
@@ -30,6 +32,7 @@ app.use(cors()); // usado para evitar erro do cors no navegador
 app.use(efetivacao)
 app.use(empreiteiro)
 app.use(vagas)
+app.use(adminMrv)
 
 // iniciando a pasta views
 app.set('view engine', 'ejs')
@@ -46,8 +49,9 @@ app.post("/cadastro", (req,res) =>{
 })
 // criando as tabelas 
  createVagas();
- createMei();
+ createEmpreiteiro();
  createEfetivacao();
+ createAdminMrv();
 
  // abrindo servidor 
 app.listen(3001, ()=>console.log("api Rodando."))
