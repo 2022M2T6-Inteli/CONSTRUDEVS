@@ -11,8 +11,8 @@
 /*definindo a cor, tipo de fonte, sombra, comprimento, largura, preenchimento (externo e interno) e alinhamento de cada classe*/
 
 body {
-	background-color: #26815c;
-	font-family: 'Open Sans', sans-serif;
+	background: linear-gradient(#505050, #26815c, #99b78b) no-repeat;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -24,9 +24,10 @@ body {
 	background-color: #fff;
 	border-radius: 5px;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-	overflow: hidden;
-	width: 800px;
+	overflow: scroll;
+	width: 700px;
 	max-width: 100%;
+
 }
 
 .header {
@@ -49,16 +50,98 @@ button {
 	font-size: 16px;
 	padding: 10px;
 	margin-top: 20px;
-	width: 50%;
+	width: 30%;
   
 }
 
 
 .linha{
   display:flex;
-  flex-direction:row;
+  flex-direction:column;
+  margin: 5%;
 }
 
 .coluna{
+  display:flex;
+  flex-direction:column;
   width:50%;
+
+}
+
+.entrada > input{
+	border: 2px solid #f0f0f0;
+    border-radius: 5px;
+    
+    font-family: inherit;
+    font-size: 14px;
+    padding: 10px;
+    width: 31%;
+}
+
+.entrada > label{
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.entrada > select{
+	border: 2px solid #f0f0f0;
+    border-radius: 5px;
+    
+    font-size: 14px;
+    padding: 10px;
+    width: 66%;
+}
+
+.entrada > input[id=cidade]{
+	border: 2px solid #f0f0f0;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px;
+    width: 65%;
+}
+
+.entrada > input[id=Complemento]{
+	border: 2px solid #f0f0f0;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px;
+    width: 50%;
+}
+
+.entrada > input[id=bairro]{
+	border: 2px solid #f0f0f0;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px;
+    width: 66%;
+}
+
+.entrada > h2{
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.entrada > input[id=funcionarios]{
+	border: 2px solid #f0f0f0;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px;
+    width: 19%;
+}
+
+
+.entradaInfo > input{
+	border: 2px solid #f0f0f0;
+    border-radius: 5px;
+    
+    font-family: inherit;
+    font-size: 14px;
+    padding: 10px;
+    width: 40%;
+}
+
+.entradaInfo > label{
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.entradaInfo > h2{
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
 }

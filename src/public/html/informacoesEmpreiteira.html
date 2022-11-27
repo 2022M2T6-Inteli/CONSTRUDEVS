@@ -15,23 +15,19 @@
     <!--container principal-->
     <div class="container">
       <div class="header">
-        <h2>Informações da empreiteira</h2>
+        <h2>Informações da Empreiteira</h2>
       </div>
 
       <main>
         <div class="linha">
           <div class="coluna">
             <section>
-              <!-- Divisão para preenchimento das informações da empreiteira -->
-              <h1> Endereço da empreiteira</h1>
-    
-              <form>
-    
-                <label for="cep">CEP</label>
-                <input id="cep" type="text" required />
-                <br></br>
-    
-                <label for="uf">ESTADO</label>
+              <!-- Divisão para preenchimento do endereço da empreiteira -->
+                
+              <div class="entrada">
+                <h2> Endereço da Empreiteira</h2>
+
+                <label for="uf">Estado</label>
                 <select id="uf">
                   <option value="AC">Acre</option>
                   <option value="AL">Alagoas</option>
@@ -61,78 +57,84 @@
                   <option value="SE">Sergipe</option>
                   <option value="TO">Tocantins</option>
                 </select>
-                <br></br>
-    
-                <label for="cidade">Cidade:</label>
-                <input id="cidade" type="text" required />
-                <br></br>
-    
-                <label for="Endereço">Endereço:</label>
-                <input id="Endereço" type="text" required />
-                <br></br>
-    
-                <label for="Numero">Número:</label>
-                <input id="Numero" type="number" required />
-                <br></br>
-    
-                <label for="Bairro">Bairro:</label>
-                <input id="Bairro" type="text" required />
-                <br></br>
-    
-                <label for="Complemento">Complemento:</label>
-                <input id="Complemento" type="text" required />
-                <br></br>
-              </form>
-            </section>
-    
-            <section>
-              <!-- Divisão para preenchimento de informações legais -->
-              <h1> Informações legais</h1>
-    
-              <label for="CNPJ">CNPJ:</label>
-              <input id="CPNJ" type="number" required />
-              <br></br>
-              <label for="RAZÃO SOCIAL">Razão social:</label>
-              <input id="RAZÃO SOCIAL" type="text" required />
-              <br></br>
-              <label for="NOME DA EMPREITEIRA">Nome da empreiteira:</label>
-              <input id="NOME DA EMPREITEIRA" type="text" required />
-              <br></br>
-              <label for="representante">Representante:</label>
-              <input id="representante" type="text" required />
-              <br></br>
-              <label for="CPF">CPF:</label>
-              <input id="CPF" type="number" required />
-              <br></br>
-              <label for="RG">RG:</label>
-              <input id="RG" type="number" required />
-              <br></br>
-              <label for="CONTATO DA EMPREITEIRA">Contato da empreiteira:</label>
-              <input id="CONTATO DA EMPREITEIRA" type="number" required />
-              <br></br>
-            </section>
-    
-          </div>
-          <div class="coluna">
-            <section>
-              <!-- Definições da empreiteira -->
-    
-              <h1> Descrição da empreiteira </h1>
-    
-              <label for="CATEGORIA">Descrição:</label>
-              <br>
-              <textarea name="descricao" id="descricao" rows="10" cols="40" maxlength="500"></textarea>
-              <br></br>
 
-              <label for="funcionarios">Qunatidade de funcionários:</label>
-              <input type="number" name="funcionarios" id="funcionarios">
-              
-    
-              <div>
-                <button href="perfil.html" type="button" class="btn btn-danger">Atualizar Informações</button>
-              </div>
-    
+                    <br><br>
+
+                    <label for="cidade">Cidade</label>
+                    <input id="cidade" type="text" required />
+                    <br></br>
+        
+                    <label for="Bairro">Bairro</label>
+                    <input id="bairro" type="text" required />
+                    <br></br>
+
+                    <label for="cep">CEP</label> 
+                    <input id="cep" type="text" required />
+        
+                    <label for="Numero">N°</label>
+                    <input id="Numero" type="number" required />
+                    <br></br>
+        
+                    <label for="Complemento">Complemento</label>
+                    <input id="Complemento" type="text" required />
+                    <br></br>
             </section>
+
+                </div>
+                
+
+                <br>
+
+                <section>
+                  <!-- Divisão para preenchimento de informações legais -->
+          
+                  <div class="entradaInfo">
+                    <h2> Informações Legais</h2>
+        
+                    <label for="nomeEmp">Nome da Empreiteira</label>
+                    <br>
+                    <input id="nomeEmpreiteira" type="text" required />
+                    <br><br>
+                    <label for="razaoS">Razão Social</label>
+                    <br>
+                    <input id="razaoSocial" type="text" required />
+                    <br><br>
+                    <label for="CNPJ">CNPJ</label>
+                    <br>
+                    <input id="CPNJ" type="number" required />
+                    <br><br>
+                    <label for="representante">Representante Legal</label>
+                    <br>
+                    <input type="text" id="representante" required />
+
+                  </div>
+
+                </section>
+                
+                <br>
+
+                <section>
+                  <!-- Definições da Empreiteira-->
+
+                  <div class="entrada">
+                    <h2> Descrição da Empreiteira </h2>
+    
+                    <label for="CATEGORIA">Descrição:</label>
+                    <br>
+                    <textarea name="descricao" id="descricao" rows="10" cols="40" maxlength="500"></textarea>
+                    <br></br>
+
+                    <label for="funcionarios">Quantidade de Funcionários:</label>
+                    <input type="number" name="funcionarios" id="funcionarios">
+                    
+          
+                    <div>
+                      <button href="perfil.html" type="button" class="btn btn-danger">Atualizar Informações</button>
+                    </div>
+
+                  </div>
+
+                </section>
 
       </main>
       </div>
