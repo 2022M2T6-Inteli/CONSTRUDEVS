@@ -1,0 +1,149 @@
+/*Formatação geral*/
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+
+
+
+/*Formatação do corpo, definindo cor de fundo e fonte*/
+.body1 {
+    background-color: #26815c;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+/*Formatação do ID "container" e alinhamento do que está contido nele de maneira geral*/
+#container {
+    text-align: center;
+    margin-top: 10%;
+    height: 10%;
+    margin-bottom: 10%;
+    
+}
+
+
+
+/*Formatação da imagem que representa os usuários e das empreiteiras*/
+.img1 {
+    margin-bottom: 7%;
+    background-color: #d9d9d9;
+    padding: 3%;
+    border-radius: 25%;
+    box-shadow: 0px 10px 15px  black;
+    
+    
+}
+
+
+/*Formatação da imagem que representa a parte da administração, com cor de fundo diferente das demais*/
+.img2 {
+    margin-bottom: 7%;
+    background-color: #fff;
+    padding: 3%;
+    border-radius: 25%;
+    box-shadow: 0px 10px 15px  black;
+    
+}
+
+
+/*Formatação do link que redireciona os usuários e empreiteiras*/
+.link {
+    text-decoration: none;
+    background-color: #fbcc54;
+    padding: 5%;
+    box-shadow: 0px 10px 15px  black;
+    font-size: 200%;
+    font-weight: 400;
+    text-decoration-color: black;
+    margin-bottom: 50%;
+    border-radius: 20px;
+}
+
+
+/*Formatação da "caixa, onde o link está contido, para aumentar os espaçamentos*/
+.boxlink {
+    margin-bottom: 15%;
+}
+
+/*Formatação do link que redireciona os administradores*/
+.link1 {
+    text-decoration:none;
+    background-color: #fbcc54;
+    padding: 5%;
+    box-shadow: 0px 10px 15px  black;
+    font-size: 200%;
+    font-weight: 400;
+    border-radius: 20px;
+}
+
+
+/*Efeito visual que ao passar o mouse sobre o link, ele muda de cor, para ajudar o usuário a se orientar*/
+.link:hover {
+    color:aqua;
+}
+
+
+/*Efeito visual que ao passar o mouse sobre o link, ele muda de cor, para ajudar o administrador a se orientar*/
+.link1:hover {
+    color:aqua;
+}
+
+
+/*Alinhamento dos itens do cabeçalho ao centro da página*/
+#header{
+    text-align: center;
+}
+
+
+/*Formatação da imagem de logo da MRV contida no header*/
+.logo {
+    margin-top: 1%;
+    align-items: center;
+}
+
+
+/*Formatação das caixas de texto para preencher com os dados e o pseudo-botão que envia os dados*/
+input {
+    width:40%;
+    height: 70px;
+    margin: 1%;
+    font-size: 25px;
+    max-width: 300px;
+    box-shadow: 0px 5px 10px  black;
+}
+
+/*Formatação do texto contido dentro da caixa de texto (placeholder)*/
+.email {
+    padding-left: 20px;
+}
+
+/*Formatação do texto contido dentro da caixa de texto (placeholder)*/
+.senha {
+    padding-left: 20px;
+}
+
+/*Formatação do texto contido dentro da caixa de texto (placeholder)*/
+.CNPJ {
+    padding-left: 20px;
+}
+
+/*Formatação geral das imagens para definir uma largura máxima para todas*/
+img {
+    max-width: 150px;
+}
+
+
+/*Formatação do pseudo-botão para ficar sem pontas (ter formato arredondado)*/
+.submit {
+    border-radius: 50px;
+
+}
+
+/*Formatação do pseudo-botão para mudar de cor quando o ponteiro do mouse passar por cima*/
+.submit:hover {
+    background-color: yellow;
+    
+}
+
