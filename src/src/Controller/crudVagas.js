@@ -80,7 +80,7 @@ export async function joinEmpreiteiroVaga(req, res) {
 // comando DELETE para todos os dados da tabela
 export async function deleteAllVagas(req, res) {
   bancoDados().then((db) => {
-    db.get("DELETE  FROM Vagas").then((res) => res);
+    db.get("DELETE FROM Vagas").then((res) => res);
   });
   res.json({
     statusCode: 200,
