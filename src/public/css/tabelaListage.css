@@ -4,3 +4,38 @@
     box-sizing: border-box;
 }
 
+/*Estilização do corpo*/
+.body1 {
+    background-color: #99b78b;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+/*Estilizção do botão que lista os itens*/
+
+#btn {
+    background-color: #f79227;
+    margin-left: 40%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    box-shadow: 2px 2px 2px;
+}
+
+
+/*Estilização da tabela*/
+.table {
+    border-bottom: 5px solid;
+    background-color: white;
+    
+}
+
+
+
+#categoria {
+    background-color: #d9d9d9 ;
+}
+
+#categoria1 {
+    background-color: #edeae4;
+}
