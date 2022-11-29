@@ -8,7 +8,6 @@
     />
     <title>Ponte</title>
     <link rel="stylesheet" type="text/css" href="../css/criarConta.css" />
-    <script src="../js/criarConta.js"></script>
   </head>
 
   <body>
@@ -19,17 +18,35 @@
       </div>
 
       <!--inserção do nome da empresa-->
-      <form action = "/cadastro" type = "submit" method = "post" id="form" class="form">
+      <form
+        action="/adicionaEmpreiteiro"
+        type="submit"
+        method="post"
+        id="form"
+        class="form"
+      >
         <div class="form-control">
           <label for="username">Nome da Empresa</label>
-          <input type="text" placeholder="nome_empresa" id="username" value = "nome" name = "nome"/>
+          <input
+            type="text"
+            placeholder="nome_empresa"
+            id="username"
+            value="nome_empresa"
+            name="nome_empresa"
+          />
           <i class="fas fa-check-circle"></i>
           <i class="fas fa-exclamation-circle"></i>
           <small>Error message</small>
         </div>
         <div class="form-control">
           <label for="username">Email</label>
-          <input type="email" placeholder="empresa@email.com" id="email" />
+          <input
+            type="email"
+            placeholder="empresa@email.com"
+            id="email"
+            value="email_empresa"
+            name="email_empresa"
+          />
           <i class="fas fa-check-circle"></i>
           <i class="fas fa-exclamation-circle"></i>
           <small>Error message</small>
@@ -38,7 +55,13 @@
         <div class="form-control">
           <!--CNPJ-->
           <label for="username">CNPJ</label>
-          <input type="cnpj" placeholder="12.345.678/0001-91" id="cnpj" />
+          <input
+            type="cnpj "
+            placeholder="12.345.678/0001-91"
+            id="cnpj"
+            value="cnpj"
+            name="cnpj"
+          />
           <i class="fas fa-check-circle"></i>
           <i class="fas fa-exclamation-circle"></i>
           <small>Error message</small>
@@ -47,7 +70,13 @@
         <div class="form-control">
           <!--CNPJ-->
           <label for="username">Localidade</label>
-          <input type="cnpj" placeholder="São Paulo - SP" id="cnpj" />
+          <input
+            type="localidade"
+            placeholder="São Paulo - SP"
+            id="localidade"
+            value="localidade"
+            name="localidade"
+          />
           <i class="fas fa-check-circle"></i>
           <i class="fas fa-exclamation-circle"></i>
           <small>Error message</small>
@@ -55,7 +84,13 @@
         <div class="form-control">
           <!--CNPJ-->
           <label for="username">Especialidade</label>
-          <input type="cnpj" placeholder="Pintura" id="cnpj" />
+          <input
+            type="especialidade"
+            placeholder="Pintura"
+            id="especialidade"
+            value="especialidade"
+            name="especialidade"
+          />
           <i class="fas fa-check-circle"></i>
           <i class="fas fa-exclamation-circle"></i>
           <small>Error message</small>
@@ -68,6 +103,7 @@
             type="representante"
             placeholder="Silvia da Silva"
             id="representante"
+            name="representante"
           />
           <i class="fas fa-check-circle"></i>
           <i class="fas fa-exclamation-circle"></i>
@@ -78,9 +114,10 @@
           <!--email representante-->
           <label for="username">Email do representante</label>
           <input
-            type="email_repre"
+            type="email_representante"
             placeholder="nome@email.com"
-            id="email_repre"
+            id="email_representante"
+            name="email_representante"
           />
           <i class="fas fa-check-circle"></i>
           <i class="fas fa-exclamation-circle"></i>
@@ -90,7 +127,12 @@
         <!-- inserção de senha -->
         <div class="form-control">
           <label for="username">Senha</label>
-          <input type="password" placeholder="senha" id="password" />
+          <input
+            type="password"
+            placeholder="senha"
+            id="password"
+            name="senha"
+          />
           <i class="fas fa-check-circle"></i>
           <i class="fas fa-exclamation-circle"></i>
           <small>Error message</small>
@@ -99,14 +141,19 @@
         <!--confirmação de senha-->
         <div class="form-control">
           <label for="username">Confirmação de senha</label>
-          <input type="password" placeholder="senha novamente" id="password2" />
+          <input
+            type="password"
+            placeholder="senha novamente"
+            id="password2"
+            name="confirma_senha"
+          />
           <i class="fas fa-check-circle"></i>
           <i class="fas fa-exclamation-circle"></i>
           <small>Error message</small>
         </div>
-        <button onclick = "visualizacaoAdministrador()">Criar</button>
+        <button type="submit">Cadastrar</button>
       </form>
     </div>
-    <script src="../js/visualizacaoAdministrador.js"></script>
+    <!-- <script src="../js/criarConta.js"></script> -->
   </body>
 </html>
