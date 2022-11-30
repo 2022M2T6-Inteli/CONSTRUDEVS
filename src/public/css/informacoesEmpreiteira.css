@@ -145,3 +145,8 @@ button {
 .entradaInfo > h2{
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
+
+.entrada > textarea[id=descricao]{
+	border: 2px solid #f0f0f0;
+    border-radius: 5px;
+}

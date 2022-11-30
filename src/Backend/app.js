@@ -9,6 +9,7 @@ import efetivacao from '../src/routes/efetivacao.js'
 import empreiteiro from '../src/routes/empreiteiro.js'
 import vagas from '../src/routes/vagas.js'
 import adminMrv from '../src/routes/adminMrv.js'
+import renderizaLogin from '../src/routes/renderizaPags.js'
 import path from 'path'
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
@@ -36,26 +37,37 @@ app.use(efetivacao)
 app.use(empreiteiro)
 app.use(vagas)
 app.use(adminMrv)
+app.use(renderizaLogin)
 
 // iniciando a pasta views
 app.set('view engine', 'ejs')
 
-app.use(express.static("public"))
+app.use("/public", express.static(path.join(__dirname, "../public"), {
+    // Aqui estamos configurando o cache dos arquivos estáticos... Muito
+    // útil em ambientes de produção, mas deve-se ter cuidado durante a
+    // fase de desenvolvimento.
+    cacheControl: true,
+    etag: false,
+    maxAge: "30d"
+}));
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname + "../../public/index.html"))
+
+app.get('/', (req,res) =>{
+    res.render("hub/hub")
 })
 
-app.post("/cadastro", (req, res) => {
-    res.render("usuario", { nome: req.body.nome })
-    console.log({ nome: req.body.nome })
+
+app.get("/hub", (req,res) =>{
+    res.render("hub/hub")
 })
+
+
 // criando as tabelas 
 createVagas();
 createEmpreiteiro();
 createEfetivacao();
 createAdminMrv();
 
-// abrindo servidor 
-app.listen(3001, () => console.log("api Rodando."))
+ // abrindo servidor 
+app.listen(3001, ()=>console.log("api Rodando em: http://localhost:3001"))
 

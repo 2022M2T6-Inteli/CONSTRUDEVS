@@ -9,7 +9,7 @@
 
 /*Formatação do corpo, definindo cor de fundo e fonte*/
 .body1 {
-    background-color: #26815c;
+    background:linear-gradient(#505050, #26815c, #99b78b) no-repeat;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -20,7 +20,6 @@
     margin-top: 10%;
     height: 10%;
     margin-bottom: 10%;
-    
 }
 
 
