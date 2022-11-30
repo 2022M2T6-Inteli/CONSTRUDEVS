@@ -7,8 +7,8 @@
 }
 
 /*posicionamento e alinhamento da texto dentro da parte central da págiina*/
-.seccion-perfil-usuario .perfil-usuario-body,
-.seccion-perfil-usuario {
+.sessao-perfil-usuario .perfil-usuario-body,
+.sessao-perfil-usuario {
     display: flex;
     flex-direction: wrap;
     flex-direction: column;
@@ -17,7 +17,7 @@
 }
 
 /*comprimento, posicionamento e fundo do cabeçalho*/
-.seccion-perfil-usuario .perfil-usuario-header {
+.sessao-perfil-usuario .perfil-usuario-header {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -26,7 +26,7 @@
 }
 
 /*definindo comprimento, posição, borda e cor do fundo da foto usada*/
-.seccion-perfil-usuario .perfil-usuario-portada {
+.sessao-perfil-usuario .perfil-usuario-portada {
     display: block;
     position: relative;
     width: 90%;
@@ -37,7 +37,7 @@
 
 /*definindo como o circulo, que é destinado à imagem irá se comportar. 
 Inserindo sua: posição, comprimento, largura, alinhamento e cor de fundo*/
-.seccion-perfil-usuario .perfil-usuario-avatar {
+.sessao-perfil-usuario .perfil-usuario-avatar {
     display: flex;
     width: 180px;
     height: 180px;
@@ -55,14 +55,14 @@ Inserindo sua: posição, comprimento, largura, alinhamento e cor de fundo*/
 }
 
 /*definindo tamanho e posição da foto inserida*/
-.seccion-perfil-usuario .perfil-usuario-avatar img {
+.sessao-perfil-usuario .perfil-usuario-avatar img {
     width: 100%;
     position: relative;
     border-radius: 50%;
 }
 
 /*utilizando a estilização do botão para facilitar o posicionamento*/
-.seccion-perfil-usuario .perfil-usuario-avatar .boton-avatar {
+.sessao-perfil-usuario .perfil-usuario-avatar .boton-avatar {
     position: absolute;
     left: 0;
     top: 0;
@@ -74,12 +74,12 @@ Inserindo sua: posição, comprimento, largura, alinhamento e cor de fundo*/
 }
 
 /*comprimento central*/
-.seccion-perfil-usuario .perfil-usuario-body {
+.sessao-perfil-usuario .perfil-usuario-body {
     width: 75%
 }
 
 /*estilizando o texto usado no campo título (posição, comprimento ocupado e fonte)*/
-.seccion-perfil-usuario .perfil-usuario-body .titulo {
+.sessao-perfil-usuario .perfil-usuario-body .titulo {
     display: block;
     width: 100%;
     font-size: 1.75rem;
@@ -87,15 +87,15 @@ Inserindo sua: posição, comprimento, largura, alinhamento e cor de fundo*/
 }
 
 /*definindo cor, fonte e alinhamento do texto dentro da classe texto*/
-.seccion-perfil-usuario .perfil-usuario-body .texto {
+.sessao-perfil-usuario .perfil-usuario-body .texto {
     color: black;
     font-size: 0.95em;
     text-align: center;
 }
 
 /*definindo posição, sombra, comprimento e fundo para o footer e a bio da página */
-.seccion-perfil-usuario .perfil-usuario-footer,
-.seccion-perfil-usuario .perfil-usuario-bio {
+.sessao-perfil-usuario .perfil-usuario-footer,
+.sessao-perfil-usuario .perfil-usuario-bio {
     display: flex;
     flex-wrap: wrap;
     padding: 1.5rem 2rem;
@@ -106,36 +106,36 @@ Inserindo sua: posição, comprimento, largura, alinhamento e cor de fundo*/
 }
 
 /*definindo posição e alinhamento textual da bio*/
-.seccion-perfil-usuario .perfil-usuario-bio {
+.sessao-perfil-usuario .perfil-usuario-bio {
     margin-bottom: 1.25rem;
     text-align: center;
 }
 
 /*deslocando o footer para melhor posicionamento*/
-.seccion-perfil-usuario .perfil-usuario-footer {
+.sessao-perfil-usuario .perfil-usuario-footer {
     margin-bottom: 1.25rem;
 }
 
 /*definindo quanto de espaço horizontal os dados do footer irão ocupar e retirando o seu estilo padrão*/
-.seccion-perfil-usuario .lista-datos {
+.sessao-perfil-usuario .lista-datos {
     width: 50%;
     list-style: none;
 }
 
 /*preenchimento interno de cada dado da lista s*/
-.seccion-perfil-usuario .lista-datos li {
+.sessao-perfil-usuario .lista-datos li {
     padding: 5px 0;
 }
 
 /*definindo posição, tamanho de fonte e alinhamento vertical de cada ícone*/
-.seccion-perfil-usuario .lista-datos li > .icon {
+.sessao-perfil-usuario .lista-datos li > .icon {
     margin-right: 1rem;
     font-size: 1.2rem;
     vertical-align: middle;
 }
 
 /*estilização inicial dos botões referentes às redes sociais que serão implementadas posteriomente*/
-.seccion-perfil-usuario .redes-sociais .boton-redes {
+.sessao-perfil-usuario .redes-sociais .boton-redes {
     border: 0;
     background: white;
     text-decoration: none;

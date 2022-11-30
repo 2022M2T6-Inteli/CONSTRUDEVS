@@ -6,8 +6,6 @@
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-
-
 /*definindo a cor, tipo de fonte, sombra, comprimento, largura, preenchimento (externo e interno) e alinhamento de cada classe*/
 
 body {
@@ -20,7 +18,7 @@ body {
 	margin: 5%;
 }
 
-.container {
+.conteiner {
 	background-color: #fff;
 	border-radius: 5px;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -30,13 +28,13 @@ body {
 
 }
 
-.header {
+.conteiner {
 	border-bottom: 1px solid #f0f0f0;
 	background-color: #f7f7f7;
 	padding: 20px 40px;
 }
 
-.header h2 {
+.conteiner h2 {
 	margin: 0;
 }
 
