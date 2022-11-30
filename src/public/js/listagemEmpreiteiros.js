@@ -9,7 +9,6 @@ btn.addEventListener("click", () => {
     })
     .then((resposta) => {
       resposta.forEach(function (user) {
-        console.log(user);
         let linha = document.createElement("tr");
         linha.className = "linha";
 
@@ -23,7 +22,6 @@ btn.addEventListener("click", () => {
                             <td>${user.email_representante}</td>`;
 
         tbody.appendChild(linha);
-        console.log(linha);
       });
     });
 });

@@ -1,32 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="public/css/login.css">
         <title>Entrada_login</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="login.css">
     </head>
     <!--Término das definições de referências da tela da empreiteira logar-->
     <body class="body1">
 
         <header id="header">
             <!--Cabeçalho apenas com o logo da MRV formatado-->
-            <img class="logo" src="img/logo-mrv.png" width="25%" >
+            <img class="logo" src="public/img/logo-mrv.png" width="25%" >
         </header>
 
         <!--Término do cabeçalho da tela da administração logar-->
 
         <div id="container">
 
-            <img class="img1" src="img/empre.png" width="15%">
+            <img class="img1" src="public/img/empre.png" width="15%">
 
             <!--Imagem com símbolo de empresa (empreiteira) para fins estéticos e informativos-->
 
             
 
-            <form>
+            <form action = "/loginEmpreiteiro" method = "post">
 
                 <div>
-                    <input class="CNPJ" type="text" name="CNPJ" id="CNPJ" placeholder="Digite seu CNPJ">
+                    <input class="CNPJ" type="text" name="cnpj" id="CNPJ" placeholder="Digite seu CNPJ">
                 </div>
                 <!--Caixa de texto para inserção das informações de usuário (CNPJ)-->
                 <div>
