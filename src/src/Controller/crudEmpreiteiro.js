@@ -60,7 +60,7 @@ export async function updateEmpreiteiro(req, res) {
   let empreiteiros = req.body;
   bancoDados().then((db) => {
     db.run(
-      "UPDATE empreiteiros SET nome_empresa=?, email_empresa=?, cnpj=?, localidade=?, especialidade=?, representante=?, senha=?,confirma_senha=? WHERE id_empreiteiro=?",
+      "UPDATE empreiteiros SET id_empreiteiro=?, nome_empresa=?, email_empresa=?, cnpj=?, localidade=?, especialidade=?, representante=?, senha=?,confirma_senha=?",
       [
         empreiteiros.nome_empresa,
         empreiteiros.email_empresa,
