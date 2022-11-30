@@ -1,8 +1,8 @@
 
 import cors from 'cors';
-import { createVagas} from '../src/Controller/crudVagas.js';
-import {createEmpreiteiro} from '../src/Controller/crudEmpreiteiro.js';
-import {createEfetivacao } from '../src/Controller/crudEfetivacao.js';
+import { createVagas } from '../src/Controller/crudVagas.js';
+import { createEmpreiteiro } from '../src/Controller/crudEmpreiteiro.js';
+import { createEfetivacao } from '../src/Controller/crudEfetivacao.js';
 import { createAdminMrv } from '../src/Controller/crudAdminMrv.js';
 import express from 'express';
 import efetivacao from '../src/routes/efetivacao.js'
@@ -19,6 +19,9 @@ const __dirname = dirname(__filename);
 
 import bodyParser from 'body-parser';
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
+// Configurar o BodyParser
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 export default urlencodedParser;
 
@@ -39,20 +42,20 @@ app.set('view engine', 'ejs')
 
 app.use(express.static("public"))
 
-app.get('/', (req,res) =>{
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname + "../../public/index.html"))
 })
 
-app.post("/cadastro", (req,res) =>{
-    res.render("usuario", {nome:req.body.nome})
-    console.log({nome:req.body.nome})
+app.post("/cadastro", (req, res) => {
+    res.render("usuario", { nome: req.body.nome })
+    console.log({ nome: req.body.nome })
 })
 // criando as tabelas 
- createVagas();
- createEmpreiteiro();
- createEfetivacao();
- createAdminMrv();
+createVagas();
+createEmpreiteiro();
+createEfetivacao();
+createAdminMrv();
 
- // abrindo servidor 
-app.listen(3001, ()=>console.log("api Rodando."))
+// abrindo servidor 
+app.listen(3001, () => console.log("api Rodando."))
 

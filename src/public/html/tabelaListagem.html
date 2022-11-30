@@ -18,6 +18,7 @@
     <button class="btn btn-blue" id="btn">
       Aperte aqui para listar os itens
     </button>
+
     <div class="tabela">
       <table class="table">
         <thead class="thead-dark">
@@ -32,13 +33,19 @@
             <th scope="col">Email do Representante</th>
           </tr>
         </thead>
-        <tbody id="tbody">
+        <tbody class="excluirLinha" id="tbody">
+            
+          
+
+          
           <tr class="linha">
+            
           </tr>
         </tbody>
       </table>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="../js/listagemEmpreiteiros.js"></script>
     <!-- JavaScript Bundle with Popper -->
     <script
@@ -46,5 +53,6 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+    <script src="../../Backend/excluir.js" defer></script>
   </body>
 </html>

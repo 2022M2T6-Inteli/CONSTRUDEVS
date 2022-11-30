@@ -82,6 +82,7 @@ export async function updateEmpreiteiro(req, res) {
 // comando delete - responsável por deletar dados da tabela MEI
 export async function deleteEmpreiteiro(req, res) {
   let id_empreiteiro = req.body.id_empreiteiro;
+  
   bancoDados().then((db) => {
     db.get("DELETE FROM empreiteiros WHERE id_empreiteiro=?", [
       id_empreiteiro,
