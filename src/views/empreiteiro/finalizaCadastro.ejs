@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,user-scalable=no"
+    />
+    <title>Ponte</title>
+    <link rel="stylesheet" type="text/css" href="public/css/informacoesEmpreiteira.css" />
+
+  </head>
+
+  <body>
+    <!--container principal-->
+    <div class="container">
+      <div class="header">
+        <h2>Informações da Empreiteira</h2>
+      </div>
+
+      <main>
+        <div class="linha">
+          <div class="coluna">
+            <section>
+              <!-- Divisão para preenchimento do endereço da empreiteira -->
+                
+              <div class="entrada">
+                <h2> Endereço da Empreiteira</h2>
+
+                <label for="uf">Estado</label>
+                <select id="uf">
+                  <option value="AC">Acre</option>
+                  <option value="AL">Alagoas</option>
+                  <option value="AP">Amapá</option>
+                  <option value="AM">Amazonas</option>
+                  <option value="BA">Bahia</option>
+                  <option value="CE">Ceará</option>
+                  <option value="DF">Distrito Federal</option>
+                  <option value="ES">Espírito Santo</option>
+                  <option value="GO">Goiás</option>
+                  <option value="MA">Maranhão</option>
+                  <option value="MT">Mato Grosso</option>
+                  <option value="MS">Mato Grosso do Sul</option>
+                  <option value="MG">Minas Gerais</option>
+                  <option value="PA">Pará</option>
+                  <option value="PB">Paraíba</option>
+                  <option value="PR">Paraná</option>
+                  <option value="PE">Pernambuco</option>
+                  <option value="PI">Piauí</option>
+                  <option value="RJ">Rio de Janeiro</option>
+                  <option value="RN">Rio Grande do Norte</option>
+                  <option value="RS">Rio Grande do Sul</option>
+                  <option value="RO">Rondônia</option>
+                  <option value="RR">Roraima</option>
+                  <option value="SC">Santa Catarina</option>
+                  <option value="SP">São Paulo</option>
+                  <option value="SE">Sergipe</option>
+                  <option value="TO">Tocantins</option>
+                </select>
+
+                    <br><br>
+
+                    <label for="cidade">Cidade</label>
+                    <input id="cidade" type="text" required />
+                    <br></br>
+        
+                    <label for="Bairro">Bairro</label>
+                    <input id="bairro" type="text" required />
+                    <br></br>
+
+                    <label for="cep">CEP</label> 
+                    <input id="cep" type="text" required />
+        
+                    <label for="Numero">N°</label>
+                    <input id="Numero" type="number" required />
+                    <br></br>
+        
+                    <label for="Complemento">Complemento</label>
+                    <input id="Complemento" type="text" required />
+                    <br></br>
+            </section>
+
+                </div>
+                
+
+                <br>
+
+                <section>
+                  <!-- Divisão para preenchimento de informações legais -->
+          
+                  <div class="entradaInfo">
+                    <h2> Informações Legais</h2>
+        
+                    <label for="nomeEmp">Nome da Empreiteira</label>
+                    <br>
+                    <input id="nomeEmpreiteira" type="text" required />
+                    <br><br>
+                    <label for="razaoS">Razão Social</label>
+                    <br>
+                    <input id="razaoSocial" type="text" required />
+                    <br><br>
+                    <label for="CNPJ">CNPJ</label>
+                    <br>
+                    <input id="CPNJ" type="number" required />
+                    <br><br>
+                    <label for="representante">Representante Legal</label>
+                    <br>
+                    <input type="text" id="representante" required />
+
+                  </div>
+
+                </section>
+                
+                <br>
+
+                <section>
+                  <!-- Definições da Empreiteira-->
+
+                  <div class="entrada">
+                    <h2> Descrição da Empreiteira </h2>
+    
+                    <label for="CATEGORIA">Descrição:</label>
+                    <br>
+                    <textarea name="descricao" id="descricao" rows="10" cols="40" maxlength="500"></textarea>
+                    <br></br>
+
+                    <label for="funcionarios">Quantidade de Funcionários:</label>
+                    <input type="number" name="funcionarios" id="funcionarios">
+                    
+          
+                    <div>
+                      <button href="perfil.html" type="button" class="btn btn-danger">Atualizar Informações</button>
+                    </div>
+
+                  </div>
+
+                </section>
+
+      </main>
+      </div>
+
+  </body>
+</html>

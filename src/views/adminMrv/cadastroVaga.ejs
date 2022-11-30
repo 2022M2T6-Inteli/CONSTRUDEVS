@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,user-scalable=no"
+    />
+    <title>Ponte</title>
+    <link rel="stylesheet" type="text/css" href="public/css/cadastroVaga.css" />
+  </head>
+
+  <body>
+    <!--container principal-->
+    <div class="container">
+      <div class="header">
+        <h2>Cadastrar Vaga</h2>
+      </div>
+
+      <!--inserção do nome da vaga-->
+      <form id="form" class="form">
+        <div class="form-control">
+          <label for="username">Nome da vaga</label>
+          <input type="text"id="username" name = "nome" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="username">Estado</label>
+          <input type="text" id="estado" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+        <div class="form-control">
+            <label for="username">Cidade</label>
+            <input type="text" id="cidade" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+
+        <div class="form-control">
+          <!--descricao-->
+          <label for="username">Descrição da vaga</label>
+          <textarea name="descricao" id="descricao" rows="10" cols="40" maxlength="500"></textarea>
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+
+        <div class="form-control">
+          <label for="username">Duração</label>
+          <input
+            type="text"
+            id="duracao"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+        <!-- código da vaga -->
+        <div class="form-control">
+          <label for="username">Código da vaga</label>
+          <input type="password"id="password" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <button>Publicar</button>
+      </form>
+    </div>
+  </body>
+</html>
