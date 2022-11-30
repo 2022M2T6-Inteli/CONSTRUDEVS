@@ -3,13 +3,6 @@ import fetch from "node-fetch";
 
 const router = Router();
 
-router.get("/renderizaLoginEmpreiteira", (req, res) => {
-  res.render("login/loginEmpreiteira");
-});
-
-router.get("/renderizaLoginAdminMrv", (req, res) => {
-  res.render("login/loginAdminMrv");
-});
 
 router.get("/renderizaIndexVisitante", (req, res) => {
   res.render("visitante/pagVisitante");
@@ -22,6 +15,29 @@ router.get("/renderizaIndexEmpreiteiro", (req, res) => {
 router.get("/renderizaIndexAdminMrv", (req, res) => {
   res.render("adminMrv/pagAdmin");
 });
+
+
+router.get("/finalizaCadastroEmpreiteiro", (req,res) =>{
+  res.render("empreiteiro/finalizaCadastro")
+})
+
+
+router.get("/oportunidadesEmpreiteiro", (req,res) =>{
+  res.render("empreiteiro/oportunidadesEmpreiteiro")
+})
+
+router.get("/renderizaListagemEmpreiteiros", (req,res) =>{
+  res.render("adminMrv/listagemEmpreiteiros")
+})
+
+router.get("/cadastroVaga", (req,res) =>{
+  res.render("adminMrv/cadastroVaga")
+})
+
+router.get("/renderizaPerfilAdmin", (req,res) =>{
+  res.render
+})
+
 
 router.post("/loginEmpreiteiro", selecionaEmpreiteiro);
 

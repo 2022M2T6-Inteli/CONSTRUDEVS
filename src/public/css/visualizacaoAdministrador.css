@@ -11,20 +11,20 @@ body {
     background: linear-gradient(#26815c, transparent) no-repeat;
 }
 
-/*dimensões internas do container principal e alinhamento do texto no centro*/
-.container {
+/*dimensões internas do conteiner principal e alinhamento do texto no centro*/
+.conteiner {
     padding: 25px 9%;
     text-align: center;
 }
 
 /*texto e preenchimento acima da caixa de busca*/
-.container .heading {
+.conteiner .heading {
     font-size: 30px;
     padding-bottom: 25px;
 }
 
 /*alinhamento do texto, tamanho da borda e da letra, preenchimento e comprimento da caixa de busca*/
-.container #search-box {
+.conteiner #search-box {
     text-align: center;
     border-radius: 30px;
     font-size: 20px;
@@ -34,7 +34,7 @@ body {
 }
 
 /*posicionamento, espaçamento e preenchimento interno da imagem em cada card*/
-.container .container-image {
+.conteiner .conteiner-image {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -50,7 +50,7 @@ body {
 }
 
 /*comprimento do campo da imagem, tamanho da sua borda, tipo de cursor, sombra por trás do card, cor, preenchimento e animação definida anterioriamente*/
-.container .container-image .image {
+.conteiner .conteiner-image .image {
     width: 350px;
     border-radius: 5px;
     border: 2px solid #000;
@@ -62,7 +62,7 @@ body {
 }
 
 /*definindo o padrão de como as imagens no card irão se comportar: comprimento, largura, posição e borda*/
-.container .container-image .image img {
+.conteiner .conteiner-image .image img {
     width: 300px;
     height: 250px;
     object-fit: cover;
@@ -72,7 +72,7 @@ body {
 
 
 /*textos presentes no card de cada empreeiteiro cadastrado, com tamanho de fonte e cor definida*/
-.container .container-image .image h3 {
+.conteiner .conteiner-image .image h3 {
     font-size: 20px;
     color: #000;
 }
@@ -80,30 +80,30 @@ body {
 
 /*responsividade para tablets*/
 @media(max-width:770px) {
-    .container .container-image {
+    .conteiner .conteiner-image {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         padding: 25px 20px;
     }
 
-    .container .container-image .image {
+    .conteiner .conteiner-image .image {
         width: 100%;
     }
 
-    .container #search-box {
+    .conteiner #search-box {
         width: 90%;
     }
 }
 
 /*responsividade para mobile*/
 @media(max-width:450px) {
-    .container .container-image {
+    .conteiner .conteiner-image {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         padding: 25px 20px;
     }
 
-    .container .container-image .image {
+    .conteiner .conteiner-image .image {
         width: 100%;
     }
 }
