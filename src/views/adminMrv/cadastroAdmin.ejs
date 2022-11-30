@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <title>Ponte</title>
+    <link rel="stylesheet" type="text/css" href="public/css/cadastrarContratante.css"/>
+    
+  </head>
+
+  <body>
+    <!--container principal-->
+    <div class="conteiner"> <!-- era container-->
+      <div class="cabecalho"> <!-- era header-->
+        <h2>Cadastrar Contratante</h2>
+      </div>
+
+      <!--inserção do nome da rh-->
+      <form id="form" class="formulario"> <!-- era form !-->
+        <div class="controleFormulario"> <!-- era form-control !-->
+          <label for="username">Nome</label>
+          <input type="text"id="username" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+        <div class="controleFormulario">
+          <label for="username">Email</label>
+          <input type="text" id="email" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+        <div class="controleFormulario">
+            <label for="username">senha</label>
+            <input type="password" id="senha" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+
+
+        <div class="controleFormulario">
+            <label for="username">Confirmação de senha</label>
+            <input type="password" id="csenha" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+        </div>
+
+        <!-- credenciais fornecidas pela mrv -->
+        <div class="controleFormulario">
+          <label for="username">Código de funcionário MRV</label>
+          <input type="password" id="senhaMrv" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+        <button>Cadastrar</button>
+      </form>
+    </div>
+  </body>
+</html>
