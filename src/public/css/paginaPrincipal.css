@@ -25,7 +25,7 @@ html{
     scroll-behavior: smooth;
 }
 
-.btn{
+.botao{
     cursor: pointer;
     border:.2rem solid var(--orange);
     color:var(--orange);
@@ -37,7 +37,7 @@ html{
     font-size: 2rem;
 }
 
-.btn::before{
+.botao::before{
     content: '';
     position: absolute;
     top:0; left: 0;
@@ -49,11 +49,11 @@ html{
     transition: .3s;
 }
 
-.btn:hover::before{
+.botao:hover::before{
     clip-path: circle(100%);
 }
 
-.btn:hover{
+.botao:hover{
     color:#fff;
 }
 
@@ -91,24 +91,24 @@ header .logo span{
     color:var(--orange);
 }
 
-header .navbar ul{
+header .barraNavegacao ul{
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-header .navbar ul li{
+header .barraNavegacao ul li{
     margin:0 1rem;
 }
 
-header .navbar ul li a{
+header .barraNavegacao ul li a{
     color:#fff;
     font-size: 1.8rem;
 }
 
-header .navbar ul li a.active,
-header .navbar ul li a:hover{
+header .barraNavegacao ul li a.ativa,
+header .barraNavegacao ul li a:hover{
     color:var(--orange);
 }
 
@@ -124,8 +124,8 @@ header.header-active{
     box-shadow: 0 .1rem .3rem rgba(0,0,0,.3);
 }
 
-header.header-active .logo,
-header.header-active .navbar a{
+header.header-ativa .logo,
+header.header-ativa .barraNavegacao a{
     color:#333;
 }
 
@@ -156,7 +156,7 @@ header.header-active .navbar a{
     color:#fff;
 }
 
-.about .row{
+.sobre .linha{
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -165,28 +165,28 @@ header.header-active .navbar a{
     padding-top: 8rem;
 }
 
-.about .row .image{
+.sobre .linha .imagem{
     flex: 1 1 40rem;
     padding:2rem;
 }
 
-.about .row .image img{
+.sobre .linha .imagem img{
     height:100%;
     width:100%;
     object-fit: cover;
 }
 
-.about .row .content{
+.sobre .linha .conteudo{
     flex: 1 1 40rem;
     padding:2rem;
 }
 
-.about .row .content h3{
+.sobre .linha .conteudo h3{
     color:#333;
     font-size: 4rem;
 }
 
-.about .row .content p{
+.sobre .linha .conteudo p{
     color:#666;
     font-size: 1.7rem;
     padding:1rem 0;
@@ -205,7 +205,7 @@ header.header-active .navbar a{
     flex-wrap: wrap;
 }
 
-.service .box-container .box{
+.service .box-container .caixa{
     height:23rem;
     width:35rem;
     margin:1rem;
@@ -214,13 +214,13 @@ header.header-active .navbar a{
     cursor: pointer;
 }
 
-.service .box-container .box img{
+.service .box-container .caixa img{
     height:100%;
     width:100%;
     object-fit: cover;
 }
 
-.service .box-container .box .info{
+.service .box-container .caixa .informacao{
     height:90%;
     width:90%;
     position: absolute;
@@ -233,16 +233,16 @@ header.header-active .navbar a{
     flex-flow: column;
 }
 
-.service .box-container .box:hover .info{
+.service .box-container .box:hover .informacao{
     transform: translate(-50%, -50%) scale(1);
 }
 
-.service .box-container .box .info h3{
+.service .box-container .caixa .informacao h3{
     font-size: 2.5rem;
     color:#333;
 }
 
-.service .box-container .box .info p{
+.service .box-container .caixa .informacao p{
     font-size: 1.2rem;
     color:#666;
     padding:1rem 2rem;
@@ -301,7 +301,7 @@ footer{
         display: block;
     }
 
-    header .navbar{
+    header .barraNavegacao{
         position: fixed;
         top:-100rem; left: 0;
         width: 100%;
@@ -310,24 +310,24 @@ footer{
         border-top: .1rem solid rgba(0,0,0,.3);
     }
 
-    header .navbar ul{
+    header .barraNavegacao ul{
         flex-flow: column;
         padding:2rem 0;
     }
 
-    header .navbar ul li{
+    header .barraNavegacao ul li{
         margin:1rem 0;
         text-align: center;
         width: 100%;
     }
 
-    header .navbar ul li a{
+    header .barraNavegacao ul li a{
         font-size: 2.5rem;
         color: #333;
         display: block;
     }
 
-    header .navbar.nav-toggle{
+    header .barraNavegacao.nav-toggle{
         top:8rem;
         opacity: 1;
     }
