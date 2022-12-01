@@ -1,55 +1,42 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet"href="public/css/login.css">
-        <title>Entrada </title>
-    </head>
-        <!--Término das definições de referências da tela da administração logar-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="public/css/entrada-login.css">
+    <title>Entrada-login</title>
+</head>
+<body>
 
+    <!--Abertura de um cabeçalho, onde ficará o Logo da MRV-->
+    <header>
+        <img src="public/img/logo-mrv.png" width="20%">
+    </header>
 
-    <body class="corpo1">  <!--era body1-->
-        <header id="cabecalho"> <!--era header-->
-            <img class="logo" src="public/img/logo-mrv.png" href="public/index.html" width="25%" >
-        </header>
-        <!--Término do cabeçalho da tela de entrada para ir na parte de logar-->
+    <!--Abertura de uma divisão com as categorias-->
+    <div id="container">
 
-
-        <div id="conteiner"> <!--era container-->
-            <!--Abertura de uma div para inserção de link de redirecionamentos formatados-->
-            <div id="conteiner-flex">
-                <img class="img1" src="public/img/userLogin.png" width="15%">
-            </div>
-            <!--Imagem de usuário-->
-
-            <div class="boxlink">
-                <a class="link" href="/renderizaIndexVisitante">Visitante</a> 
-            </div>
-            <!--Imagem que representa o visitante e o link correspondente para o redirecionamento para a tela inicial (index)-->
-
-            <div id="conteiner-flex">
-                <img class="img1" src="public/img/empre.png" width="15%">
-            </div>
-            <!--Imagem de empreiteira-->
-
-            <div class="boxlink">
-                <a class="link" href="/loginEmpreiteiro">Empreiteira</a> 
-            </div>
-            <!--Imagem que representa a empreiteira e o link correspondente para o redirecionamento para a tela de login da empreiteira-->
-
-            <div id="conteiner-flex">
-                <img class="img2" src="public/img/adm.png" width="15%">
-            </div>
-            <!--Imagem de administração-->
-
-            <div class="boxlink">
-                <a class="link1" href="/loginAdminMrv">Administração</a>
-            </div>
-
-            <!--Imagem que representa a administração e o link correspondente para o redirecionamento para a tela de login da administração -->
-
+        <!--Abertura de uma divisão com a categoria administração-->
+        <div class="coluna-33adm">
+            <img class="imgadm" src="public/img/adm.png" width="25%"><br>
+            <a class="linkadm" href="/loginAdminMrv">Administração</a>
         </div>
-    </body>
+
+        <!--Abertura de uma divisão com a categoria empreiteira-->
+        <div class="coluna-33empre">
+            <img class="imgempre" src="public/img/empre.png" width="25%"><br>
+            <a class="linkempre" href="/loginEmpreiteiro">Empreiteira</a>
+        </div>
+
+        <!--Abertura de uma divisão com a categoria Usuário comum sem cadastro-->
+        <div class="coluna-33user">
+            <img class="imguser" src="public/img/user.png" width="25%"><br>
+            <a class="linkconvidado" href="/renderizaIndexVisitante">Convidados</a>
+        </div>
+    </div>
+
+    <!--Parágrafo de rodapé, com observação-->
+    <p class="rodape">*Convidados são usuários não cadastrados</p>
+</body>
 </html>

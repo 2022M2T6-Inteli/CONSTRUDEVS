@@ -17,11 +17,11 @@ router.get("/loginEmpreiteiro", (req,res) =>{
 })
 
 router.get("/cadastrarEmpreiteiro", (req,res) =>{
-  res.render("adminMrv/cadastroAdmin")
+  res.render("empreiteiro/finalizaCadastro")
 })
 
 router.get("/cadastrarAdminMrv", (req,res) =>{
-  res.render("empreiteiro/finalizaCadastro")
+  res.render("adminMrv/cadastroAdmin")
 })
 
 

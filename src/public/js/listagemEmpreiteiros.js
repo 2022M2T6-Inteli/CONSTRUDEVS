@@ -2,7 +2,6 @@
 let btn = document.getElementById("btn");
 let tbody = document.getElementById("tbody");
 
-
 // btn.addEventListener("click", async () => {
 //   await renderEmpreiteiros();
 // });
@@ -27,15 +26,24 @@ const toggleInputs = async (number) => {
     buttonText.innerHTML = "Salvar";
   } else {
     await updateUser(number, {
-      nome_empresa: inputs[0].value, email_empresa: inputs[1].value, cnpj: inputs[2].value, localidade: inputs[3].value, especialidade: inputs[4].value, representante: inputs[5].value, email_representante: inputs[6].value
-    }).then(res => {
-      console.log(res)
-      buttonText.innerHTML = "Carregando...";
-    }).catch(err => {
-      console.log(err)
-    }).finally(() => {
-      buttonText.innerHTML = "Habilitar edicao";
+      nome_empresa: inputs[0].value,
+      email_empresa: inputs[1].value,
+      cnpj: inputs[2].value,
+      localidade: inputs[3].value,
+      especialidade: inputs[4].value,
+      representante: inputs[5].value,
+      email_representante: inputs[6].value,
     })
+      .then((res) => {
+        console.log(res);
+        buttonText.innerHTML = "Carregando...";
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+      .finally(() => {
+        buttonText.innerHTML = "Habilitar edicao";
+      });
 
     inputs.map((input) => (input.disabled = true));
   }
@@ -47,7 +55,7 @@ const renderEmpreiteiros = async () => {
       return resposta.json();
     })
     .then((resposta) => {
-      tbody.innerHTML = ""
+      tbody.innerHTML = "";
 
       resposta.forEach(function (user) {
         console.log(user + "user");
@@ -88,44 +96,58 @@ const renderEmpreiteiros = async () => {
 
         tbody.appendChild(linha);
         console.log(linha);
-
       });
+    });
+};
+
+async function deleteUser(id) {
+  await axios
+    .delete("http://localhost:3001/deleteEmpreiteiro", {
+      data: { id_empreiteiro: id },
+    })
+    .then(async (res) => {
+      await renderEmpreiteiros();
+
+      console.log(res);
+    })
+    .catch((err) => {
+      console.log(err);
     });
 }
 
-async function deleteUser(id) {
-  await axios.delete("http://localhost:3001/deleteEmpreiteiro", {
-    data: { id_empreiteiro: id }
-  }).then(async res => {
-    await renderEmpreiteiros();
-
-    console.log(res)
-  }).catch(err => {
-    console.log(err)
-  })
-}
-
-async function updateUser(id, {
-  nome_empresa,
-  email_empresa,
-  cnpj,
-  localidade,
-  especialidade,
-  representante,
-  email_representante
-}) {
+async function updateUser(
+  id,
+  {
+    nome_empresa,
+    email_empresa,
+    cnpj,
+    localidade,
+    especialidade,
+    representante,
+    email_representante,
+  }
+) {
   try {
-      await axios.put("http://localhost:3001/atualizaEmpreiteiro", {
-      id_empreiteiro: id, nome_empresa, email_empresa, cnpj, localidade, especialidade, representante, email_representante
-    }).then(async res => {
-      console.log(res)
-      await renderEmpreiteiros();
-    }).catch(err => {
-      console.error(err)
-    })
-
+    await axios
+      .put("http://localhost:3001/atualizaEmpreiteiro", {
+        id_empreiteiro: id,
+        nome_empresa,
+        email_empresa,
+        cnpj,
+        localidade,
+        especialidade,
+        representante,
+        email_representante,
+      })
+      .then(async (res) => {
+        console.log(res);
+        await renderEmpreiteiros();
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   } catch (error) {
-    console.error(error)
+    console.error(error);
   }
 }
 
@@ -134,4 +156,3 @@ if (window) {
     renderEmpreiteiros();
   });
 }
-
