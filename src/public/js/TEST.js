@@ -41,7 +41,6 @@ const updateEmpreiteiros = async () => {
                               <input id ="6">                                             
                               <input id ="7">  
                               <button onclick="updateE()", >click</button>                                          
-                              
                             </td>
                           `;
 
