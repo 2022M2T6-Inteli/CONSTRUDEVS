@@ -17,7 +17,7 @@ router.get("/loginEmpreiteiro", (req,res) =>{
 })
 
 router.get("/cadastrarEmpreiteiro", (req,res) =>{
-  res.render("empreiteiro/finalizaCadastro")
+  res.render("empreiteiro/cadastroEmpreiteiro")
 })
 
 router.get("/cadastrarAdminMrv", (req,res) =>{

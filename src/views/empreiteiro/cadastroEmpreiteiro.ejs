@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <title>Ponte</title>
+    <link rel="stylesheet" type="text/css" href="public/css/criarConta.css"/>
+
+  </head>
+
+  <body>
+    <!--container principal-->
+    <div class="conteiner"> <!--era container-->
+      <div class="cabecalho"> <!--era header-->
+        <h2>Criar Conta</h2>
+      </div>
+
+      <!--inserção do nome da empresa-->
+      <form action="/adicionaEmpreiteiro" type="submit" method="post" id="formulario" class="formulario "> <!--eram form-->
+
+        <div class="controleFormulario"> <!--eram form-control-->
+          <label for="username">Nome da Empresa</label>
+          <input type="text" placeholder="nome_empresa" id="username"  name="nome_empresa"/>
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+        <div class="controleFormulario"> <!--eram form-control-->
+          <label for="username">Email</label>
+          <input type="email" placeholder="empresa@email.com" id="email"  name="email_empresa"/>
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+        <div class="controleFormulario"> <!--eram form-control-->
+          <!--CNPJ-->
+          <label for="username">CNPJ</label>
+          <input type="cnpj" placeholder="12.345.678/0001-91" id="cnpj"    name="cnpj"/>
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+        <div class="controleFormulario"> <!--eram form-control-->
+          <!--CNPJ-->
+          <label for="username">Localidade</label>
+          <input type="localidade" placeholder="São Paulo - SP" id="localidade" name="localidade"/>
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+        <div class="controleFormulario"> <!--eram form-control-->
+          <!--CNPJ-->
+          <label for="username">Especialidade</label>
+          <input type="especialidade" placeholder="Pintura" id="especialidade" name="especialidade"/>
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+        <div class="controleFormulario"> <!--eram form-control-->
+          <!--nome do representante-->
+          <label for="username">Representante da Empresa</label>
+          <input type="representante" placeholder="Silvia da Silva" id="representante" name="representante"/>
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+        <div class="controleFormulario"> <!--eram form-control-->
+          <!--email representante-->
+          <label for="username">Email do representante</label>
+          <input type="email_representante" placeholder="nome@email.com" id="email_representante" name="email_representante"/>
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+        <!-- inserção de senha -->
+        <div class="controleFormulario"> <!--eram form-control-->
+          <label for="username">Senha</label>
+          <input type="password" placeholder="senha" id="password" name="senha"/>
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+        <!--confirmação de senha-->
+        <div class="controleFormulario"> <!--eram form-control-->
+          <label for="username">Confirmação de senha</label>
+          <input type="password" placeholder="senha novamente" id="password2" name="confirma_senha"/>
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+
+        <button type="submit">Cadastrar</button>
+      </form>
+    </div>
+    <!-- <script src="../js/criarConta.js"></script> -->
+  </body>
+</html>
