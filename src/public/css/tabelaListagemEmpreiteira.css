@@ -1,17 +1,15 @@
 *{
     margin:0;
     padding: 0;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    
+    
 }
 
 /*Estilização do corpo*/
-.corpo1 {
+#corpo1 {
     background-color: #99b78b;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-left: 3%;
-    margin-right: 3%;
+
 }
 
 /*Estilizção do botão que lista os itens*/
@@ -21,14 +19,16 @@
     margin-left: 30%;
     margin-top: 2%;
     margin-bottom: 2%;
-    box-shadow: 2px 2px 2px;
+    box-shadow: 2px 2px 2px black;
 }
 
 
 /*Estilização da tabela*/
-.table {
+#table {
     border-bottom: 5px solid;
     background-color: white;
+    width: 70%;
+    
     
 }
 
@@ -41,3 +41,22 @@
 #categoria1 {
     background-color: #edeae4;
 }
+
+#delete {
+    background-color: red;
+    margin-left: 5%;
+    box-shadow: 2px 2px 2px black;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.update12 {
+    
+    background-color: lightgreen;
+    margin-bottom: 5px;
+    box-shadow: 2px 2px 2px black;
+    padding: 5px;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+

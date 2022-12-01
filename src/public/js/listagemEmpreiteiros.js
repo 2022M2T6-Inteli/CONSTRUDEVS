@@ -77,11 +77,11 @@ const renderEmpreiteiros = async () => {
                               <input type="text" id="email_representante${user.id_empreiteiro}" value="${user.email_representante}" disabled="true" />
                             </td>
 
-                            <td>
-                              <button id="update${user.id_empreiteiro}" onclick="toggleInputs(${user.id_empreiteiro});">Habilitar edicao</button>
+                            <td id="update1">
+                              <button class="update12" id="update${user.id_empreiteiro}" onclick="toggleInputs(${user.id_empreiteiro});">Habilitar edição</button>
                             </td>
                             <td>
-                              <button onclick="deleteUser(${user.id_empreiteiro})">
+                              <button id="delete" onclick="deleteUser(${user.id_empreiteiro})">
                                 Delete
                               </button>
                             </td>`;
