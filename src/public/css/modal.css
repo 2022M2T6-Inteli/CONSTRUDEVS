@@ -1,9 +1,12 @@
+
+/*definindo base da página*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/*alinhando e proporcionando elementos do html*/
 html{
     align-items: center;
     width: 100%;
@@ -11,6 +14,9 @@ html{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
 }
+
+
+/*posicionando elementos do body, colocando:cores, larguras e fundos*/
 
 body{
     display: flex;

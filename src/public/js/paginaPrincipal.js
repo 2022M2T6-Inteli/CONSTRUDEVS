@@ -1,3 +1,7 @@
+
+
+
+// função em jquery que melhora a navegação, possibilitando a busca por elementos de forma dinâmica
 $(document).ready(function(){
 
     $('#menu').click(function(){

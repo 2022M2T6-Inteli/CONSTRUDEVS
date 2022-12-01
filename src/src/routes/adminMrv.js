@@ -3,6 +3,9 @@ import { insertAdminMrv, udpateAdminMrv, deleteAdminMrv, selectAdminMrv, selectA
 
 const router = Router();
 
+
+// implementando sistema de rotas com funções CRUD criadas no arquivo Controller
+
 router.get('/selectAllAdminMrv', selectAllAdminMrv)
 router.get('/selectAdminMrv', selectAdminMrv)
 router.post('/adicionaAdminMrv', insertAdminMrv)
@@ -14,10 +17,18 @@ router.delete('/deleteAllAdminMrv', deleteAllAdminMrv)
 router.get("/renderizaIndexAdminMrv", (req, res) => {
     res.render("adminMrv/pagAdmin");
   });
+
+
+router.get("/renderizaListaEmpreiteiros", (req,res) =>{
+  res.render("adminMrv/listagemEmpreiteiros", 
+  {
+
+  })
+})
   
-  
-  router.get("/renderizaListagemEmpreiteiros", (req,res) =>{
-    res.render("adminMrv/listagemEmpreiteiros")
+
+  router.get("/listaEmpreiteiros", (req,res) =>{ 
+    res.render("adminMrv/listaEmpreiteirosCadastrados")
   })
   
   router.get("/cadastroVaga", (req,res) =>{
@@ -25,7 +36,7 @@ router.get("/renderizaIndexAdminMrv", (req, res) => {
   })
   
   router.get("/renderizaPerfilAdmin", (req,res) =>{
-    res.render
+    res.render("adminMrv/perfilAdmin")
   })
 
 export default router;

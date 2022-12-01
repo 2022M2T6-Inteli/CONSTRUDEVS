@@ -3,6 +3,8 @@ import fetch from "node-fetch";
 
 const router = Router();
 
+// arquivo usado para renderizar, dinamicamente, arquivos EJS
+
 router.get("/renderizaIndexVisitante", (req, res) => {
   res.render("visitante/pagVisitante");
 });
@@ -37,7 +39,7 @@ function selecionaAdmin(req, res) {
           analista.email_admin == req.body.email &&
           analista.senha_admin == req.body.senha
         ) {
-          res.render("adminMrv/pagAdmin");
+          res.render("adminMrv/pagAdmin")
         } else {
           res.render("erros/pagErros");
         }

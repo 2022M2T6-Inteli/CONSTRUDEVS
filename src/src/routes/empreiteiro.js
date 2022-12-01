@@ -5,7 +5,7 @@ import {selectAllEmpreiteiro, selectEmpreiteiro, insertEmpreiteiro, updateEmprei
 
 const router = Router();
 
-// Rotas da tabela MEI
+// Rotas da tabela empreiteiro
 router.get('/selectAllEmpreiteiro', selectAllEmpreiteiro)
 router.get('/selectEmpreiteiro', selectEmpreiteiro)
 router.delete('/deleteEmpreiteiro', deleteEmpreiteiro)
@@ -20,11 +20,15 @@ router.delete('/deleteAllEmpreiteiros', deleteAllEmpreiteiro)
   });
 
   router.get("/finalizaCadastroEmpreiteiro", (req,res) =>{
-    res.render("empreiteiro/finalizaCadastro")
+    res.render("empreiteiro/cadastroEmpreiteiro")
   })
 
   router.get("/oportunidadesEmpreiteiro", (req,res) =>{
     res.render("empreiteiro/oportunidadesEmpreiteiro")
+  })
+
+  router.get("/renderizaPerfilEmpreiteiro", (req,res) =>{
+    res.render("empreiteiro/perfil")
   })
   
 export default router;

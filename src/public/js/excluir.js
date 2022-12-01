@@ -1,3 +1,5 @@
+
+// função que exclui uma parte da tabela 
 let tabela = document.querySelector("#tbody")
 
 tabela.addEventListener("click",function(event){

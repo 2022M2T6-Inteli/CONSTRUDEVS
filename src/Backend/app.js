@@ -1,4 +1,4 @@
-
+// arquivos importados para integração geral do projeto !
 import cors from 'cors';
 import { createVagas } from '../src/Controller/crudVagas.js';
 import { createEmpreiteiro } from '../src/Controller/crudEmpreiteiro.js';
