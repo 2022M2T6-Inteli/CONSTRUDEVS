@@ -1,54 +1,55 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html>
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="stylesheet" type="text/css" href="/public/css/login.css">
-        <title>Entrada_login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"href="public/css/login.css">
+        <title>Entrada </title>
     </head>
         <!--Término das definições de referências da tela da administração logar-->
-    <body class="body1">
-        <header id="header">
-            <img class="logo" src="public/img/logo-mrv.png" href="public/html/index.html" width="25%" >
+
+
+    <body class="corpo1">  <!--era body1-->
+        <header id="cabecalho"> <!--era header-->
+            <img class="logo" src="public/img/logo-mrv.png" href="public/index.html" width="25%" >
         </header>
         <!--Término do cabeçalho da tela de entrada para ir na parte de logar-->
 
 
-        <div id="container">
+        <div id="conteiner"> <!--era container-->
             <!--Abertura de uma div para inserção de link de redirecionamentos formatados-->
-            <div id="container-flex">
+            <div id="conteiner-flex">
                 <img class="img1" src="public/img/userLogin.png" width="15%">
             </div>
             <!--Imagem de usuário-->
 
             <div class="boxlink">
-                <a class="link" href="/renderizaIndexVisitante"> Visitante</a> 
+                <a class="link" href="/renderizaIndexVisitante">Visitante</a> 
             </div>
             <!--Imagem que representa o visitante e o link correspondente para o redirecionamento para a tela inicial (index)-->
 
-
-            <div id="container-flex">
+            <div id="conteiner-flex">
                 <img class="img1" src="public/img/empre.png" width="15%">
             </div>
             <!--Imagem de empreiteira-->
 
             <div class="boxlink">
-                <a class="link" href="/renderizaIndexEmpreiteiro">Empreiteira</a> 
+                <a class="link" href="/loginEmpreiteiro">Empreiteira</a> 
             </div>
             <!--Imagem que representa a empreiteira e o link correspondente para o redirecionamento para a tela de login da empreiteira-->
 
-
-            <div id="container-flex">
+            <div id="conteiner-flex">
                 <img class="img2" src="public/img/adm.png" width="15%">
             </div>
             <!--Imagem de administração-->
 
             <div class="boxlink">
-                <a class="link1" href="/renderizaIndexAdminMrv">Administração</a>
+                <a class="link1" href="/loginAdminMrv">Administração</a>
             </div>
 
             <!--Imagem que representa a administração e o link correspondente para o redirecionamento para a tela de login da administração -->
+
         </div>
     </body>
 </html>

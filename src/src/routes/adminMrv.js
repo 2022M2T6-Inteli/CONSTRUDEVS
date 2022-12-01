@@ -10,4 +10,22 @@ router.get('/deleteAdminMrv', deleteAdminMrv)
 router.put('/atualizaAdminMrv', udpateAdminMrv)
 router.delete('/deleteAllAdminMrv', deleteAllAdminMrv)
 
+
+router.get("/renderizaIndexAdminMrv", (req, res) => {
+    res.render("adminMrv/pagAdmin");
+  });
+  
+  
+  router.get("/renderizaListagemEmpreiteiros", (req,res) =>{
+    res.render("adminMrv/listagemEmpreiteiros")
+  })
+  
+  router.get("/cadastroVaga", (req,res) =>{
+    res.render("adminMrv/cadastroVaga")
+  })
+  
+  router.get("/renderizaPerfilAdmin", (req,res) =>{
+    res.render
+  })
+
 export default router;
