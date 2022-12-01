@@ -2,14 +2,21 @@
 * {
     padding: 0;
     margin: 0;
+<<<<<<< HEAD
     text-align: center;
+=======
+>>>>>>> c873c98fe7c61b4a08cf893b430c2386c9c97de1
 }
 
 
 /*Formatação do corpo*/
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+<<<<<<< HEAD
     background: #26815c;
+=======
+    background-color: #26815c;
+>>>>>>> c873c98fe7c61b4a08cf893b430c2386c9c97de1
 }
 
 /*Formatação do cabeçalho*/
