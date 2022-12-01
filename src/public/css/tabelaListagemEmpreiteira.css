@@ -1,13 +1,8 @@
 *{
     margin:0;
     padding: 0;
-    
-    
+
 }
-
-
-
-
 
 /*Estilização do corpo*/
 #corpo1 {
@@ -26,10 +21,11 @@
     box-shadow: 2px 2px 2px black;
 }
 
-.tabela{
-    width: 100%;
-    margin: 0;
-    padding: 10% auto;
+#tabela{
+    width: 60%;
+    margin-left: 2px;
+    margin-top: 1%;
+
 }
 
 tr{
