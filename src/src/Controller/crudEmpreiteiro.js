@@ -35,7 +35,7 @@ export async function insertEmpreiteiro(req, res) {
   let empreiteiros = req.body;
   bancoDados().then((db) => {
     db.run(
-      'INSERT INTO empreiteiros (nome_empresa, email_empresa, cnpj, localidade, especialidade, representante,email_representante, senha, confirma_senha) VALUES (?,?,?,?,?,?,?,?,?)',
+      'INSERT INTO empreiteiros (nome_empresa, email_empresa, cnpj, localidade, especialidade, representante, email_representante, senha, confirma_senha) VALUES (?,?,?,?,?,?,?,?,?)',
       [
         empreiteiros.nome_empresa,
         empreiteiros.email_empresa,
@@ -46,7 +46,6 @@ export async function insertEmpreiteiro(req, res) {
         empreiteiros.email_representante,
         empreiteiros.senha,
         empreiteiros.confirma_senha,
-
       ]
     );
   });
@@ -57,20 +56,22 @@ export async function insertEmpreiteiro(req, res) {
 
 // comando update - responsável por atualizar os dados da tabela MEI
 export async function updateEmpreiteiro(req, res) {
-  let empreiteiros = req.body;
+  let { id_empreiteiro, nome_empresa, email_empresa, cnpj, localidade, especialidade, representante, email_representante } = req.body;
+
+  console.log(req.body)
+
   bancoDados().then((db) => {
     db.run(
-      "UPDATE empreiteiros SET id_empreiteiro=?, nome_empresa=?, email_empresa=?, cnpj=?, localidade=?, especialidade=?, representante=?, senha=?,confirma_senha=?",
+      "UPDATE empreiteiros SET nome_empresa=?, email_empresa=?, cnpj=?, localidade=?, especialidade=?, representante=?, email_representante=? WHERE id_empreiteiro=?",
       [
-        empreiteiros.nome_empresa,
-        empreiteiros.email_empresa,
-        empreiteiros.cnpj,
-        empreiteiros.localidade,
-        empreiteiros.especialidade,
-        empreiteiros.representante,
-        empreiteiros.senha,
-        empreiteiros.confirma_senha,
-        empreiteiros.id_empreiteiro,
+        nome_empresa,
+        email_empresa,
+        cnpj,
+        localidade,
+        especialidade,
+        representante,
+        email_representante,
+        id_empreiteiro,
       ]
     );
   });
@@ -82,7 +83,7 @@ export async function updateEmpreiteiro(req, res) {
 // comando delete - responsável por deletar dados da tabela MEI
 export async function deleteEmpreiteiro(req, res) {
   let id_empreiteiro = req.body.id_empreiteiro;
-  
+
   bancoDados().then((db) => {
     db.get("DELETE FROM empreiteiros WHERE id_empreiteiro=?", [
       id_empreiteiro,
