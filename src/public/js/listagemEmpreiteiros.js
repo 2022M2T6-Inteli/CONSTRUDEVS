@@ -21,7 +21,7 @@ const toggleInputs = async (number) => {
 
   console.log(inputs[1].disabled);
 
-  if (buttonText.innerHTML === "Habilitar edicao") {
+  if (buttonText.innerHTML === "Editar") {
     inputs.map((input) => (input.disabled = false));
     buttonText.innerHTML = "Salvar";
   } else {
@@ -42,7 +42,7 @@ const toggleInputs = async (number) => {
         console.log(err);
       })
       .finally(() => {
-        buttonText.innerHTML = "Habilitar edicao";
+        buttonText.innerHTML = "Editar";
       });
 
     inputs.map((input) => (input.disabled = true));
@@ -86,7 +86,7 @@ const renderEmpreiteiros = async () => {
                             </td>
 
                             <td id="update1">
-                              <button class="update12" id="update${user.id_empreiteiro}" onclick="toggleInputs(${user.id_empreiteiro});">Habilitar edição</button>
+                              <button class="update12" id="update${user.id_empreiteiro}" onclick="toggleInputs(${user.id_empreiteiro});">Editar</button>
                             </td>
                             <td>
                               <button id="delete" onclick="deleteUser(${user.id_empreiteiro})">
