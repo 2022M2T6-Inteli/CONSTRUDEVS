@@ -1,0 +1,176 @@
+/*Formatação geral*/
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+/*Formatação do corpo*/
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #26815c;
+}
+
+/*Formatação do cabeçalho*/
+header {
+    text-align: center;
+    margin-top: 2%;
+}
+
+
+/*Formatação da div "container"*/
+#container {
+    text-align: center;
+    margin-top: 7%;
+    margin-bottom: 30%;
+}
+
+/*Formatação geral dos elementos contidos no container para versão mobile*/
+@media (max-width: 500px) {
+        #container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10%;
+        align-items: center;
+    }
+}
+
+
+/*Formatação da coluna de administrador para versões mobile*/
+@media (max-width: 500px) {
+    .coluna-33adm{
+    margin-bottom: 10%;
+    justify-content: center;
+}
+}
+
+
+/*Formatação da coluna de convidado para versões mobile*/
+@media (max-width: 500px) {
+    .coluna-33user{
+    margin-bottom: 10%;
+}
+}
+
+
+/*Formatação da coluna de empreiteira para versões mobile*/
+@media (max-width: 500px) {
+    .coluna-33empre{
+    margin-bottom: 10%;
+}
+}
+
+/*Formatação do rodapé para versões mobile*/
+@media (max-width: 500px) {
+    .rodape{
+    font-size: 12px;
+}
+}
+
+/*Formatação da coluna para ocupar 33% da página em largura*/
+.coluna-33adm {
+    width: 33%;
+    float: left;
+    
+}
+
+
+/*Formatação da coluna para ocupar 33% da página em largura*/
+.coluna-33empre {
+    width: 33%;
+    float: left;
+}
+
+
+/*Formatação da coluna para ocupar 33% da página em largura*/
+.coluna-33user {
+    width: 33%;
+    float: left;
+    
+}
+
+
+/*Formatação da imagem que representa a administração*/
+.imgadm {
+    background-color: #edeae4;
+    padding: 2%;
+    border-radius: 25px;
+    margin-bottom: 7%;
+    box-shadow: 5px 5px 5px black;
+}
+
+/*Formatação da imagem que representa a empreiteita*/
+.imgempre {
+    background-color: #edeae4;
+    padding: 2%;
+    border-radius: 25px;
+    margin-bottom: 7%;
+    box-shadow: 5px 5px 5px black;
+}
+
+/*Formatação da imagem que representa o público não cadastrado*/
+.imguser {
+    background-color: #edeae4;
+    padding: 2%;
+    border-radius: 25px;
+    margin-bottom: 7%;
+    box-shadow: 5px 5px 5px black;
+}
+
+
+/*Formatação do link que redireciona a administração*/
+.linkadm {
+    text-decoration: none;
+    color: black;
+    background-color: #d9d9d9;
+    padding: 3%;
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px black;
+}
+
+
+/*Formatação do link que redireciona a empreiteira*/
+.linkempre {
+    text-decoration: none;
+    color: black;
+    background-color: #d9d9d9;
+    padding: 3%;
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px black;
+}
+
+
+/*Formatação do link que redireciona os convidados*/
+.linkconvidado {
+    text-decoration: none;
+    color: black;
+    background-color: #d9d9d9;
+    padding: 3%;
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px black;
+    margin-bottom: 52%;
+}
+
+
+/*Formatação do link para ter efeito quando o cursor passa por cima*/
+.linkadm:hover {
+    color: #f79227;
+}
+
+
+/*Formatação do link para ter efeito quando o cursor passa por cima*/
+.linkempre:hover {
+    color: #f79227;
+}
+
+
+/*Formatação do link para ter efeito quando o cursor passa por cima*/
+.linkconvidado:hover {
+    color: #f79227;
+}
+
+.rodape {
+    margin-left: 1%;
+}
+
