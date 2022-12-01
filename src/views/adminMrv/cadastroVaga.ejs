@@ -18,60 +18,45 @@
       </div>
 
       <!--inserção do nome da vaga-->
-      <form id="formulario" class="formulario">
+      <form action= "/insereVaga" type = "submit" method= "post" id="formulario" class="formulario">
+       
+        <!-- código da vaga -->
+        <div class="controleFormulario">
+          <label for="username">Código da vaga</label>
+          <input type="password"id="password" name = "id_vagas" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
+       
+        <div class="controleFormulario">
+          <label for="username">Cidade - Estado</label>
+          <input type="text" id="estado"  placeholder="São Paulo - SP" name = "regiao"/>
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error message</small>
+        </div>
         <div class="controleFormulario">
           <label for="username">Nome da vaga</label>
-          <input type="text"id="username" name = "nome" />
+          <input type="text"id="username" name = "area_de_atuacao"/>
           <i class="fas fa-check-circle"></i>
           <i class="fas fa-exclamation-circle"></i>
           <small>Error message</small>
         </div>
-        <div class="controleFormulario">
-          <label for="username">Estado</label>
-          <input type="text" id="estado" />
-          <i class="fas fa-check-circle"></i>
-          <i class="fas fa-exclamation-circle"></i>
-          <small>Error message</small>
-        </div>
+       
 
         <div class="controleFormulario">
-            <label for="username">Cidade</label>
-            <input type="text" id="cidade" />
-            <i class="fas fa-check-circle"></i>
-            <i class="fas fa-exclamation-circle"></i>
-            <small>Error message</small>
-          </div>
-
-        <div class="controleFormulario">
-          <!--descricao-->
-          <label for="username">Descrição da vaga</label>
-          <textarea name="descricao" id="descricao" rows="10" cols="40" maxlength="500"></textarea>
-          <i class="fas fa-check-circle"></i>
-          <i class="fas fa-exclamation-circle"></i>
-          <small>Error message</small>
-        </div>
-
-
-        <div class="controleFormulario">
-          <label for="username">Duração</label>
+          <label for="username">Telefone</label>
           <input
-            type="text"
-            id="duracao"
+            type="number"
+            id="telefone"
+            name ="telefone"
           />
           <i class="fas fa-check-circle"></i>
           <i class="fas fa-exclamation-circle"></i>
           <small>Error message</small>
         </div>
-
-        <!-- código da vaga -->
-        <div class="controleFormulario">
-          <label for="username">Código da vaga</label>
-          <input type="password"id="password" />
-          <i class="fas fa-check-circle"></i>
-          <i class="fas fa-exclamation-circle"></i>
-          <small>Error message</small>
-        </div>
-        <button>Publicar</button>
+        <button type = "submit">Publicar</button>
       </form>
     </div>
   </body>
