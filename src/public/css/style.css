@@ -120,6 +120,11 @@ body {
 
 }
 
+figcaption > h2{
+    font-size: larger;
+    
+}
+
 /*Clientes cadastrados*/
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,600);
