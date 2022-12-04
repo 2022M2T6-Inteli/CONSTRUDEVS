@@ -80,18 +80,24 @@ deve possuir o valor "node app.js".
 
 ## 🗃 Histórico de lançamentos
 
-* 0.2.1 - 25/01/2022
-    * Atualização de documentos (código do módulo permanece inalterado).
-* 0.2.0 - 15/01/2022
-    * Remove `setDefaultXYZ()`
-    * Adiciona `init()`
-* 0.1.1 - 11/01/2022
-    * Crash quando chama `baz()`
-* 0.1.0 - 10/01/2022
-    * O primeiro lançamento adequado
-    * Renomeia `foo()` para `bar()`
-* 0.0.1 - 01/01/2022
-    * Trabalho em andamento
+* 0.1.0 - 21/10/2022
+    * Inserção do Wireframe.
+    * Preenchimento das partes referentes a negócios do WAD.
+    * Preenchimento das partes referentes a experiência do usuário no WAD.
+* 0.1.1 - 04/11/2022
+    * Adição do código fonte corresponde ao server side - backend.
+    * Inserção da arquitetura do sistema no WAD.
+    * Construção da estrutura do banco de dados no WAD. 
+    * Adiçaõ da Documentação da API no WAD.
+* 0.1.2 - 18/11/2022
+    * Adição do código fonte correspondente ao client side - frontend.
+    * Inserção do guia de estilos do sistema no WAD.
+* 0.1.3 - 02/12/2022
+    * Integração do sistema com ambos os códigos fonte (frontend + backend).
+    * Elaboração de testes de usabilidades com usuários próximos das personas construídas no WAD.
+* 1.0.0 - 16/12/2022
+    * Finalização de todo o código fonte.
+    * Finalização da documentação do WAD.
 
 ## 📋 Licença/License
 
