@@ -24,12 +24,16 @@ A aplicação web acima soluciona o problema de contratação de empreiteiros da
 
 |--> documentos<br>
   &emsp;| --> outros <br>
-  &emsp;| T6_G2_V2.2_Web_application_document.pdf<br>
-  &emsp;| T6_G2_V2.2_Web_application_document.docx<br>
+  &emsp;| T6_G2_V2.7_Web_application_document.pdf<br>
+  &emsp;| T6_G2_V2.7_Web_application_document.docx<br>
 |--> imagens<br>
 |--> src<br>
   &emsp;|--> Backend<br>
   &emsp;|--> Frontend<br>
+  &emsp;|--> data<br>
+  &emsp;|--> public<br>
+  &emsp;|--> src<br>
+  &emsp;|--> views<br>
 | readme.md<br>
 | license.txt
 
