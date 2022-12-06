@@ -69,5 +69,4 @@ function selecionaEmpreiteiro(req, res) {
 router.post("/logarAdminMrv", selecionaAdmin)
 router.post("/logarEmpreiteiro", selecionaEmpreiteiro)
 
-
 export default router;
