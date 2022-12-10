@@ -18,7 +18,15 @@
 
 ## 📝 Descrição
 
-A aplicação web acima soluciona o problema de contratação de empreiteiros da empresa MRV. A solução se baseia em um site de fácil compreensão com foco em escalabilidade do processo.
+O sistema <a href="https://github.com/2022M2T6-Inteli/Projeto2">Pontes</a> é uma aplicação web que conecta os empreiteiros com 
+a construtora MRV.
+
+Seu principal objetivo é facilitar o processo de contratação de empreiteiras
+para obras da MRV, otimizando a qualidade e rapidez neste processo. O sistema 
+Web pode ser utilizado tanto pela MRV quanto pelo empreiteiro, de modo que 
+o empreiteiro poderá inserir seus dados dentro da plataforma, e de acordo com 
+alguns filtros a MRV poderá analisar e seguir contato com a empreiteira.
+
 
 ## 📁 Estrutura de pastas
 
