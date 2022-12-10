@@ -1,42 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../../public/css/primerLogin.css">
-    <title>Entrada-login</title>
+    <title></title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- css link -->
+    <link rel="stylesheet" href="../../public/css/paginaPrincipal.css">
+
 </head>
+
 <body>
+    
+<!-- seção de cabeçalho começa  -->
 
-    <!--Abertura de um cabeçalho, onde ficará o Logo da MRV-->
-    <header>
-        <img src="public/img/logo-mrv.png" width="20%">
-    </header>
+<header>
 
-    <!--Abertura de uma divisão com as categorias-->
-    <div id="container">
+<img id="mrv-logo" src="../../public//img/mrv-logo.png" alt="mrv-logo">
 
-        <!--Abertura de uma divisão com a categoria administração-->
-        <div class="coluna-33adm">
-            <img class="imgadm" src="public/img/adm.png" width="25%"><br>
-            <a class="linkadm" href="/loginAdminMrv">Administração</a>
-        </div>
+<div id="menu" class="fas fa-bars"></div>
 
-        <!--Abertura de uma divisão com a categoria empreiteira-->
-        <div class="coluna-33empre">
-            <img class="imgempre" src="public/img/empre.png" width="25%"><br>
-            <a class="linkempre" href="/loginEmpreiteiro">Empreiteira</a>
-        </div>
+<nav class="barraNavegacao"> <!-- era navbar-->
+    <ul>
+        <li><a href="/cadastrarEmpreiteiro">CADASTRAR EMPREITERA</a></li> 
+        <li><a href="/loginEmpreiteiro">LOGIN EMPREITERA</a></li>
+    </ul> 
+</nav>
 
-        <!--Abertura de uma divisão com a categoria Usuário comum sem cadastro-->
-        <div class="coluna-33user">
-            <img class="imguser" src="public/img/user.png" width="25%"><br>
-            <a class="linkconvidado" href="/renderizaIndexVisitante">Convidados</a>
+</header>
+
+<!-- seção de cabeçalho termina -->
+
+<!-- seção inicial começa  -->
+
+<section class="home" id="home">
+
+<h1>Encontre a vaga ideal</h1>
+
+</section>
+
+<!-- seção inicial termina -->
+
+<!-- seção sobre nós começa  -->
+
+<section class="sobre" id="sobre">
+
+<div class="linha">
+
+    <div class="imagem">
+        <img src="../../public/img/imgtwo.jpg" alt="">
+    </div>
+
+    <div class="conteudo">
+        <h3>Sobre nós</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, illo saepe! Magnam, unde explicabo amet perferendis voluptate distinctio facilis quae ipsa quas! Officiis veritatis aut est vero id, debitis pariatur?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, soluta laboriosam. Laborum aspernatur laboriosam deserunt cupiditate laudantium illum commodi. Vero.</p>
+        <a href="#"><button class="botao">Saiba mais</button></a>
+    </div>
+
+</div>
+
+</section>
+
+<!-- seção sobre nós termina -->
+
+<!-- seção de serviço começa  -->
+
+<section class="service" id="service">
+
+<h1 class="heading">Serviços</h1>
+
+<div class="box-container">
+
+    <div class="caixa">
+        <img src="../../public/img/imgthree.jpg" alt="">
+        <div class="informacao">
+            <h3>São Paulo, SP</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus a distinctio excepturi libero eveniet amet id vel minima officiis doloribus.</p>
+            <a href="#"><button class="btn">Aplicar</button></a>
         </div>
     </div>
 
-    <!--Parágrafo de rodapé, com observação-->
-    <p class="rodape">*Convidados são usuários não cadastrados</p>
+    <div class="caixa">
+        <img src="../../public/img/imgfour.jpg" alt="">
+        <div class="informacao">
+            <h3>Tatuapé, SP</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus a distinctio excepturi libero eveniet amet id vel minima officiis doloribus.</p>
+            <a href="#"><button class="btn">Aplicar</button></a>
+        </div>
+    </div>
+
+    <div class="caixa">
+        <img src="../../public/img/imgfive.jpg" alt="">
+        <div class="informacao">
+            <h3>Belo Horizonte, MG</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus a distinctio excepturi libero eveniet amet id vel minima officiis doloribus.</p>
+            <a href="#"><button class="btn">Aplicar</button></a>
+        </div>
+    </div>
+
+    <div class="caixa">
+        <img src="../../public/img/imgsix.jpg" alt="">
+        <div class="informacao">
+            <h3>Rio de Janeiro, RJ</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus a distinctio excepturi libero eveniet amet id vel minima officiis doloribus.</p>
+            <a href="#"><button class="btn">Aplicar</button></a>
+        </div>
+    </div>
+
+    <div class="caixa">
+        <img src="../../public/img/imgseven.jpg" alt="">
+        <div class="informacao">
+            <h3>Pernambuco, PE</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus a distinctio excepturi libero eveniet amet id vel minima officiis doloribus.</p>
+            <a href="#"><button class="btn">Aplicar</button></a>
+        </div>
+    </div>
+
+    <div class="caixa">
+        <img src="../../public/img/imgeigth.jpg" alt="">
+        <div class="informacao">
+            <h3>Belém, PA</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus a distinctio excepturi libero eveniet amet id vel minima officiis doloribus.</p>
+            <a href="#"><button class="btn">Aplicar</button></a>
+        </div>
+    </div>
+
+</div>
+
+</section>
+
+<!-- seção de serviço termina -->
+
+<!-- seção de rodapé começa -->
+
+<footer>
+  <div class="container-footer">
+        <div class="row-footer">
+            <div class="footer-col">
+                <ul>
+                    <li>Fale Conosco</li>
+                    <li>Trabalhe Conosco</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <ul>
+                    <li>Desafios</li>
+                    <li>Parcerias</li>                      
+                </ul>
+            </div>
+            <div class="footer-col">
+                <ul>
+                    <li>Minas Gerais, MG 10012, Brasil</li>
+                    <li>info@example.com</li>
+                    <li>+ 01 234 567 88</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- seção de rodapé termina -->
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- js link  -->
+<script src="../../public/js/paginaPrincipal.js"></script>
+
 </body>
 </html>
