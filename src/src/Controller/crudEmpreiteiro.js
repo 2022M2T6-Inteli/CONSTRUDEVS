@@ -13,7 +13,7 @@ export async function selectAllEmpreiteiro(req, res) {
 
 // comando SELECT da tabela MEI
 export async function selectEmpreiteiro(req, res) {
-  let id_empreiteiro = req.body.id_empreiteiro;
+  let id_empreiteiro = req.query.id_empreiteiro;
   bancoDados().then((db) => {
     db.get("SELECT * FROM empreiteiros WHERE id_empreiteiro=?", [
       id_empreiteiro,

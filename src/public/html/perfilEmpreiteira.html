@@ -29,17 +29,15 @@
       <!--corpo principal do perfil, com sua bio e nome-->
       <div class="perfil-usuario-body">
         <div class="perfil-usuario-bio">
-          <h3 class="titulo">GUERRA EMPREITEIRO</h3>
-          <p class="texto">
-            Nós da Guerra somos profissionais em realizar o seu sonho. Estamos
-            localizados na cidade de São Paulo - SP e contamos com mais de 50
-            obras realizadas no estado.
+          <h3 class="titulo" id="titulo">GUERRA EMPREITEIRO</h3>
+          <p id="texto0">
+            
           </p>
         </div>
 
         <!--parte inferior com seus principais serviços listados-->
         <div class="perfil-usuario-footer">
-          <ul class="lista-datos">
+          <ul class="lista-datos" id="servicos">
             <li>
               <i class="icon-imagen"><strong>Serviços</strong></i>
             </li>
@@ -48,7 +46,7 @@
             <li><i class="icon-imagen">Demolição</i></li>
           </ul>
           <!--parte inferior com informações principais da empreiteira-->
-          <ul class="lista-datos">
+          <ul class="lista-datos" id="printarCnpj">
             <li>
               <i class="icon-imagen"><strong>Informações gerais</strong></i>
             </li>
@@ -58,6 +56,7 @@
             <li><i class="icon-imagen">Especializados em construção</i></li>
           </ul>
         </div>
+        
         <!--parte para inserção das redes sociais, será implementada posteriormente -->
 
         <div class="redes-sociais">
@@ -73,5 +72,44 @@
         </div>
       </div>
     </section>
+    <script>
+
+    
+
+    let url = 'http://localhost:3001/selectEmpreiteiro?id_empreiteiro'
+
+     fetch(url)
+    .then((response) => {
+        return response.json();
+    })
+    .then((data) => {
+        let usuarios = data;
+        let saida = '';
+        let servicos = '';
+        let nomeEmpresa = '';
+        let printarCnpj = '';
+        usuarios.map(function (experiencia) {
+            nomeEmpresa = '<p>' + `${experiencia.nome_empresa}` + '</p>';
+            servicos = '<li>' +'<i class="icon-imagen">'+ `${experiencia.especialidade}` +'</i>' +'</li>';
+            printarCnpj = '<li>' +'<i class="icon-imagen">'+ `${experiencia.cnpj}` +'</i>' +'</li>';
+            console.log(nomeEmpresa);
+        });
+        document.getElementById("titulo").innerHTML = nomeEmpresa
+        document.getElementById("texto0").innerHTML = saida
+        document.getElementById("servicos").innerHTML = servicos
+        document.getElementById("printarCnpj").innerHTML = printarCnpj
+    })
+    .catch(function (error) {
+        console.log(error);
+    })
+
+    
+    
+  </script>
+  <script src="../js/listagemEmpreiteiros.js">
+    
+
+  </script>
+  
   </body>
 </html>
