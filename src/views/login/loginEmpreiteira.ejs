@@ -1,16 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="public/css/login.css">
-    <title>Entrada_login</title>
-</head>
-<!--Término das definições de referências da tela da empreiteira logar-->
-=======
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,52 +14,32 @@
             <!--Cabeçalho apenas com o logo da MRV formatado-->
             <img class="logo" src="/public/img/logo-mrv.png" width="25%" >
         </header>
->>>>>>> 6d163ec658b71d6b2bdd2223cbd12cc197154cce
 
-<body class="corpo1">
-    
+        <!--Término do cabeçalho da tela da administração logar-->
 
-    <header id="cabecalho">
-        <!--Cabeçalho apenas com o logo da MRV formatado-->
-        <img class="logo" src="public/img/logo-mrv.png" width="25%">
-    </header>
+        <div id="conteiner">
 
-<<<<<<< HEAD
-    
-    <!--Término do cabeçalho da tela da administração logar-->
-    
-    <div id="conteiner">
-        
-=======
             <img class="img1" src="/public/img/empre.png" width="15%">
->>>>>>> 6d163ec658b71d6b2bdd2223cbd12cc197154cce
 
-        <img class="img1" src="public/img/empre.png" width="15%">
+            <!--Imagem com símbolo de empresa (empreiteira) para fins estéticos e informativos-->
 
-        <!--Imagem com símbolo de empresa (empreiteira) para fins estéticos e informativos-->
+            
 
+            <form action = "/logarEmpreiteiro" method = "post">
 
+                <div>
+                    <input class="CNPJ" type="text" name="cnpj" id="CNPJ" placeholder="Digite seu CNPJ">
+                </div>
+                <!--Caixa de texto para inserção das informações de usuário (CNPJ)-->
+                <div>
+                    <input class="senha" type="password" name="senha" id="senha" placeholder="Digite sua senha">
+                </div>
+                <!--Caixa de texto para inserção da senha do usuário-->
+                <div>
+                    <input class="submit" type="submit" value="Entrar">
+                </div>
+                <!--Botão para enviar e em seguida validar os dados digitados-->
+            </form>
 
-        <form action="/logarEmpreiteiro" method="post">
-
-            <div>
-                <input class="CNPJ" type="text" name="cnpj" id="CNPJ" placeholder="Digite seu CNPJ">
-            </div>
-            <!--Caixa de texto para inserção das informações de usuário (CNPJ)-->
-            <div>
-                <input class="senha" type="password" name="senha" id="senha" placeholder="Digite sua senha">
-            </div>
-            <!--Caixa de texto para inserção da senha do usuário-->
-            <div>
-                <input class="submit" type="submit" value="Entrar">
-            </div>
-            <!--Botão para enviar e em seguida validar os dados digitados-->
-        </form>
-
-        <script>
-
-      </script>
-
-</body>
-
+    </body>
 </html>
