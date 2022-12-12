@@ -75,63 +75,6 @@
     </div>
   </section>
 
-  <script>
-    // let user = document.cookie.split(';')[0].trim().split("user=")[1];
-    // let password = document.cookie.split(';')[1].trim().split("password=")[1]
-
-    let user = {}
-
-    let id = 34 // document.cookie.split(";")[0].trim().split("id=")[1];
-
-    // const checkUserLoggedIn = async () => {
-    //   await fetch(`http://localhost:3001/selectEmpreiteiro?id_empreiteiro=${id}`)
-    //     .then( (res) => { user = res.data } )
-    //     .catch( () => { window.route = "/login" } )
-    // }
-
-    // checkUserLoggedIn()
-
-    fetch(`http://localhost:3001/selectEmpreiteiro?id_empreiteiro=${id}`)
-      .then(data => {
-        return data.json();
-      })
-      .then(post => {
-        console.log(post.title);
-      });
-
-    let url = `http://localhost:3001/selectAllEmpreiteiro`
-
-    let servicos = '';
-    let nomeEmpresa = '';
-    let printarCnpj = '';
-    let experiencia = ''
-
-    fetch(url)
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        let usuarios = data;
-
-        usuarios.map((user) => {
-          if (user.id_empreiteiro == id) {
-            console.log(user)
-
-            document.getElementById("titulo").innerHTML = user.nome_empresa
-            
-          }
-        })
-      })
-      .catch(function (error) {
-        console.log(error);
-      })
-
-
-
-
-
-
-  </script>
   <script src="../js/listagemEmpreiteiros.js">
 
 

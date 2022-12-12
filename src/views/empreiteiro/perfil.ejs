@@ -26,7 +26,7 @@
       <!--corpo principal do perfil, com sua bio e nome-->
       <div class="perfil-usuario-body">
         <div class="perfil-usuario-bio">
-          <h3 class="titulo">GUERRA EMPREITEIRO</h3>
+          <h3 class="titulo" id="titulo">GUERRA EMPREITEIRO</h3>
           <p class="texto">
             Nós da Guerra somos profissionais em realizar o seu sonho. Estamos
             localizados na cidade de São Paulo - SP e contamos com mais de 50
@@ -40,7 +40,7 @@
             <li>
               <i class="icon-imagen"><strong>Serviços</strong></i>
             </li>
-            <li><i class="icon-imagen">Reformas</i></li>
+            <li><i class="icon-imagen" id="servicos">Reformas</i></li>
             <li><i class="icon-imagen">Manutenção</i></li>
             <li><i class="icon-imagen">Demolição</i></li>
           </ul>
@@ -50,7 +50,7 @@
               <i class="icon-imagen"><strong>Informações gerais</strong></i>
             </li>
             <li></li>
-            <li><i class="icon-imagen">25 funcionários</i></li>
+            <li><i class="icon-imagen" id="printarCnpj">25 funcionários</i></li>
             <li><i class="icon-imagen">localizados em São Paulo-SP</i></li>
             <li><i class="icon-imagen">Especializados em construção</i></li>
           </ul>
@@ -69,5 +69,66 @@
         </div>
       </div>
     </section>
+    
+  <script>
+    // let user = document.cookie.split(';')[0].trim().split("user=")[1];
+    // let password = document.cookie.split(';')[1].trim().split("password=")[1]
+
+    let user = {}
+
+    let id = 34 // document.cookie.split(";")[0].trim().split("id=")[1];
+
+    // const checkUserLoggedIn = async () => {
+    //   await fetch(`http://localhost:3001/selectEmpreiteiro?id_empreiteiro=${id}`)
+    //     .then( (res) => { user = res.data } )
+    //     .catch( () => { window.route = "/login" } )
+    // }
+
+    // checkUserLoggedIn()
+
+    fetch(`http://localhost:3001/selectEmpreiteiro?id_empreiteiro=${id}`)
+      .then(data => {
+        return data.json();
+      })
+      .then(post => {
+        console.log(post.title);
+      });
+
+    let url = `http://localhost:3001/selectAllEmpreiteiro`
+
+    let servicos = '';
+    let nomeEmpresa = '';
+    let printarCnpj = '';
+    let experiencia = ''
+
+    fetch(url)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        let usuarios = data;
+
+        usuarios.map((user) => {
+          if (user.id_empreiteiro == id) {
+            console.log(user)
+
+            document.getElementById("titulo").innerHTML = user.nome_empresa
+
+            document.getElementById("printarCnpj").innerHTML = user.cnpj
+            document.getElementById("servicos").innerHTML = user.especialidade
+
+          }
+        })
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
+
+
+
+
+
+
+  </script>
   </body>
 </html>
