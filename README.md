@@ -18,7 +18,7 @@
 
 ## 📝 Descrição
 
-O sistema <a href="https://github.com/2022M2T6-Inteli/Projeto2">Pontes</a> é uma aplicação web que conecta os empreiteiros com 
+O sistema <a href="https://github.com/2022M2T6-Inteli/Projeto2">Ponte</a> é uma aplicação web que conecta os empreiteiros com 
 a construtora MRV.
 
 Seu principal objetivo é facilitar o processo de contratação de empreiteiras
