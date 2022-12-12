@@ -13,6 +13,7 @@ import renderizaLogin from '../src/routes/renderizaPags.js'
 import path from 'path'
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+import cookieParser from 'cookie-parser';
 
 const app = express();
 const __filename = fileURLToPath(import.meta.url);
@@ -31,6 +32,8 @@ export default urlencodedParser;
 app.use(express.urlencoded({ extended: true })) // usado para pegar elementos de preenchimento do forms
 app.use(express.json());
 app.use(cors()); // usado para evitar erro do cors no navegador 
+
+app.use(cookieParser())
 
 // implementando o sistema de rotas
 app.use(efetivacao)
