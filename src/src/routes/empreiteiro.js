@@ -26,7 +26,7 @@ router.delete('/deleteAllEmpreiteiros', deleteAllEmpreiteiro)
   })
 
   router.get("/renderizaPerfilEmpreiteiro", (req,res) =>{
-    res.render("empreiteiro/perfil")
+    res.render("empreiteiro/perfil");
   })
   
 export default router;
