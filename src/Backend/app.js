@@ -43,13 +43,13 @@ app.use(renderizaLogin)
 app.set('view engine', 'ejs')
 
 app.use("/public", express.static(path.join(__dirname, "../public"), {
-    // Aqui estamos configurando o cache dos arquivos estáticos... Muito
-    // útil em ambientes de produção, mas deve-se ter cuidado durante a
-    // fase de desenvolvimento.
     cacheControl: true,
     etag: false,
     maxAge: "30d"
 }));
+
+
+
 
 
 app.get('/', (req,res) =>{
