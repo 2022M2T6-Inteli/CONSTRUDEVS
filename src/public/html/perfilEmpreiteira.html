@@ -1,115 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/perfilEmpreiteira.css" />
-    <title>PERFIL</title>
-  </head>
-  <body>
-    <!--OBS: as fotos e informações usadas nessa página servem somente para exemplificação. Posteriormente, isso será feito automaticamente pelo banco de dados-->
 
-    <!--definindo parte superior da página maior do candidato-->
-    <section class="sessao-perfil-usuario"> <!--era seccion-perfil-usuario-->
-      <div class="perfil-usuario-header">
-        <div class="perfil-usuario-portada">
-          <div class="perfil-usuario-avatar">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/perfilEmpreiteira.css" />
+  <title>PERFIL</title>
+</head>
 
-            <!--parte onde a foto da empreeiteira vai ficar-->
-            <img src="../img/empreiteiroExemplo.jpg"img-avatar">
-            <button type="button" class="boton-avatar">
-              <i class="icon-image"></i>
-            </button>
+<body>
+  <!--OBS: as fotos e informações usadas nessa página servem somente para exemplificação. Posteriormente, isso será feito automaticamente pelo banco de dados-->
 
-          </div>
+  <!--definindo parte superior da página maior do candidato-->
+  <section class="sessao-perfil-usuario"> <!--era seccion-perfil-usuario-->
+    <div class="perfil-usuario-header">
+      <div class="perfil-usuario-portada">
+        <div class="perfil-usuario-avatar">
+
+          <!--parte onde a foto da empreeiteira vai ficar-->
+          <img src="../img/empreiteiroExemplo.jpg" img-avatar">
+          <button type="button" class="boton-avatar">
+            <i class="icon-image"></i>
+          </button>
+
         </div>
       </div>
-      
-      <!--corpo principal do perfil, com sua bio e nome-->
-      <div class="perfil-usuario-body">
-        <div class="perfil-usuario-bio">
-          <h3 class="titulo" id="titulo">GUERRA EMPREITEIRO</h3>
-          <p id="texto0">
-            
-          </p>
-        </div>
+    </div>
 
-        <!--parte inferior com seus principais serviços listados-->
-        <div class="perfil-usuario-footer">
-          <ul class="lista-datos" id="servicos">
-            <li>
-              <i class="icon-imagen"><strong>Serviços</strong></i>
-            </li>
-            <li><i class="icon-imagen">Reformas</i></li>
-            <li><i class="icon-imagen">Manutenção</i></li>
-            <li><i class="icon-imagen">Demolição</i></li>
-          </ul>
-          <!--parte inferior com informações principais da empreiteira-->
-          <ul class="lista-datos" id="printarCnpj">
-            <li>
-              <i class="icon-imagen"><strong>Informações gerais</strong></i>
-            </li>
-            <li></li>
-            <li><i class="icon-imagen">25 funcionários</i></li>
-            <li><i class="icon-imagen">localizados em São Paulo-SP</i></li>
-            <li><i class="icon-imagen">Especializados em construção</i></li>
-          </ul>
-        </div>
-        
-        <!--parte para inserção das redes sociais, será implementada posteriormente -->
+    <!--corpo principal do perfil, com sua bio e nome-->
+    <div class="perfil-usuario-body">
+      <div class="perfil-usuario-bio">
+        <h3 class="titulo" id="titulo">GUERRA EMPREITEIRO</h3>
+        <p id="texto0">
 
-        <div class="redes-sociais">
-          <a href="#" class="botaoFacebook"> <!--era boton-redes facebook-->
-            <i class="icon-facebook"></i>
-          </a>
-          <a href="#" class="botaoWhatsapp"> <!--era boton-redes whatsapp-->
-            <i class="icon-whatsapp"></i>
-          </a>
-          <a href="#" class="botaoInstagram"> <!--era boton-redes instagram-->
-            <i class="icon-instagram"></i>
-          </a>
-        </div>
+        </p>
       </div>
-    </section>
-    <script>
 
-    
+      <!--parte inferior com seus principais serviços listados-->
+      <div class="perfil-usuario-footer">
+        <ul class="lista-datos" id="servicos">
+          <li>
+            <i class="icon-imagen"><strong>Serviços</strong></i>
+          </li>
+          <li><i class="icon-imagen">Reformas</i></li>
+          <li><i class="icon-imagen">Manutenção</i></li>
+          <li><i class="icon-imagen">Demolição</i></li>
+        </ul>
+        <!--parte inferior com informações principais da empreiteira-->
+        <ul class="lista-datos" id="printarCnpj">
+          <li>
+            <i class="icon-imagen"><strong>Informações gerais</strong></i>
+          </li>
+          <li></li>
+          <li><i class="icon-imagen">25 funcionários</i></li>
+          <li><i class="icon-imagen">localizados em São Paulo-SP</i></li>
+          <li><i class="icon-imagen">Especializados em construção</i></li>
+        </ul>
+      </div>
 
-    let url = 'http://localhost:3001/selectEmpreiteiro?id_empreiteiro'
+      <!--parte para inserção das redes sociais, será implementada posteriormente -->
 
-     fetch(url)
-    .then((response) => {
+      <div class="redes-sociais">
+        <a href="#" class="botaoFacebook"> <!--era boton-redes facebook-->
+          <i class="icon-facebook"></i>
+        </a>
+        <a href="#" class="botaoWhatsapp"> <!--era boton-redes whatsapp-->
+          <i class="icon-whatsapp"></i>
+        </a>
+        <a href="#" class="botaoInstagram"> <!--era boton-redes instagram-->
+          <i class="icon-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // let user = document.cookie.split(';')[0].trim().split("user=")[1];
+    // let password = document.cookie.split(';')[1].trim().split("password=")[1]
+
+    let user = {}
+
+    let id = 34 // document.cookie.split(";")[0].trim().split("id=")[1];
+
+    // const checkUserLoggedIn = async () => {
+    //   await fetch(`http://localhost:3001/selectEmpreiteiro?id_empreiteiro=${id}`)
+    //     .then( (res) => { user = res.data } )
+    //     .catch( () => { window.route = "/login" } )
+    // }
+
+    // checkUserLoggedIn()
+
+    fetch(`http://localhost:3001/selectEmpreiteiro?id_empreiteiro=${id}`)
+      .then(data => {
+        return data.json();
+      })
+      .then(post => {
+        console.log(post.title);
+      });
+
+    let url = `http://localhost:3001/selectAllEmpreiteiro`
+
+    let servicos = '';
+    let nomeEmpresa = '';
+    let printarCnpj = '';
+    let experiencia = ''
+
+    fetch(url)
+      .then((response) => {
         return response.json();
-    })
-    .then((data) => {
+      })
+      .then((data) => {
         let usuarios = data;
-        let saida = '';
-        let servicos = '';
-        let nomeEmpresa = '';
-        let printarCnpj = '';
-        usuarios.map(function (experiencia) {
-            nomeEmpresa = '<p>' + `${experiencia.nome_empresa}` + '</p>';
-            servicos = '<li>' +'<i class="icon-imagen">'+ `${experiencia.especialidade}` +'</i>' +'</li>';
-            printarCnpj = '<li>' +'<i class="icon-imagen">'+ `${experiencia.cnpj}` +'</i>' +'</li>';
-            console.log(nomeEmpresa);
-        });
-        document.getElementById("titulo").innerHTML = nomeEmpresa
-        document.getElementById("texto0").innerHTML = saida
-        document.getElementById("servicos").innerHTML = servicos
-        document.getElementById("printarCnpj").innerHTML = printarCnpj
-    })
-    .catch(function (error) {
-        console.log(error);
-    })
 
-    
-    
+        usuarios.map((user) => {
+          if (user.id_empreiteiro == id) {
+            console.log(user)
+
+            document.getElementById("titulo").innerHTML = user.nome_empresa
+            
+          }
+        })
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
+
+
+
+
+
+
   </script>
   <script src="../js/listagemEmpreiteiros.js">
-    
+
 
   </script>
-  
-  </body>
+
+</body>
+
 </html>

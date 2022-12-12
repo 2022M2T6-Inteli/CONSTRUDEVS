@@ -39,6 +39,10 @@ function selecionaAdmin(req, res) {
           analista.email_admin == req.body.email &&
           analista.senha_admin == req.body.senha
         ) {
+                   
+          res.cookie('user', analista.email_admin);
+          res.cookie('password', analista.senha_admin);
+
           res.render("adminMrv/pagAdmin")
         } else {
           res.render("erros/pagErros");
@@ -58,6 +62,10 @@ function selecionaEmpreiteiro(req, res) {
           empreiteiro.cnpj == req.body.cnpj &&
           empreiteiro.senha == req.body.senha
         ) {
+          res.cookie('user', empreiteiro.cnpj);
+          res.cookie('password', empreiteiro.senha);
+          res.cookie('id', empreiteiro.id_empreiteiro)
+
           res.render("empreiteiro/pagEmpreiteiro");
         } else {
           res.render("erros/pagErros");
