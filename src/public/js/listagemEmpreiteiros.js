@@ -147,7 +147,6 @@ async function updateUser(
       })
       .then(async (res) => {
         console.log(res);
-        await renderEmpreiteiros();
       })
       .catch((err) => {
         console.error(err);

@@ -81,7 +81,7 @@
 
     let user = {}
 
-    let id = 34 // document.cookie.split(";")[0].trim().split("id=")[1];
+    let id = 01 // document.cookie.split(";")[0].trim().split("id=")[1];
 
     // const checkUserLoggedIn = async () => {
     //   await fetch(`http://localhost:3001/selectEmpreiteiro?id_empreiteiro=${id}`)
@@ -118,7 +118,10 @@
             console.log(user)
 
             document.getElementById("titulo").innerHTML = user.nome_empresa
-            
+
+            document.getElementById("printarCnpj").innerHTML = user.cnpj
+            document.getElementById("servicos").innerHTML = user.especialidade
+
           }
         })
       })
