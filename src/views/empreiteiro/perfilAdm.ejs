@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/public/css/perfilEmpreiteira.css" />
   <title>PERFIL</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -43,34 +44,35 @@
           <li>
             <i class="icon-imagen"><strong>Serviços</strong></i>
           </li>
-          <li id="servi0"></li>
-          <li id="botaoP"></li>
+          <li><input type="text" class="editarAll" id="servi0" disabled="true"></li>
         </ul>
         <!--parte inferior com informações principais da empreiteira-->
         <ul class="lista-datos">
           <li>
             <i class="icon-imagen"><strong>Seu Email</strong></i>
           </li>
-          <li><input type="text" class="testando" id="editarAll" disabled="true"></li>
-          
+          <li><input placeholder="Email" type="text" class="editarAll" id="email" disabled="true"></li>
+
         </ul>
-        <ul class="lista-datos">  
+        <ul class="lista-datos">
           <li>
             <i class="icon-imagen"><strong>Informações gerais</strong></i>
           </li>
-          <li id="localidade"><input type="text" class="testando" id="editarAll" disabled="true"></li>
-          <li id="printarCnpj"><input type="text" class="testando" id="editarAll" disabled="true"></li>
-          
-          
+          <li><input placeholder="Localidade" type="text" class="editarAll" id="localidade" disabled="true"></li>
+          <li><input placeholder="CNPJ" type="text" class="editarAll" id="printarCnpj" disabled="true"></li>
+
+
         </ul>
         <ul class="lista-datos">
           <li>
             <i class="icon-imagen"><strong>Contabilidade</strong></i>
           </li>
-          <li id="representante"></li>
-          <li id="emailR"></li>
+          <li><input placeholder="Representante" type="text" class="editarAll" id="representante" disabled="true"></li>
+          <li><input placeholder="Email" type="text" class="editarAll" id="emailR" disabled="true"></li>
         </ul>
-        
+        <button class="update" id="atualizar0" onclick="toggle();">Editar </button>
+        <button id="enviar10">Enviar</button>
+
       </div>
       <!--parte para inserção das redes sociais, será implementada posteriormente -->
       <div class="redes-sociais">
@@ -88,110 +90,131 @@
   </section>
 
   <script>
-    let input = document.getElementById("editarAll");
-      const toggle = () => {
-        input.disabled = !input.disabled
-      }
+
+    const toggle = () => {
+      let input0 = document.getElementById("email");
+      let input1 = document.getElementById("localidade");
+      let input2 = document.getElementById("printarCnpj");
+      let input3 = document.getElementById("servi0");
+      let input4 = document.getElementById("representante");
+      let input5 = document.getElementById("emailR");
+      input0.disabled = !input0.disabled
+      input1.disabled = !input1.disabled
+      input2.disabled = !input2.disabled
+      input3.disabled = !input3.disabled
+      input4.disabled = !input4.disabled
+      input5.disabled = !input5.disabled
+
+      console.log()
+    }
+
+  
 
 
 
 
-      // let user = document.cookie.split(';')[0].trim().split("user=")[1];
-      // let password = document.cookie.split(';')[1].trim().split("password=")[1]
+
+    // let user = document.cookie.split(';')[0].trim().split("user=")[1];
+    // let password = document.cookie.split(';')[1].trim().split("password=")[1]
 
 
-      let user = {}
+    let user = {}
 
-      let id = 01;
+    let id = 34;
 
-      // const checkUserLoggedIn = async () => {
-      //   await fetch(`http://localhost:3001/selectEmpreiteiro?id_empreiteiro=${id}`)
-      //     .then( (res) => { user = res.data } )
-      //     .catch( () => { window.route = "/login" } )
-      // }
+    // const checkUserLoggedIn = async () => {
+    //   await fetch(`http://localhost:3001/selectEmpreiteiro?id_empreiteiro=${id}`)
+    //     .then( (res) => { user = res.data } )
+    //     .catch( () => { window.route = "/login" } )
+    // }
 
-      // checkUserLoggedIn()
+    // checkUserLoggedIn()
 
-      fetch(`http://localhost:3001/selectEmpreiteiro?id_empreiteiro=${id}`)
-        .then(data => {
-          return data.json();
-        })
-        .then(post => {
-          console.log(post.title);
-        });
-
-      let url = `http://localhost:3001/selectAllEmpreiteiro`
-
-      let servicos = '';
-      let nomeEmpresa = '';
-      let printarCnpj = '';
-      let experiencia = ''
-
-      fetch(url)
-        .then((response) => {
-          return response.json();
-        })
-        .then((data) => {
-          let usuarios = data;
-
-          usuarios.map((user) => {
-            if (user.id_empreiteiro == id) {
-              console.log(user)
-
-              document.getElementById("titulo").innerHTML += user.nome_empresa
-              document.getElementById("email").value.innerHTML += user.email_empresa
-              
-              document.getElementById("localidade").value.innerHTML += user.localidade
-              document.getElementById("printarCnpj").value.innerHTML += user.cnpj
-              document.getElementById("servi0").value.innerHTML += `<input type="text" class="testando" id="editarAll" disabled="true" value="${user.especialidade}">`
-              document.getElementById("representante").value.innerHTML += `<input type="text" class="testando" id="editarAll" disabled="true" value="${user.representante}">`
-              document.getElementById("emailR").value.innerHTML += `<input type="text" class="testando" id="editarAll" disabled="true" value="${user.email_representante}">`
-              document.getElementById("botaoP").value.innerHTML += `<button class="update" id="update${user.id_empreiteiro}" onclick="toggle(${user.id_empreiteiro});">Editar </button>">`
-
-              
-
-            }
-          })
-        })
-        .catch(function (error) {
-          console.log(error);
-        })
-
-        async function updateUser(
-  id,
-  {
-    nome_empresa,
-    email_empresa,
-    cnpj,
-    localidade,
-    especialidade,
-    representante,
-    email_representante,
-  }
-) {
-  try {
-    await axios
-      .put("http://localhost:3001/atualizaEmpreiteiro", {
-        id_empreiteiro: id,
-        nome_empresa,
-        email_empresa,
-        cnpj,
-        localidade,
-        especialidade,
-        representante,
-        email_representante,
+    fetch(`http://localhost:3001/selectAdminMrv?id_adminMrv=${id}`)
+      .then(data => {
+        return data.json();
       })
-      .then(async (res) => {
-        console.log(res);
-        await renderEmpreiteiros();
-      })
-      .catch((err) => {
-        console.error(err);
+      .then(post => {
+        console.log(post.title);
       });
-  } catch (error) {
-    console.error(error);
-  }
-}
+
+    let url = `http://localhost:3001/selectAllAdminMrv`
+
+    let servicos = '';
+    let nomeEmpresa = '';
+    let printarCnpj = '';
+    let experiencia = ''
+
+    fetch(url)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        let usuarios = data;
+
+        usuarios.map((user) => {
+          if (user.id_empreiteiro == id) {
+            console.log(user)
+
+            document.getElementById("titulo").innerHTML = user.nome_admin
+            document.getElementById("email").value = user.email_admin
+
+            document.getElementById("localidade").value = user.senha_admin
+            document.getElementById("printarCnpj").value = user.confirma_senha
+            
+
+
+
+
+          }
+        })
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
+
+    async function updateUser(
+      id,
+      {
+        nome_admin,
+        email_admin,
+        senha_admin,
+        confirma_senha,
+  
+      }
+    ) {
+      try {
+        await axios
+          .put("http://localhost:3001/atualizaAdminMrv", {
+            id_adminMrv: id,
+            nome_admin,
+            email_admin,
+            senha_admin,
+            confirma_senha,
+          })
+          .then(async (res) => {
+            console.log(res);
+          })
+          .catch((err) => {
+            console.error(err);
+          });
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    document.getElementById("enviar10").addEventListener('click', async () => {
+      await updateUser(
+        34, {
+        nome_admin:document.getElementById("titulo").innerHTML,
+        email_admin:document.getElementById("email").value,
+        senha_admin:document.getElementById("printarCnpj").value,
+        confirma_senha:document.getElementById("localidade").value
+
+      }
+      ).then(async()=>{
+        window.location.reload()
+      })
+    })
 
 
 

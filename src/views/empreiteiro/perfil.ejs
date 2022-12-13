@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/public/css/perfilEmpreiteira.css" />
   <title>PERFIL</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -44,22 +45,21 @@
             <i class="icon-imagen"><strong>Serviços</strong></i>
           </li>
           <li><input type="text" class="editarAll" id="servi0" disabled="true"></li>
-          <li><button class="update" id="atualizar0" onclick="toggle();">Editar </button></li>
         </ul>
         <!--parte inferior com informações principais da empreiteira-->
         <ul class="lista-datos">
           <li>
             <i class="icon-imagen"><strong>Seu Email</strong></i>
           </li>
-          <li><input type="text" class="editarAll" id="email" disabled="true"></li>
+          <li><input placeholder="Email" type="text" class="editarAll" id="email" disabled="true"></li>
 
         </ul>
         <ul class="lista-datos">
           <li>
             <i class="icon-imagen"><strong>Informações gerais</strong></i>
           </li>
-          <li><input type="text" class="editarAll" id="localidade" disabled="true"></li>
-          <li><input type="text" class="editarAll" id="printarCnpj" disabled="true"></li>
+          <li><input placeholder="Localidade" type="text" class="editarAll" id="localidade" disabled="true"></li>
+          <li><input placeholder="CNPJ" type="text" class="editarAll" id="printarCnpj" disabled="true"></li>
 
 
         </ul>
@@ -67,10 +67,11 @@
           <li>
             <i class="icon-imagen"><strong>Contabilidade</strong></i>
           </li>
-          <li><input type="text" class="editarAll" id="representante" disabled="true"></li>
-          <li><input type="text" class="editarAll" id="emailR" disabled="true"></li>
+          <li><input placeholder="Representante" type="text" class="editarAll" id="representante" disabled="true"></li>
+          <li><input placeholder="Email" type="text" class="editarAll" id="emailR" disabled="true"></li>
         </ul>
-        <button>Enviar</button>
+        <button class="update" id="atualizar0" onclick="toggle();">Editar </button>
+        <button id="enviar10">Enviar</button>
 
       </div>
       <!--parte para inserção das redes sociais, será implementada posteriormente -->
@@ -103,28 +104,11 @@
       input3.disabled = !input3.disabled
       input4.disabled = !input4.disabled
       input5.disabled = !input5.disabled
-      
+
       console.log()
     }
-    
-    document.getElementById("atualizar0").addEventListener('click',async ()=>{
-      let email = document.getElementById("email").value;
-      let localidade = document.getElementById("localidade").value;
-      let printarCnpj = document.getElementById("printarCnpj").value;
-      let servi0 = document.getElementById("servi0").value;
-      let representante = document.getElementById("representante").value;
-      let emailR = document.getElementById("emailR").value;
-      await updateUser(0,{
-        email,
-        localidade,
-        printarCnpj,
-        servi0,
-        representante,
-        emailR
-        
-      })
-      
-    })
+
+  
 
 
 
@@ -136,7 +120,7 @@
 
     let user = {}
 
-    let id = 01;
+    let id = 34;
 
     // const checkUserLoggedIn = async () => {
     //   await fetch(`http://localhost:3001/selectEmpreiteiro?id_empreiteiro=${id}`)
@@ -217,7 +201,6 @@
           })
           .then(async (res) => {
             console.log(res);
-            await renderEmpreiteiros();
           })
           .catch((err) => {
             console.error(err);
@@ -226,6 +209,22 @@
         console.error(error);
       }
     }
+    document.getElementById("enviar10").addEventListener('click', async () => {
+      await updateUser(
+        34, {
+        nome_empresa:document.getElementById("titulo").innerHTML,
+        email_empresa:document.getElementById("email").value,
+        cnpj:document.getElementById("printarCnpj").value,
+        localidade:document.getElementById("localidade").value,
+        especialidade:document.getElementById("servi0").value,
+        representante:document.getElementById("representante").value,
+        email_representante:document.getElementById("emailR").value,
+
+      }
+      ).then(async()=>{
+        window.location.reload()
+      })
+    })
 
 
 

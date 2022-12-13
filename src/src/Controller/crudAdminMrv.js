@@ -10,7 +10,7 @@ export async function selectAllAdminMrv(req, res) {
 
 // comando SELECT da tabela efetivacao 
 export async function selectAdminMrv(req, res) {
-    let id_adminMrv = req.body.id_adminMrv;
+    let id_adminMrv = req.query.id_adminMrv;
     bancoDados().then(db => {
         db.get('SELECT * FROM adminMrv WHERE id_adminMrv=?', [id_adminMrv])
             .then(Cadastro => res.json(Cadastro))
