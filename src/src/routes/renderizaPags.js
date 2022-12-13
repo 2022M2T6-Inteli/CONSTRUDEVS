@@ -43,7 +43,7 @@ function selecionaAdmin(req, res) {
           res.cookie('user', analista.email_admin);
           res.cookie('password', analista.senha_admin);
 
-          res.render("adminMrv/pagAdmin")
+          res.render("adminMrv/pagAdmin");
         } else {
           res.render("erros/pagErros");
         }
