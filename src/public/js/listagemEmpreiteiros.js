@@ -52,7 +52,7 @@ const toggleInputs = async (number) => {
 
 // função para deletar e exibir dinamicamente 
 const renderEmpreiteiros = async () => {
-  await fetch("http://localhost:3001/selectAllEmpreiteiro")
+  await fetch("/selectAllEmpreiteiro")
     .then((resposta) => {
       return resposta.json();
     })

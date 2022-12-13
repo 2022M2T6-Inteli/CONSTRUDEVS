@@ -130,7 +130,7 @@
 
     // checkUserLoggedIn()
 
-    fetch(`http://localhost:3001/selectEmpreiteiro?id_empreiteiro=${id}`)
+    fetch(`http://localhost:3001/selectAdminMrv?id_adminMrv=${id}`)
       .then(data => {
         return data.json();
       })
@@ -138,7 +138,7 @@
         console.log(post.title);
       });
 
-    let url = `http://localhost:3001/selectAllEmpreiteiro`
+    let url = `http://localhost:3001/selectAllAdminMrv`
 
     let servicos = '';
     let nomeEmpresa = '';
@@ -156,14 +156,12 @@
           if (user.id_empreiteiro == id) {
             console.log(user)
 
-            document.getElementById("titulo").innerHTML = user.nome_empresa
-            document.getElementById("email").value = user.email_empresa
+            document.getElementById("titulo").innerHTML = user.nome_admin
+            document.getElementById("email").value = user.email_admin
 
-            document.getElementById("localidade").value = user.localidade
-            document.getElementById("printarCnpj").value = user.cnpj
-            document.getElementById("servi0").value = user.especialidade
-            document.getElementById("representante").value = user.representante
-            document.getElementById("emailR").value = user.email_representante
+            document.getElementById("localidade").value = user.senha_admin
+            document.getElementById("printarCnpj").value = user.confirma_senha
+            
 
 
 
@@ -178,26 +176,21 @@
     async function updateUser(
       id,
       {
-        nome_empresa,
-        email_empresa,
-        cnpj,
-        localidade,
-        especialidade,
-        representante,
-        email_representante,
+        nome_admin,
+        email_admin,
+        senha_admin,
+        confirma_senha,
+  
       }
     ) {
       try {
         await axios
-          .put("http://localhost:3001/atualizaEmpreiteiro", {
-            id_empreiteiro: id,
-            nome_empresa,
-            email_empresa,
-            cnpj,
-            localidade,
-            especialidade,
-            representante,
-            email_representante,
+          .put("http://localhost:3001/atualizaAdminMrv", {
+            id_adminMrv: id,
+            nome_admin,
+            email_admin,
+            senha_admin,
+            confirma_senha,
           })
           .then(async (res) => {
             console.log(res);
@@ -212,13 +205,10 @@
     document.getElementById("enviar10").addEventListener('click', async () => {
       await updateUser(
         34, {
-        nome_empresa:document.getElementById("titulo").innerHTML,
-        email_empresa:document.getElementById("email").value,
-        cnpj:document.getElementById("printarCnpj").value,
-        localidade:document.getElementById("localidade").value,
-        especialidade:document.getElementById("servi0").value,
-        representante:document.getElementById("representante").value,
-        email_representante:document.getElementById("emailR").value,
+        nome_admin:document.getElementById("titulo").innerHTML,
+        email_admin:document.getElementById("email").value,
+        senha_admin:document.getElementById("printarCnpj").value,
+        confirma_senha:document.getElementById("localidade").value
 
       }
       ).then(async()=>{
