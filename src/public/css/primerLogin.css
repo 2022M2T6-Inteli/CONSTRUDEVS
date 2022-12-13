@@ -1,11 +1,11 @@
+@charset "utf-8";
+
 /*Formatação geral*/
 * {
     padding: 0;
     margin: 0;
     text-align: center;
 }
-
-
 
 /*Formatação do corpo*/
 body {
@@ -18,7 +18,6 @@ header {
     text-align: center;
     margin-top: 2%;
 }
-
 
 /*Formatação da div "container"*/
 #container {
@@ -47,14 +46,12 @@ header {
 }
 }
 
-
 /*Formatação da coluna de convidado para versões mobile*/
 @media (max-width: 500px) {
     .coluna-33user{
     margin-bottom: 10%;
 }
 }
-
 
 /*Formatação da coluna de empreiteira para versões mobile*/
 @media (max-width: 500px) {
