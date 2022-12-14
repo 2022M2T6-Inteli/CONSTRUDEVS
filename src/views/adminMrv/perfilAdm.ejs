@@ -49,26 +49,12 @@
         <!--parte inferior com informações principais da empreiteira-->
         <ul class="lista-datos">
           <li>
-            <i class="icon-imagen"><strong>Seu Email</strong></i>
-          </li>
-          <li><input placeholder="Email" type="text" class="editarAll" id="email" disabled="true"></li>
-
-        </ul>
-        <ul class="lista-datos">
-          <li>
             <i class="icon-imagen"><strong>Informações gerais</strong></i>
           </li>
           <li><input placeholder="Localidade" type="text" class="editarAll" id="localidade" disabled="true"></li>
           <li><input placeholder="CNPJ" type="text" class="editarAll" id="printarCnpj" disabled="true"></li>
 
 
-        </ul>
-        <ul class="lista-datos">
-          <li>
-            <i class="icon-imagen"><strong>Contabilidade</strong></i>
-          </li>
-          <li><input placeholder="Representante" type="text" class="editarAll" id="representante" disabled="true"></li>
-          <li><input placeholder="Email" type="text" class="editarAll" id="emailR" disabled="true"></li>
         </ul>
         <button class="update" id="atualizar0" onclick="toggle();">Editar </button>
         <button id="enviar10">Enviar</button>
@@ -92,18 +78,13 @@
   <script>
 
     const toggle = () => {
-      let input0 = document.getElementById("email");
+      
       let input1 = document.getElementById("localidade");
       let input2 = document.getElementById("printarCnpj");
       let input3 = document.getElementById("servi0");
-      let input4 = document.getElementById("representante");
-      let input5 = document.getElementById("emailR");
-      input0.disabled = !input0.disabled
       input1.disabled = !input1.disabled
       input2.disabled = !input2.disabled
       input3.disabled = !input3.disabled
-      input4.disabled = !input4.disabled
-      input5.disabled = !input5.disabled
 
       console.log()
     }
@@ -120,7 +101,7 @@
 
     let user = {}
 
-    let id = 34;
+    let id = 3;
 
     // const checkUserLoggedIn = async () => {
     //   await fetch(`http://localhost:3001/selectEmpreiteiro?id_empreiteiro=${id}`)
@@ -153,11 +134,11 @@
         let usuarios = data;
 
         usuarios.map((user) => {
-          if (user.id_empreiteiro == id) {
+          if (user.id_adminMrv == id) {
             console.log(user)
 
             document.getElementById("titulo").innerHTML = user.nome_admin
-            document.getElementById("email").value = user.email_admin
+            document.getElementById("servi0").value = user.email_admin
 
             document.getElementById("localidade").value = user.senha_admin
             document.getElementById("printarCnpj").value = user.confirma_senha
@@ -204,9 +185,9 @@
     }
     document.getElementById("enviar10").addEventListener('click', async () => {
       await updateUser(
-        34, {
+        3, {
         nome_admin:document.getElementById("titulo").innerHTML,
-        email_admin:document.getElementById("email").value,
+        email_admin:document.getElementById("servi0").value,
         senha_admin:document.getElementById("printarCnpj").value,
         confirma_senha:document.getElementById("localidade").value
 
