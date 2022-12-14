@@ -49,9 +49,7 @@ export async function insertEmpreiteiro(req, res) {
       ]
     );
   });
-  res.json({
-    statusCode: 200,
-  });
+  res.render("cadastroEfetuado/cadastroOk");
 }
 
 // comando update - responsável por atualizar os dados da tabela MEI

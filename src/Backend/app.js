@@ -15,15 +15,21 @@ import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import cookieParser from 'cookie-parser';
 
+
+
+
 const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 import bodyParser from 'body-parser';
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
+
+
+
 // Configurar o BodyParser
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 export default urlencodedParser;
 
@@ -41,6 +47,9 @@ app.use(empreiteiro)
 app.use(vagas)
 app.use(adminMrv)
 app.use(renderizaLogin)
+
+
+
 
 // iniciando a pasta views
 app.set('view engine', 'ejs')

@@ -112,6 +112,13 @@ router.get("/cadastrarAdminMrv", (req, res) => {
   res.render("adminMrv/cadastroAdmin");
 });
 
+router.get("/cadastroFeito", (req,res) =>{
+  res.render("cadastroEfetuado/cadastroOk")
+})
+
+
+
+
 // função para sistema de login admin MRV
 function selecionaAdmin(req, res) {
   fetch("http://localhost:3001/selectAllAdminMrv")
@@ -120,10 +127,10 @@ function selecionaAdmin(req, res) {
     })
     .then((admin) => {
       admin.forEach((analista) => {
-        if (
-          analista.email_admin == req.body.email &&
-          analista.senha_admin == req.body.senha
-        ) {
+        if (analista.email_admin == req.body.email && analista.senha_admin == req.body.senha  ) {
+          res.cookie("user", analista.cnpj);
+          res.cookie("password", analista.senha);
+          res.cookie("id", analista.id_empreiteiro);
           res.render("adminMrv/pagAdmin");
         } else {
           res.render("erros/pagErros");
@@ -132,24 +139,43 @@ function selecionaAdmin(req, res) {
     });
 }
 
-function selecionaEmpreiteiro(req, res) {
+router.post("/logarAdminMrv", selecionaAdmin);
+
+
+
+function selecionaEmpreiteiro(req,res) {
+
   fetch("http://localhost:3001/selectAllEmpreiteiro")
     .then((admin) => {
       return admin.json();
     })
     .then((admin) => {
       admin.forEach((empreiteiro) => {
-          if (empreiteiro.cnpj == req.body.cnpj && empreiteiro.senha == req.body.senha) {
-            res.cookie("user", empreiteiro.cnpj);
-            res.cookie("password", empreiteiro.senha);
-            res.cookie("id", empreiteiro.id_empreiteiro);
-            res.render("empreiteiro/pagEmpreiteiro");
-          } 
+          if (empreiteiro.cnpj === req.body.cnpj && empreiteiro.senha === req.body.senha) {
+           res.render("empreiteiro/pagEmpreiteiro")
+          } else {
+            res.render("erros/pagErros");
+          }
       });
     });
 }
+router.post("/logarEmpreiteiro",selecionaEmpreiteiro);
 
-router.post("/logarAdminMrv", selecionaAdmin);
-router.post("/logarEmpreiteiro", selecionaEmpreiteiro);
 
-export default router;
+
+// router.get("/logarAdminMrv", (req,res) =>{
+//   res.render("adminMrv/pagAdmin");
+// })
+
+
+// router.get("/logarEmpreiteiro", (req,res) =>{
+
+//   if( req.session.cnpj && req.session.senha){
+//     res.render("empreiteiro/pagEmpreiteiro");
+//   } else {
+//     res.render("erros/pagErros");
+//   }
+// })
+
+
+export default router
