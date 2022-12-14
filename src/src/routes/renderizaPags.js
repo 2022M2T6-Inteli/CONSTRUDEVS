@@ -146,12 +146,12 @@ router.post("/logarAdminMrv", selecionaAdmin);
 function selecionaEmpreiteiro(req,res) {
 
   fetch("http://localhost:3001/selectAllEmpreiteiro")
-    .then((admin) => {
-      return admin.json();
+    .then((user) => {
+      return user.json();
     })
-    .then((admin) => {
-      admin.forEach((empreiteiro) => {
-          if (empreiteiro.cnpj === req.body.cnpj && empreiteiro.senha === req.body.senha) {
+    .then((user) => {
+      user.forEach((empreiteiro) => {
+          if (empreiteiro.cnpj == req.body.cnpj && empreiteiro.senha == req.body.senha) {
            res.render("empreiteiro/pagEmpreiteiro")
           } else {
             res.render("erros/pagErros");
