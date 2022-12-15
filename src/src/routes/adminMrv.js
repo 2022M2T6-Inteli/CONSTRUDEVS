@@ -15,7 +15,7 @@ router.delete('/deleteAllAdminMrv', deleteAllAdminMrv)
 
 
 router.get("/renderizaIndexAdminMrv", (req, res) => {
-    res.render("adminMrv/pagAdmin");
+    res.render("adminMrv/pagAdminv2"); //trocado por pagAdmin
   });
 
 
