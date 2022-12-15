@@ -164,7 +164,6 @@ function selecionaEmpreiteiro(req,res) {
             valores[0] = empreiteiro.cnpj;
             valores[1] = empreiteiro.senha; 
             res.cookie("id_User", empreiteiro.id_empreiteiro);
-            res.render("empreiteiro/pagEmpreiteiro")
           } 
           return valores;
       });
@@ -176,7 +175,9 @@ router.get("/logarEmpreiteiro", (req,res) =>{
   if(valores[0] && valores[1]){
     res.render("empreiteiro/pagEmpreiteiro");
   }
-  res.render("erros/pagErros")
+  if (valores[0] == null || valores[1] == null){
+     res.render("erros/pagErros")
+  }
 }) 
 
 // router.get("/logarAdminMrv", (req,res) =>{
