@@ -34,8 +34,8 @@ alguns filtros a MRV poderá analisar e seguir contato com a empreiteira.
   &emsp;| --> outros <br>
     &emsp;|-->endPoints Sistema Ponte.postman_collection.json<br>
     &emsp;|-->modelagemFinal-BD-ConstruDevs.png<br>
-  &emsp;| T6_G2_V2.7_Web_application_document.pdf<br>
-  &emsp;| T6_G2_V2.7_Web_application_document.docx<br>
+  &emsp;| T6_G2_V2.8_Web_application_document.pdf<br>
+  &emsp;| T6_G2_V2.8_Web_application_document.docx<br>
 |--> imagens<br>
 |--> src<br>
   &emsp;|--> Backend<br>
