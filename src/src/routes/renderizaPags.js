@@ -1,5 +1,6 @@
 import cookieParser from "cookie-parser";
 import { response, Router } from "express";
+import { existsSync } from "fs";
 import fetch from "node-fetch";
 
 const router = Router();
@@ -117,6 +118,22 @@ router.get("/cadastroFeito", (req,res) =>{
   res.render("cadastroEfetuado/cadastroOk")
 })
 
+router.get("/listaVagas", (req,res) =>{
+  res.render("empreiteiro/listaVagas")
+})
+
+router.get("/logarAdmin", (req,res) =>{
+  res.render("adminMrv/pagAdmin")
+})
+
+router.get("/logarEmpreiteiro",(req,res) =>{
+  res.render("empreiteiro/pagEmpreiteiro")
+})
+
+router.get("/erro", (req,res) =>{
+  console.log('ERRO!');
+  res.render("erros/pagErros");
+})
 
 
 
@@ -159,40 +176,25 @@ function selecionaEmpreiteiro(req,res) {
     })
     .then((user) => {
       user.forEach((empreiteiro) => {
-        let valores = [];
+       
           if (empreiteiro.cnpj == req.body.cnpj && empreiteiro.senha == req.body.senha) {
-            valores[0] = empreiteiro.cnpj;
-            valores[1] = empreiteiro.senha; 
             res.cookie("id_User", empreiteiro.id_empreiteiro);
-          } 
-          return valores;
+            res.render("empreiteiro/pagEmpreiteiro");
+          }
       });
     });
 }
+
+
 router.post("/logarEmpreiteiro",selecionaEmpreiteiro);
+
+
 
 router.get("/logarEmpreiteiro", (req,res) =>{
   if(valores[0] && valores[1]){
     res.render("empreiteiro/pagEmpreiteiro");
   }
-  if (valores[0] == null || valores[1] == null){
-     res.render("erros/pagErros")
-  }
-}) 
-
-// router.get("/logarAdminMrv", (req,res) =>{
-//   res.render("adminMrv/pagAdmin");
-// })
-
-
-// router.get("/logarEmpreiteiro", (req,res) =>{
-
-//   if( req.session.cnpj && req.session.senha){
-//     res.render("empreiteiro/pagEmpreiteiro");
-//   } else {
-//     res.render("erros/pagErros");
-//   }
-// })
-
+  res.send(`ERROR 404! VOLTE PARA A TELA INICIAL <a href =" /hub ">VOLTE AQUI</a>`)
+})
 
 export default router
