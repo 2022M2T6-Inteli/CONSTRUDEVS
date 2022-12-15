@@ -108,27 +108,23 @@
       console.log()
     }
 
-  
+    function getCookie(cookieName) {
+      let cookie = {};
+      document.cookie.split(';').forEach(function (el) {
+        let [key, value] = el.split('=');
+        cookie[key.trim()] = value;
+      })
+      return cookie[cookieName];
+    }
+
+    let id_User = getCookie('id_User')
 
 
-
-
-
-    // let user = document.cookie.split(';')[0].trim().split("user=")[1];
-    // let password = document.cookie.split(';')[1].trim().split("password=")[1]
-
+    console.log(id_User)
 
     let user = {}
 
-    let id = 34;
-
-    // const checkUserLoggedIn = async () => {
-    //   await fetch(`http://localhost:3001/selectEmpreiteiro?id_empreiteiro=${id}`)
-    //     .then( (res) => { user = res.data } )
-    //     .catch( () => { window.route = "/login" } )
-    // }
-
-    // checkUserLoggedIn()
+    let id = id_User;
 
     fetch(`http://localhost:3001/selectEmpreiteiro?id_empreiteiro=${id}`)
       .then(data => {
@@ -211,7 +207,7 @@
     }
     document.getElementById("enviar10").addEventListener('click', async () => {
       await updateUser(
-        34, {
+        id, {
         nome_empresa:document.getElementById("titulo").innerHTML,
         email_empresa:document.getElementById("email").value,
         cnpj:document.getElementById("printarCnpj").value,

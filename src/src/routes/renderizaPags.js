@@ -1,9 +1,10 @@
-import { Router } from "express";
+import cookieParser from "cookie-parser";
+import { response, Router } from "express";
 import fetch from "node-fetch";
 
 const router = Router();
 let resposta =
-`
+  `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -121,16 +122,17 @@ router.get("/cadastroFeito", (req,res) =>{
 
 // função para sistema de login admin MRV
 function selecionaAdmin(req, res) {
+  for (let cookie of Object.keys(req.cookies)) {
+      res.clearCookie(cookie)
+  }
   fetch("http://localhost:3001/selectAllAdminMrv")
-    .then((admin) => {
-      return admin.json();
+  .then((admin) => {
+    return admin.json();
     })
     .then((admin) => {
       admin.forEach((analista) => {
         if (analista.email_admin == req.body.email && analista.senha_admin == req.body.senha  ) {
-          res.cookie("user", analista.cnpj);
-          res.cookie("password", analista.senha);
-          res.cookie("id", analista.id_empreiteiro);
+          res.cookie("Id_adm", analista.id_empreiteiro);
           res.render("adminMrv/pagAdmin");
         } 
       });
@@ -155,6 +157,9 @@ router.get("/logarAdminMrv", (req,res) =>{
 
 
 function selecionaEmpreiteiro(req,res) {
+  for (let cookie of Object.keys(req.cookies)) {
+    res.clearCookie(cookie)
+}
 
   fetch("http://localhost:3001/selectAllEmpreiteiro")
     .then((user) => {
@@ -163,7 +168,8 @@ function selecionaEmpreiteiro(req,res) {
     .then((user) => {
       user.forEach((empreiteiro) => {
           if (empreiteiro.cnpj == req.body.cnpj && empreiteiro.senha == req.body.senha) {
-           res.render("empreiteiro/pagEmpreiteiro")
+            res.cookie("id_User", empreiteiro.id_empreiteiro);
+            res.render("empreiteiro/pagEmpreiteiro")
           } else {
             res.render("erros/pagErros");
           }
