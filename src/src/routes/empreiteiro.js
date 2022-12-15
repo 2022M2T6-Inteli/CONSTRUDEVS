@@ -14,7 +14,7 @@ router.post('/adicionaEmpreiteiro', insertEmpreiteiro)
 router.delete('/deleteAllEmpreiteiros', deleteAllEmpreiteiro)
 
   router.get("/renderizaIndexEmpreiteiro", (req, res) => {
-    res.render("empreiteiro/pagEmpreiteirov2"); // trocado por pagEmpreitero
+    res.render("empreiteiro/pagEmpreiteiro"); 
   });
 
   router.get("/finalizaCadastroEmpreiteiro", (req,res) =>{
