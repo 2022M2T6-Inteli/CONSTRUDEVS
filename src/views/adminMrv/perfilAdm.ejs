@@ -42,14 +42,14 @@
       <div class="perfil-usuario-footer">
         <ul class="lista-datos">
           <li>
-            <i class="icon-imagen"><strong>Serviços</strong></i>
+            <i class="icon-imagen"><strong>Seu Email</strong></i>
           </li>
           <li><input type="text" class="editarAll" id="servi0" disabled="true"></li>
         </ul>
         <!--parte inferior com informações principais da empreiteira-->
         <ul class="lista-datos">
           <li>
-            <i class="icon-imagen"><strong>Informações gerais</strong></i>
+            <i class="icon-imagen"><strong>Sua Senha</strong></i>
           </li>
           <li><input placeholder="Localidade" type="text" class="editarAll" id="localidade" disabled="true"></li>
           <li><input placeholder="CNPJ" type="text" class="editarAll" id="printarCnpj" disabled="true"></li>
@@ -78,7 +78,7 @@
   <script>
 
     const toggle = () => {
-      
+
       let input1 = document.getElementById("localidade");
       let input2 = document.getElementById("printarCnpj");
       let input3 = document.getElementById("servi0");
@@ -89,27 +89,23 @@
       console.log()
     }
 
-  
+    function getCookie(cookieName) {
+      let cookie = {};
+      document.cookie.split(';').forEach(function (el) {
+        let [key, value] = el.split('=');
+        cookie[key.trim()] = value;
+      })
+      return cookie[cookieName];
+    }
+
+    let id_admin = getCookie('Id_admin')
 
 
-
-
-
-    // let user = document.cookie.split(';')[0].trim().split("user=")[1];
-    // let password = document.cookie.split(';')[1].trim().split("password=")[1]
-
+    console.log(id_admin)
 
     let user = {}
 
-    let id = 3;
-
-    // const checkUserLoggedIn = async () => {
-    //   await fetch(`http://localhost:3001/selectEmpreiteiro?id_empreiteiro=${id}`)
-    //     .then( (res) => { user = res.data } )
-    //     .catch( () => { window.route = "/login" } )
-    // }
-
-    // checkUserLoggedIn()
+    let id = id_admin;
 
     fetch(`http://localhost:3001/selectAdminMrv?id_adminMrv=${id}`)
       .then(data => {
@@ -142,7 +138,7 @@
 
             document.getElementById("localidade").value = user.senha_admin
             document.getElementById("printarCnpj").value = user.confirma_senha
-            
+
 
 
 
@@ -161,7 +157,7 @@
         email_admin,
         senha_admin,
         confirma_senha,
-  
+
       }
     ) {
       try {
@@ -185,14 +181,14 @@
     }
     document.getElementById("enviar10").addEventListener('click', async () => {
       await updateUser(
-        3, {
-        nome_admin:document.getElementById("titulo").innerHTML,
-        email_admin:document.getElementById("servi0").value,
-        senha_admin:document.getElementById("printarCnpj").value,
-        confirma_senha:document.getElementById("localidade").value
+        id, {
+        nome_admin: document.getElementById("titulo").innerHTML,
+        email_admin: document.getElementById("servi0").value,
+        senha_admin: document.getElementById("printarCnpj").value,
+        confirma_senha: document.getElementById("localidade").value
 
       }
-      ).then(async()=>{
+      ).then(async () => {
         window.location.reload()
       })
     })

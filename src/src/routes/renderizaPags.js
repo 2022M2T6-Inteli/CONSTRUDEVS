@@ -1,9 +1,10 @@
-import { Router } from "express";
+import cookieParser from "cookie-parser";
+import { response, Router } from "express";
 import fetch from "node-fetch";
 
 const router = Router();
 let resposta =
-`
+  `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -114,37 +115,46 @@ router.get("/cadastrarAdminMrv", (req, res) => {
 
 // função para sistema de login admin MRV
 function selecionaAdmin(req, res) {
+  for (let cookie of Object.keys(req.cookies)) {
+      res.clearCookie(cookie)
+  }
   fetch("http://localhost:3001/selectAllAdminMrv")
-    .then((admin) => {
-      return admin.json();
+  .then((admin) => {
+    return admin.json();
     })
     .then((admin) => {
       admin.forEach((analista) => {
+        
+        
         if (
           analista.email_admin == req.body.email &&
           analista.senha_admin == req.body.senha
-        ) {
-          res.render("adminMrv/pagAdmin");
-        } else {
+          ) {
+            
+            res.cookie("Id_admin", analista.id_adminMrv);
+            res.render("adminMrv/pagAdmin");
+            
+          } else {
           res.render("erros/pagErros");
         }
       });
     });
-}
-
-function selecionaEmpreiteiro(req, res) {
+  }
+  
+  function selecionaEmpreiteiro(req, res) {
+  for (let cookie of Object.keys(req.cookies)) {
+      res.clearCookie(cookie)
+  }
   fetch("http://localhost:3001/selectAllEmpreiteiro")
     .then((admin) => {
       return admin.json();
     })
     .then((admin) => {
       admin.forEach((empreiteiro) => {
-          if (empreiteiro.cnpj == req.body.cnpj && empreiteiro.senha == req.body.senha) {
-            res.cookie("user", empreiteiro.cnpj);
-            res.cookie("password", empreiteiro.senha);
-            res.cookie("id", empreiteiro.id_empreiteiro);
-            res.render("empreiteiro/pagEmpreiteiro");
-          } 
+        if (empreiteiro.cnpj == req.body.cnpj && empreiteiro.senha == req.body.senha) {
+          res.cookie("id_User", empreiteiro.id_empreiteiro);
+          res.render("empreiteiro/pagEmpreiteiro");
+        }
       });
     });
 }
