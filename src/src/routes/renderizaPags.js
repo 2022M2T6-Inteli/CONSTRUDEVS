@@ -1,4 +1,5 @@
 import cookieParser from "cookie-parser";
+import { render } from "ejs";
 import { response, Router } from "express";
 import { existsSync } from "fs";
 import fetch from "node-fetch";
@@ -192,9 +193,12 @@ router.post("/logarEmpreiteiro",selecionaEmpreiteiro);
 
 router.get("/logarEmpreiteiro", (req,res) =>{
   if(valores[0] && valores[1]){
+    console.log("ENTROU NO IF")
     res.render("empreiteiro/pagEmpreiteiro");
+  } else {
+    console.log("ENTROU NO ELSE")
+    res.render("erros/pagErros");
   }
-  res.send(`ERROR 404! VOLTE PARA A TELA INICIAL <a href =" /hub ">VOLTE AQUI</a>`)
 })
 
 export default router
