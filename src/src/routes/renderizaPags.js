@@ -142,55 +142,42 @@ function selecionaAdmin(req, res) {
 router.post("/logarAdminMrv", selecionaAdmin);
 
 router.get("/logarAdminMrv", (req,res) =>{
-  fetch("http://localhost:3001/selectAllAdminMrv").then((admin) =>{
-    return admin.json();
-  }).then((admin) =>{
-    admin.forEach((analista) =>{
-      if (analista.email_admin == req.body.email && analista.senha_admin == req.body.senha  ) {
+      if(valores[0] && valores[1]){
         res.render("adminMrv/pagAdmin");
-      } else if (analista.email_admin !== req.body.email && analista.senha_admin !== req.body.senha ){
-        res.render("erros/pagErros")
       }
+      res.render("erros/pagErros")
     })
-  })
-})
 
 
 function selecionaEmpreiteiro(req,res) {
   for (let cookie of Object.keys(req.cookies)) {
     res.clearCookie(cookie)
 }
-
   fetch("http://localhost:3001/selectAllEmpreiteiro")
     .then((user) => {
       return user.json();
     })
     .then((user) => {
       user.forEach((empreiteiro) => {
+        let valores = [];
           if (empreiteiro.cnpj == req.body.cnpj && empreiteiro.senha == req.body.senha) {
+            valores[0] = empreiteiro.cnpj;
+            valores[1] = empreiteiro.senha; 
             res.cookie("id_User", empreiteiro.id_empreiteiro);
             res.render("empreiteiro/pagEmpreiteiro")
-          } else {
-            res.render("erros/pagErros");
-          }
+          } 
+          return valores;
       });
     });
 }
 router.post("/logarEmpreiteiro",selecionaEmpreiteiro);
 
 router.get("/logarEmpreiteiro", (req,res) =>{
-  fetch("http://localhost:3001/selectAllEmpreiteiro").then((empreiteiro) =>{
-    return empreiteiro.json();
-  }).then((empreiteiro) =>{
-    empreiteiro.forEach((empreiteiro) =>{
-      if (empreiteiro.cnpj == req.body.cnpj && empreiteiro.senha == req.body.senha  ) {
-        res.render("empreiteiro/pagEmpreiteiro");
-      } else if (empreiteiro.cnpj !== req.body.cnpj && empreiteiro.senha !== req.body.senha ){
-        res.render("erros/pagErros")
-      }
-    })
-  })
-})
+  if(valores[0] && valores[1]){
+    res.render("empreiteiro/pagEmpreiteiro");
+  }
+  res.render("erros/pagErros")
+}) 
 
 // router.get("/logarAdminMrv", (req,res) =>{
 //   res.render("adminMrv/pagAdmin");
