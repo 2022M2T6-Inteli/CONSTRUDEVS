@@ -132,15 +132,26 @@ function selecionaAdmin(req, res) {
           res.cookie("password", analista.senha);
           res.cookie("id", analista.id_empreiteiro);
           res.render("adminMrv/pagAdmin");
-        } else {
-          res.render("erros/pagErros");
-        }
+        } 
       });
     });
 }
 
 router.post("/logarAdminMrv", selecionaAdmin);
 
+router.get("/logarAdminMrv", (req,res) =>{
+  fetch("http://localhost:3001/selectAllAdminMrv").then((admin) =>{
+    return admin.json();
+  }).then((admin) =>{
+    admin.forEach((analista) =>{
+      if (analista.email_admin == req.body.email && analista.senha_admin == req.body.senha  ) {
+        res.render("adminMrv/pagAdmin");
+      } else if (analista.email_admin !== req.body.email && analista.senha_admin !== req.body.senha ){
+        res.render("erros/pagErros")
+      }
+    })
+  })
+})
 
 
 function selecionaEmpreiteiro(req,res) {
@@ -161,7 +172,19 @@ function selecionaEmpreiteiro(req,res) {
 }
 router.post("/logarEmpreiteiro",selecionaEmpreiteiro);
 
-
+router.get("/logarEmpreiteiro", (req,res) =>{
+  fetch("http://localhost:3001/selectAllEmpreiteiro").then((empreiteiro) =>{
+    return empreiteiro.json();
+  }).then((empreiteiro) =>{
+    empreiteiro.forEach((empreiteiro) =>{
+      if (empreiteiro.cnpj == req.body.cnpj && empreiteiro.senha == req.body.senha  ) {
+        res.render("empreiteiro/pagEmpreiteiro");
+      } else if (empreiteiro.cnpj !== req.body.cnpj && empreiteiro.senha !== req.body.senha ){
+        res.render("erros/pagErros")
+      }
+    })
+  })
+})
 
 // router.get("/logarAdminMrv", (req,res) =>{
 //   res.render("adminMrv/pagAdmin");
