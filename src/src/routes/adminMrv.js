@@ -19,13 +19,13 @@ router.get("/renderizaIndexAdminMrv", (req, res) => {
   });
 
 
-router.get("/renderizaListaEmpreiteiros", (req,res) =>{
+ router.get("/renderizaListaEmpreiteiros", (req,res) =>{
   res.render("adminMrv/listagemEmpreiteiros");
   })
 
 
   
-router.get("/perfilAdmin", (req,res) =>{
+ router.get("/perfilAdmin", (req,res) =>{
   res.render("adminMrv/perfilAdm");
   })
   

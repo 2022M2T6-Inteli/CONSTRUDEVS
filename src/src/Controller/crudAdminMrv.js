@@ -52,9 +52,7 @@ export async function insertAdminMrv(req, res) {
     bancoDados().then(db => {
         db.run('INSERT INTO adminMrv (id_adminMrv, nome_admin, email_admin, senha_admin, confirma_senha) VALUES (?,?,?,?,?)', [id_adminMrv.id_adminMrv, nome_admin.nome_admin, email_admin.email_admin, senha_admin.senha_admin, confirma_senha.confirma_senha]);
     });
-    res.json({
-        "statusCode": 200
-    })
+    res.render("cadastroEfetuado/cadastroOk");
 }
 
 // comando create - responsável por criar a tabela efetivacao

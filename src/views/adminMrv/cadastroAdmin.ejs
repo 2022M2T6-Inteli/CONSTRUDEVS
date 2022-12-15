@@ -17,10 +17,10 @@
       </div>
 
       <!--inserção do nome da rh-->
-      <form id="form" class="formulario"> <!-- era form !-->
+      <form action = "/adicionaAdminMrv" method = "post" id="form" class="formulario" type = "submit"> <!-- era form !-->
         <div class="controleFormulario"> <!-- era form-control !-->
           <label for="username">Nome</label>
-          <input type="text"id="username" />
+          <input type="text"id="username" name = "nome_admin" />
           <i class="fas fa-check-circle"></i>
           <i class="fas fa-exclamation-circle"></i>
           <small>Error message</small>
@@ -28,7 +28,7 @@
 
         <div class="controleFormulario">
           <label for="username">Email</label>
-          <input type="text" id="email" />
+          <input type="text" id="email" name = "email_admin" />
           <i class="fas fa-check-circle"></i>
           <i class="fas fa-exclamation-circle"></i>
           <small>Error message</small>
@@ -36,7 +36,7 @@
 
         <div class="controleFormulario">
             <label for="username">senha</label>
-            <input type="password" id="senha" />
+            <input type="password" id="senha" name = "senha_admin"/>
             <i class="fas fa-check-circle"></i>
             <i class="fas fa-exclamation-circle"></i>
             <small>Error message</small>
@@ -45,7 +45,7 @@
 
         <div class="controleFormulario">
             <label for="username">Confirmação de senha</label>
-            <input type="password" id="csenha" />
+          <input type="password" id="csenha" name = "confirma_senha"/>
             <i class="fas fa-check-circle"></i>
             <i class="fas fa-exclamation-circle"></i>
             <small>Error message</small>
@@ -54,12 +54,12 @@
         <!-- credenciais fornecidas pela mrv -->
         <div class="controleFormulario">
           <label for="username">Código de funcionário MRV</label>
-          <input type="password" id="senhaMrv" />
+          <input type="password" id="senhaMrv" name = "id_adminMrv"/>
           <i class="fas fa-check-circle"></i>
           <i class="fas fa-exclamation-circle"></i>
           <small>Error message</small>
         </div>
-        <button>Cadastrar</button>
+        <button type = "submit">Cadastrar</button>
       </form>
     </div>
   </body>

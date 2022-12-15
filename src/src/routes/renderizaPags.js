@@ -113,6 +113,13 @@ router.get("/cadastrarAdminMrv", (req, res) => {
   res.render("adminMrv/cadastroAdmin");
 });
 
+router.get("/cadastroFeito", (req,res) =>{
+  res.render("cadastroEfetuado/cadastroOk")
+})
+
+
+
+
 // função para sistema de login admin MRV
 function selecionaAdmin(req, res) {
   for (let cookie of Object.keys(req.cookies)) {
@@ -124,42 +131,57 @@ function selecionaAdmin(req, res) {
     })
     .then((admin) => {
       admin.forEach((analista) => {
-        
-        
-        if (
-          analista.email_admin == req.body.email &&
-          analista.senha_admin == req.body.senha
-          ) {
-            
-            res.cookie("Id_admin", analista.id_adminMrv);
-            res.render("adminMrv/pagAdmin");
-            
-          } else {
+        if (analista.email_admin == req.body.email && analista.senha_admin == req.body.senha  ) {
+          res.cookie("Id_adm", analista.id_empreiteiro);
+          res.render("adminMrv/pagAdmin");
+        } else {
           res.render("erros/pagErros");
-        }
-      });
-    });
-  }
-  
-  function selecionaEmpreiteiro(req, res) {
-  for (let cookie of Object.keys(req.cookies)) {
-      res.clearCookie(cookie)
-  }
-  fetch("http://localhost:3001/selectAllEmpreiteiro")
-    .then((admin) => {
-      return admin.json();
-    })
-    .then((admin) => {
-      admin.forEach((empreiteiro) => {
-        if (empreiteiro.cnpj == req.body.cnpj && empreiteiro.senha == req.body.senha) {
-          res.cookie("id_User", empreiteiro.id_empreiteiro);
-          res.render("empreiteiro/pagEmpreiteiro");
         }
       });
     });
 }
 
 router.post("/logarAdminMrv", selecionaAdmin);
-router.post("/logarEmpreiteiro", selecionaEmpreiteiro);
 
-export default router;
+
+
+function selecionaEmpreiteiro(req,res) {
+  for (let cookie of Object.keys(req.cookies)) {
+    res.clearCookie(cookie)
+}
+
+  fetch("http://localhost:3001/selectAllEmpreiteiro")
+    .then((user) => {
+      return user.json();
+    })
+    .then((user) => {
+      user.forEach((empreiteiro) => {
+          if (empreiteiro.cnpj == req.body.cnpj && empreiteiro.senha == req.body.senha) {
+            res.cookie("id_User", empreiteiro.id_empreiteiro);
+            res.render("empreiteiro/pagEmpreiteiro")
+          } else {
+            res.render("erros/pagErros");
+          }
+      });
+    });
+}
+router.post("/logarEmpreiteiro",selecionaEmpreiteiro);
+
+
+
+// router.get("/logarAdminMrv", (req,res) =>{
+//   res.render("adminMrv/pagAdmin");
+// })
+
+
+// router.get("/logarEmpreiteiro", (req,res) =>{
+
+//   if( req.session.cnpj && req.session.senha){
+//     res.render("empreiteiro/pagEmpreiteiro");
+//   } else {
+//     res.render("erros/pagErros");
+//   }
+// })
+
+
+export default router
