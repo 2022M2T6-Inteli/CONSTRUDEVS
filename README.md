@@ -32,20 +32,12 @@ alguns filtros a MRV poderá analisar e seguir contato com a empreiteira.
 
 |--> documentos<br>
   &emsp;| --> outros <br>
-    &emsp;|-->endPoints Sistema Ponte.postman_collection.json<br>
-    &emsp;|-->modelagemFinal-BD-ConstruDevs.png<br>
-  &emsp;| T6_G2_V2.8_Web_application_document.pdf<br>
-  &emsp;| T6_G2_V2.8_Web_application_document.docx<br>
+  &emsp;| T6_G2_V3_Web_application_document.pdf<br>
+  &emsp;| T6_G2_V3_Web_application_document.docx<br>
 |--> imagens<br>
 |--> src<br>
   &emsp;|--> Backend<br>
-    &emsp;|-->app.js<br>
-    &emsp;|-->configDB.js<br>
   &emsp;|--> Frontend<br>
-  &emsp;|--> data<br>
-  &emsp;|--> public<br>
-  &emsp;|--> src<br>
-  &emsp;|--> views<br>
 | readme.md<br>
 | license.txt
 
@@ -100,10 +92,4 @@ Isso iniciará o servidor da aplicação que será aberta na porta 3001
 
 ## 📋 Licença/License
 
-<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/Spidus/Teste_Final_1">MODELO GIT INTELI</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.yggbrasil.com.br/vr">Inteli, Yago Araújo do Vale Moreira, Marcos Teixeira, Celine Souza, Henrique Godoy, Bruno Wasserstein, Raab Iane</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.</p>
-
-## 🎓 Referências
-
-Aqui estão as referências usadas no projeto:
-
-1. <https://creativecommons.org/share-your-work/>
+<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/2022M2T6-Inteli/CONSTRUDEVS">CONSTRUDEVS</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/InteliProjects">Inteli, <a href="https://www.linkedin.com/in/yago-ara%C3%BAjo-do-vale-moreira-461816247/">Yago Araújo do Vale Moreira</a>, <a href="https://www.linkedin.com/in/marcos-teixeira-37676a24a/">Marcos Teixeira</a>, <a href="https://www.linkedin.com/in/celine-souza-1a38aa225/">Celine Souza</a>, <a href="https://www.linkedin.com/in/henrique-godoy-879138252/">Henrique Godoy</a>, <a href="https://www.linkedin.com/in/bruno-wasserstein-04b6b1209">Bruno Wasserstein</a>, <a href="https://www.linkedin.com/in/raab-iane/">Raab Iane</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.</p>
